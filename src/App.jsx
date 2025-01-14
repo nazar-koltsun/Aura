@@ -1,9 +1,22 @@
-import './index.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import RootLayout from './layouts/RootLayout';
+import UsersPage from './pages/UsersPage';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    children: [
+      {
+        index: true,
+        element: <UsersPage />,
+      },
+    ],
+  },
+]);
 
 const App = () => {
-  return (
-    <div className="font-inter">App</div>
-  );
-}
+  return <RouterProvider router={router}></RouterProvider>;
+};
 
 export default App;
