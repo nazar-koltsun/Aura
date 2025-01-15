@@ -23,7 +23,7 @@ const RootLayout = () => {
       <div className="grid grid-cols-[320px_1fr] grid-rows-[auto_1fr] min-h-screen max-768:grid-cols-[280px_1fr]">
         <Header />
         <Sidebar isOpen={isSidebarOpen} closeSidebar={closeSidebar} />
-        <main>
+        <main className="py-14 px-11">
           { !isSidebarOpen && 
             <Button
               className="hidden max-768:flex ml-3 px-3 py-[18px] hover:opacity-50"

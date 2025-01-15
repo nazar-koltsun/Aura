@@ -1,9 +1,15 @@
+import PageTitle from '../components/PageTitle';
+import Card from '../components/Card';
+
 const UsersPage = () => {
   return (
-    <div>
-      <h1>Users Page</h1>
-    </div>
+    <>
+      <PageTitle title="Użytkownicy" />
+      <Card className="mt-9"> 
+        SOme context 
+      </Card>
+    </>
   );
-}
+};
 
 export default UsersPage;
