@@ -23,16 +23,14 @@ const RootLayout = () => {
       <div className="grid grid-cols-[320px_1fr] grid-rows-[auto_1fr] min-h-screen max-768:grid-cols-[280px_1fr]">
         <Header />
         <Sidebar isOpen={isSidebarOpen} closeSidebar={closeSidebar} />
-        <main className="py-14 px-11">
-          { !isSidebarOpen && 
-            <Button
-              className="hidden max-768:flex ml-3 px-3 py-[18px] hover:opacity-50"
-              variant="flat"
-              onClick={openSidebar}
-            >
-              <BurgerIcon />
-            </Button>
-          } 
+        <main className="py-14 px-11 max-768:row-start-2 max-768:row-end-3 max-768:col-start-1 max-768:col-end-4 max-768:py-7 max-768:px-6">
+          <Button
+            className="hidden max-768:flex px-3 py-[18px] hover:opacity-50"
+            variant="flat"
+            onClick={openSidebar}
+          >
+            <BurgerIcon width={30} height={30} />
+          </Button>
           <Outlet />
         </main>
       </div>

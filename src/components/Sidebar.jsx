@@ -10,7 +10,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
     <>
       <aside
         className={cn(
-          'px-5 py-8 border-r border-[var(--bright-gray)] z-20 bg-white',
+          'row-start-2 col-start-1 col-end-2 px-5 py-8 border-r border-[var(--bright-gray)] z-20 bg-white',
           !isOpen && 'max-768:hidden'
         )}
       >

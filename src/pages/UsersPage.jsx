@@ -14,7 +14,7 @@ const UsersPage = () => {
     <>
       <PageTitle title="Użytkownicy" />
       <Card className="mt-9"> 
-        <Tabs className="mt-4" items={TABS_ITEMS} onClick={setActiveTab} activeTab={activeTab} />
+        <Tabs className="mt-4 w-[calc(100vw-472px)] max-768:w-[calc(100vw-80px)]" items={TABS_ITEMS} onClick={setActiveTab} activeTab={activeTab} />
       </Card>
     </>
   );

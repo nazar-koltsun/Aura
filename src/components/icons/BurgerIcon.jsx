@@ -7,7 +7,6 @@ const BurgerIcon = ({ width = 24, height = 24, fill = '#65676B' }) => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke={fill}
-      className="size-6"
     >
       <path
         strokeLinecap="round"
