@@ -13,6 +13,23 @@ const HEADER_NAV_LINKS = [
   {
     title: 'Cennik',
     path: 'price',
+    submenu: {
+      title: 'Wybierz cennik',
+      items: [
+        {
+          title: 'Klient firmowy',
+          path: 'price',
+        },
+        {
+          title: 'Klient indywidualny',
+          path: 'price',
+        },
+        {
+          title: 'Klient JST',
+          path: 'price',
+        },
+      ],
+    }
   },
   {
     title: 'Kontakt',
