@@ -1,0 +1,200 @@
+import { NavLink } from 'react-router-dom';
+
+import Logo from '../../assets/images/logo.png';
+import NewsletterForm from './NewsletterForm';
+import SocialMedia from './SocialMedia';
+
+import TiktokIcon from '../icons/TiktokIcon';
+import ThreadsIcon from '../icons/ThreadsIcon';
+import InstagramIcon from '../icons/InstagramIcon';
+import XIcon from '../icons/XIcon';
+import FacebookIcon from '../icons/FacebookIcon';
+
+import SeparatorTopImg from '../../assets/images/separator-top.svg';
+
+const socialNetworksBaseClasses =
+  'group-hover:fill-[var(--sandy-brown)] transition duration-200 ease-in-out';
+
+const socialNetworks = [
+  {
+    title: 'TikTok',
+    href: 'https://tiktok.com',
+    icon: <TiktokIcon className={socialNetworksBaseClasses} />,
+  },
+  {
+    title: 'Threads',
+    href: 'https://threads.com',
+    icon: <ThreadsIcon className={socialNetworksBaseClasses} />,
+  },
+  {
+    title: 'Instagram',
+    href: 'https://instagram.com',
+    icon: <InstagramIcon className={socialNetworksBaseClasses} />,
+  },
+  {
+    title: 'X',
+    href: 'https://x.com',
+    icon: <XIcon className={socialNetworksBaseClasses} />,
+  },
+  {
+    title: 'Facebook',
+    href: 'https://facebook.com',
+    icon: <FacebookIcon className={socialNetworksBaseClasses} />,
+  },
+];
+
+const Footer = () => {
+  const titleBaseClasses =
+    'text-[var(--eerie-black)] font-medium text-lg leading-[22px] tracking-[1px]';
+  const linkBaseClasses =
+    'text-[var(--granite-gray)] text-sm hover:text-[var(--sandy-brown)] transition duration-200 ease-in-out';
+
+  return (
+    <footer>
+      <img className="w-full" src={SeparatorTopImg} alt="" />
+
+      <div className="py-5 px-14">
+        <div className="flex flex-col justify-center items-center">
+          <img
+            className='max-1024:w-[180px] max-1024:h-auto"'
+            src={Logo}
+            width={216}
+            height={110}
+            alt="nowAura logo"
+          />
+
+          <p className="text-[var(--granite-gray)] text-center mt-4 text-xl">
+            Zbuduj AURĘ wokół siebie i odkryj jak komunikacja może być <br />{' '}
+            Twoim najpotężniejszym narzędziem.
+          </p>
+        </div>
+
+        <div
+          className="h-[2px] mt-14"
+          style={{
+            background:
+              'linear-gradient(to right, #000000 0%, #FFFFFF 0%, rgba(42, 157, 143, 0.6) 50%, rgba(0, 0, 0, 0) 100%)',
+          }}
+          role="presentation"
+        ></div>
+
+        <div className="flex justify-between gap-4 pt-12 pb-6 px-14">
+          <div className="max-w-[285px]">
+            <h3 className={titleBaseClasses}>Newsletter</h3>
+
+            <p className="mt-4 text-[var(--granite-gray)]">
+              Zapisz się na nasz newsletter, <br /> żeby być na bieżąco.
+            </p>
+
+            <NewsletterForm className="mt-8" />
+          </div>
+
+          <div>
+            <h3 className={titleBaseClasses}>O Nas</h3>
+
+            <ul className="mt-4 space-y-2">
+              <li>
+                <NavLink to={'#'} className={linkBaseClasses}>
+                  Jak to Działa?
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to={'#'} className={linkBaseClasses}>
+                  FAQ
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={'#'} className={linkBaseClasses}>
+                  Cennik
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className={titleBaseClasses}>Produkty</h3>
+
+            <ul className="mt-4 space-y-2">
+              <li>
+                <NavLink to={'#'} className={linkBaseClasses}>
+                  Klient Firmowy
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to={'#'} className={linkBaseClasses}>
+                  Klient Indywidualny
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={'#'} className={linkBaseClasses}>
+                  Regulamin
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={'#'} className={linkBaseClasses}>
+                  Polityka Prywatności
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className={titleBaseClasses}>Kontakt</h3>
+
+            <ul className="mt-4 space-y-2">
+              <li>
+                <a href="mailto:info@nowaura.com" className={linkBaseClasses}>
+                  info@nowaura.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+48601778876" className={linkBaseClasses}>
+                  +48 601 778 876
+                </a>
+              </li>
+              <li>
+                <span className="text-[var(--granite-gray)] text-sm">
+                  ul. Warszawska 40
+                </span>
+              </li>
+              <li>
+                <span className="text-[var(--granite-gray)] text-sm">
+                  40-008 Katowice
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className={titleBaseClasses}>Social Media</h3>
+
+            <span className="block mt-4 text-[var(--granite-gray)] text-sm">
+              Obserwuj Nas
+            </span>
+            <SocialMedia networks={socialNetworks} className="mt-2" />
+          </div>
+        </div>
+
+        <p className="text-[var(--metallic-silver)] text-sm">
+          <sup>(1)</sup>
+          Johnson & Johnson Institute & Osso VR: Enhancing surgical training,{' '}
+          <a
+            href="https://virtualspeech.com/blog/vr-training-case-studies"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://virtualspeech.com/blog/vr-training-case-studies
+          </a>
+        </p>
+
+        <p className="mt-12 text-[var(--granite-gray)] text-center text-sm">
+          Copyright © 2024{' '}
+        </p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

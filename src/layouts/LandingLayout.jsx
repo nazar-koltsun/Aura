@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Header from '../components/Header';
+import Footer from '../components/landing/Footer';
 
 const HEADER_NAV_LINKS = [
   {
@@ -46,7 +47,7 @@ const LandingLayout = () => {
     <div className='grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-screen'>
       <Header className="col-span-1" navItems={HEADER_NAV_LINKS} />
       <main><Outlet /></main>
-      <footer className=''>footer</footer>
+      <Footer />
     </div>
   );
 };
