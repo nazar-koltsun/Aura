@@ -10,11 +10,13 @@ const Button = ({
   ...props
 }) => {
   const baseStyles =
-    'flex items-center gap-3 py-[13px] px-9 font-semibold text-base rounded-full transition duration-300 ease-in-out';
+    'flex items-center justify-center gap-3 py-[13px] px-9 font-semibold text-base rounded-full transition duration-300 ease-in-out';
 
   const variantStyles = {
     flat: 'text-[var(--granite-gray)] font-medium py-0 px-0 hover:underline',
     default: 'text-white bg-[var(--jungle-green)] hover:bg-[#1e6960]',
+    bordered:
+      'text-[var(--granite-gray)] py-[12px] border border-[var(--jungle-green)] hover:bg-[var(--granite-gray)] hover:text-white',
   };
 
   let button = null;
