@@ -43,11 +43,11 @@ const HEADER_NAV_LINKS = [
 
 const LandingLayout = () => {
   return (
-    <>
-      <Header navItems={HEADER_NAV_LINKS} />
+    <div className='grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-screen'>
+      <Header className="col-span-1" navItems={HEADER_NAV_LINKS} />
       <main><Outlet /></main>
-      <footer>footer</footer>
-    </>
+      <footer className=''>footer</footer>
+    </div>
   );
 };
 
