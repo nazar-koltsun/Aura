@@ -1,4 +1,10 @@
-import { cn } from '../../../lib/utils';
+import { useEffect, useRef } from 'react';
+import Glide from '@glidejs/glide';
+import '@glidejs/glide/dist/css/glide.core.min.css';
+import '@glidejs/glide/dist/css/glide.theme.min.css';
+import styles from './ClientCards.module.css';
+
+import { cn, debounce } from '../../../lib/utils';
 
 import Button from '../../Button';
 import CompanyIcon from '../../icons/CompanyIcon';
@@ -27,6 +33,51 @@ const clientCards = [
 ];
 
 const ClientCards = ({ data = clientCards, className }) => {
+  const glideRef = useRef(null);
+  const glideInstanceRef = useRef(null);
+
+  useEffect(() => {
+    const initializeCarousel = () => {
+      if (window.innerWidth <= 1024 && !glideInstanceRef.current) {
+        // Initialize Glide.js for mobile
+        glideInstanceRef.current = new Glide(glideRef.current, {
+          type: 'carousel',
+          perView: 2,
+          focusAt: 'center',
+          gap: 20,
+          // autoplay: 3000,
+          breakpoints: {
+            660: {
+              perView: 1.2,
+              gap: 15,
+            },
+          },
+        });
+        glideInstanceRef.current.mount();
+      } else if (window.innerWidth > 1024 && glideInstanceRef.current) {
+        // Destroy Glide.js for larger viewports
+        glideInstanceRef.current.destroy();
+        glideInstanceRef.current = null;
+      }
+    };
+
+    // Initialize carousel on mount
+    const debouncedInitialize = debounce(initializeCarousel, 400);
+
+    debouncedInitialize();
+
+    // Re-initialize on resize
+    window.addEventListener('resize', debouncedInitialize);
+
+    return () => {
+      // Cleanup event listener and Glide instance
+      window.removeEventListener('resize', debouncedInitialize);
+      if (glideInstanceRef.current) {
+        glideInstanceRef.current.destroy();
+      }
+    };
+  }, []);
+
   const renderActions = (index) => {
     if (index === 0) {
       return (
@@ -81,31 +132,46 @@ const ClientCards = ({ data = clientCards, className }) => {
   };
 
   return (
-    <ul className={cn('grid grid-cols-3 gap-7 max-1240:grid-cols-2', className)}>
-      {data.map((cardData, index) => (
-        <li
-          key={cardData.title}
-          className={cn("flex flex-col items-center bg-[var(--cultured)] px-8 py-7 rounded-[30px]", 
-            index === 0 && 'shadow-cardOrange', index === 1 && 'shadow-cardGreen', index === 2 && 'shadow-cardGray')}
+    <div ref={glideRef} className='glide'>
+      <div className={cn("glide__track", styles.slidesTrack)} data-glide-el="track">
+        <ul
+          className={cn(
+            'glide__slides grid grid-cols-3 max-1240:grid-cols-2',
+            styles.slides,
+            className
+          )}
         >
-          <div className="flex justify-center items-center w-[42px] h-[42px]">
-            {cardData.icon}
-          </div>
+          {data.map((cardData, index) => (
+            <li
+              key={cardData.title}
+              className={cn(
+                'glide__slide flex flex-col items-center bg-[var(--cultured)] px-8 py-7 rounded-[30px] max-1024:py-5 max-1024:px-4',
+                styles.slide,
+                index === 0 && 'shadow-cardOrange',
+                index === 1 && 'shadow-cardGreen',
+                index === 2 && 'shadow-cardGray'
+              )}
+            >
+              <div className="flex justify-center items-center w-[42px] h-[42px]">
+                {cardData.icon}
+              </div>
 
-          <h3 className="mt-8 text-[24px] text-center leading-[30px] text-[var(--eerie-black)] font-semibold">
-            {cardData.title}
-          </h3>
+              <h3 className="mt-8 text-[24px] text-center leading-[30px] text-[var(--eerie-black)] font-semibold max-1024:mt-4 max-1024:text-[20px] max-1024:leading-[25px]">
+                {cardData.title}
+              </h3>
 
-          <p className="mt-7 mb-7 text-[18px] text-center leading-[30px] text-[var(--granite-gray)]">
-            {cardData.description}
-          </p>
+              <p className="mt-7 mb-7 text-[18px] text-center leading-[30px] text-[var(--granite-gray)] max-1024:mt-6 max-1024:mb-5">
+                {cardData.description}
+              </p>
 
-          <div className="mt-auto flex flex-col items-center gap-5">
-            {renderActions(index)}
-          </div>
-        </li>
-      ))}
-    </ul>
+              <div className="mt-auto flex flex-col items-center gap-5">
+                {renderActions(index)}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 

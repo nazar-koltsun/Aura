@@ -1,0 +1,30 @@
+
+@media (min-width: 1025px) {
+  .slidesTrack {
+    overflow: visible;
+    cursor: auto;
+  }
+
+  .slides {
+    display: grid;
+    gap: 28px;
+    margin-top: 60px;
+    overflow: visible;
+  }
+  
+  .slide {
+    width: auto;
+    height: auto;
+    flex-shrink: initial;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slides {
+    padding: 30px 0;
+  }
+
+  .slide {
+    height: auto;
+  }
+}
