@@ -5,7 +5,6 @@ const PlayVideoIcon = () => {
       height="101"
       viewBox="0 0 100 101"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_b_75_3666)">
         <rect
@@ -14,7 +13,7 @@ const PlayVideoIcon = () => {
           height="100"
           rx="50"
           fill="white"
-          fill-opacity="0.4"
+          fillOpacity="0.4"
         />
         <rect
           x="1"
@@ -23,12 +22,12 @@ const PlayVideoIcon = () => {
           height="98"
           rx="49"
           stroke="white"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <path
           d="M41.875 38.5162L60.1813 49.5L41.875 60.4838V38.5162Z"
           stroke="white"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </g>
       <defs>
@@ -39,9 +38,9 @@ const PlayVideoIcon = () => {
           width="115"
           height="115"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="3.75" />
           <feComposite
             in2="SourceAlpha"
