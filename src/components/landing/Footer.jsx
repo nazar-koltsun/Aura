@@ -53,7 +53,7 @@ const Footer = () => {
     <footer>
       <img className="w-full" src={SeparatorTopImg} alt="" />
 
-      <div className="py-5 px-14">
+      <div className="py-5 px-14 max-1024:px-4 max-1024:pt-7 max-1024:pb-12">
         <div className="flex flex-col justify-center items-center">
           <img
             className='max-1024:w-[180px] max-1024:h-auto"'
@@ -63,14 +63,14 @@ const Footer = () => {
             alt="nowAura logo"
           />
 
-          <p className="text-[var(--granite-gray)] text-center mt-4 text-xl">
+          <p className="text-[var(--granite-gray)] text-center mt-4 text-xl max-1024:mt-3">
             Zbuduj AURĘ wokół siebie i odkryj jak komunikacja może być <br />{' '}
             Twoim najpotężniejszym narzędziem.
           </p>
         </div>
 
         <div
-          className="h-[2px] mt-14"
+          className="h-[2px] mt-14 max-1024:mt-10"
           style={{
             background:
               'linear-gradient(to right, #000000 0%, #FFFFFF 0%, rgba(42, 157, 143, 0.6) 50%, rgba(0, 0, 0, 0) 100%)',
@@ -78,21 +78,21 @@ const Footer = () => {
           role="presentation"
         ></div>
 
-        <div className="flex justify-between gap-4 pt-12 pb-6 px-14">
-          <div className="max-w-[285px]">
+        <div className="flex justify-between flex-wrap gap-8 pt-12 pb-6 px-14 max-1024:px-0 max-1024:pt-7 max-960:grid max-960:grid-cols-4 max-700:grid-cols-3 max-520:grid-cols-2">
+          <div className="max-w-[285px] max-960:col-span-2 max-700:col-span-3 max-700:max-w-[500px] max-520:col-span-2 max-520:max-w-[300px]">
             <h3 className={titleBaseClasses}>Newsletter</h3>
 
             <p className="mt-4 text-[var(--granite-gray)]">
-              Zapisz się na nasz newsletter, <br /> żeby być na bieżąco.
+              Zapisz się na nasz newsletter, <br className='max-960:hidden' /> żeby być na bieżąco.
             </p>
 
-            <NewsletterForm className="mt-8" />
+            <NewsletterForm className="mt-8 max-1024:mt-3" />
           </div>
 
           <div>
             <h3 className={titleBaseClasses}>O Nas</h3>
 
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-2 max-1024:space-y-3.5">
               <li>
                 <NavLink to={'#'} className={linkBaseClasses}>
                   Jak to Działa?
@@ -115,7 +115,7 @@ const Footer = () => {
           <div>
             <h3 className={titleBaseClasses}>Produkty</h3>
 
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-2 max-1024:space-y-3.5">
               <li>
                 <NavLink to={'#'} className={linkBaseClasses}>
                   Klient Firmowy
@@ -143,7 +143,7 @@ const Footer = () => {
           <div>
             <h3 className={titleBaseClasses}>Kontakt</h3>
 
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-2 max-1024:space-y-3.5">
               <li>
                 <a href="mailto:info@nowaura.com" className={linkBaseClasses}>
                   info@nowaura.com
@@ -173,7 +173,7 @@ const Footer = () => {
             <span className="block mt-4 text-[var(--granite-gray)] text-sm">
               Obserwuj Nas
             </span>
-            <SocialMedia networks={socialNetworks} className="mt-2" />
+            <SocialMedia networks={socialNetworks} className="mt-2 max-1024:mt-3.5" />
           </div>
         </div>
 
