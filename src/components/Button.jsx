@@ -10,7 +10,7 @@ const Button = ({
   ...props
 }) => {
   const baseStyles =
-    'flex items-center justify-center gap-3 py-[13px] px-9 font-semibold text-base rounded-full transition duration-300 ease-in-out';
+    'flex items-center justify-center gap-3 py-[13px] px-9 font-semibold text-base tracking-[0.5px] rounded-full transition duration-300 ease-in-out';
 
   const variantStyles = {
     flat: 'text-[var(--granite-gray)] font-medium py-0 px-0 hover:underline',

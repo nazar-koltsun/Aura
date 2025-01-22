@@ -51,7 +51,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <img className="w-full" src={SeparatorTopImg} alt="" />
+      <img className="w-full" src={SeparatorTopImg} alt="" role='presentation' />
 
       <div className="py-5 px-14 max-1024:px-4 max-1024:pt-7 max-1024:pb-12">
         <div className="flex flex-col justify-center items-center">
