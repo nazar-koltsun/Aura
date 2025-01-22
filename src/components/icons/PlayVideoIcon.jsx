@@ -1,10 +1,11 @@
-const PlayVideoIcon = () => {
+const PlayVideoIcon = ({ className = '' }) => {
   return (
     <svg
       width="100"
       height="101"
       viewBox="0 0 100 101"
       fill="none"
+      className={className}
     >
       <g filter="url(#filter0_b_75_3666)">
         <rect
