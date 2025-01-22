@@ -10,7 +10,7 @@ import InstagramIcon from '../icons/InstagramIcon';
 import XIcon from '../icons/XIcon';
 import FacebookIcon from '../icons/FacebookIcon';
 
-import SeparatorTopImg from '../../assets/images/separator-top.svg';
+import SeparatorTopImg from '../../assets/images/landing/separator-top.svg';
 
 const socialNetworksBaseClasses =
   'group-hover:fill-[var(--sandy-brown)] transition duration-200 ease-in-out';

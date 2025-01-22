@@ -8,6 +8,7 @@
   --granite-gray: #65676b;
   --taupe-gray: #878787;
   --jungle-green: #2a9d8f;
+  --celadon-green: #218075;
 
   --sandy-brown: #f4a261;
   --cultured: #f5f8fa;
@@ -40,6 +41,14 @@ body {
   font-family: 'Inter';
   src: url('./assets/fonts/Inter/Inter-SemiBold.woff2') format('woff2');
   font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
