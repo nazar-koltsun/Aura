@@ -30,7 +30,7 @@ const MainLanding = () => {
         </Button>
       </div>
 
-      <div className="flex justify-center pt-20">
+      <div className="flex justify-center pt-20 min-h-[456px]">
         <div className="inline-block mx-auto relative p-[18px] pb-0 bg-[var(--cultured)] rounded-[10px] ">
           <NavLink
             to={'#'}
