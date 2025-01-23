@@ -5,15 +5,17 @@ import Subtitle from '../components/landing/Subtitle';
 import SectionTitle from '../components/landing/SectionTitle';
 import ClientCards from '../components/landing/main/ClientCards';
 import HowToSteps from '../components/landing/main/HowToSteps';
+import ProposalList from '../components/landing/main/ProposalList';
 
 import MainBannerImage from '../assets/images/landing/main-banner.webp';
 import MainBannerMobileImage from '../assets/images/landing/main-banner-mobile.webp';
+import SeparatorTopImg from '../assets/images/landing/separator-top.svg';
 import SeparatorBottomSimpleImage from '../assets/images/landing/separator-bottom-simple.svg';
 import SeparatorTopSimpleImage from '../assets/images/landing/separator-top-simple.svg';
 import HowToBg from '../assets/images/landing/how-to-bg.webp';
 import HowToBgMobile from '../assets/images/landing/how-to-bg-mobile.webp';
 import WhatAreNowAuraImage from '../assets/images/landing/about-aura.webp';
-import WhatAreNowAuraMobileImage from '../assets/images/landing/about-aura-mobile.webp'
+import WhatAreNowAuraMobileImage from '../assets/images/landing/about-aura-mobile.webp';
 
 import PlayVideoIcon from '../components/icons/PlayVideoIcon';
 
@@ -212,6 +214,29 @@ const MainLanding = () => {
             Dowiedz się więcej
           </Button>
         </div>
+      </section>
+
+      {/* Proposalt section */}
+      <section className="flex flex-col items-center px-[70px] max-1024:px-4">
+			<img class="w-full" alt="" role="presentation" src={SeparatorTopImg} />
+        <Subtitle title="Oferta" className='mt-[52px] max-1024:mt-9' />
+
+        <SectionTitle
+          title="Wybierz ofertę dla siebie"
+          className="mt-3"
+        />
+
+				<ProposalList className='mt-9 max-1024:mt-14' />
+
+				<div className='mt-[82px] mb-[77px] flex flex-col items-center max-1024:mt-9 max-1024:mb-9'>
+					<p className='text-center text-[var(--eerie-black)] text-[26px] leading-[30px] max-1024:text-xl'>Sprawdź, spersonalizowaną ofertę dla Twoich potrzeb.</p>
+
+					<div className='mt-6 flex justify-center gap-8 max-1024:gap-3 max-1024:flex-col'>
+						<Button to="#" className='min-w-[193px] bg-[var(--sandy-brown)] hover:bg-[#DE8640]'>Klient firmowy</Button>
+						<Button to="#" className='min-w-[193px] px-4'>Klient indywidualny</Button>
+						<Button to="#" className='min-w-[193px] bg-[var(--rocket-metallic)] hover:bg-[var(--eerie-black)]'>Klient JST</Button>
+					</div>
+				</div>
       </section>
     </>
   );

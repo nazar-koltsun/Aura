@@ -4,7 +4,7 @@ const Subtitle = ({ title, isShort, className }) => {
   return (
     <div
       className={cn(
-        'px-8 py-1 bg-[var(--cultured)] rounded-[4px]',
+        'inline-block text-center px-8 py-1 bg-[var(--cultured)] rounded-[4px]',
         isShort && 'px-6',
         className
       )}
