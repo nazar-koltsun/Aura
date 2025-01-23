@@ -5,16 +5,16 @@
 :root {
   /* colors */
   --bright-gray: #ededed;
+  --cultured: #f5f8fa;
+  --light-silver: #d8d8d8;
   --granite-gray: #65676b;
   --taupe-gray: #878787;
-  --jungle-green: #2a9d8f;
-  --celadon-green: #218075;
-
-  --sandy-brown: #f4a261;
-  --cultured: #f5f8fa;
+  --rocket-metallic: #8b8181;
   --metallic-silver: #a7abb4;
   --eerie-black: #181818;
-  --rocket-metallic: #8B8181;
+  --jungle-green: #2a9d8f;
+  --celadon-green: #218075;
+  --sandy-brown: #f4a261;
 }
 
 body {

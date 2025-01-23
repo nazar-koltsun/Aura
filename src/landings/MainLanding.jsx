@@ -4,10 +4,13 @@ import Button from '../components/Button';
 import Subtitle from '../components/landing/Subtitle';
 import SectionTitle from '../components/landing/SectionTitle';
 import ClientCards from '../components/landing/main/ClientCards';
+import HowToSteps from '../components/landing/main/HowToSteps';
 
 import MainBannerImage from '../assets/images/landing/main-banner.webp';
 import MainBannerMobileImage from '../assets/images/landing/main-banner-mobile.webp';
 import SeparatorBottomSimpleImage from '../assets/images/landing/separator-bottom-simple.svg';
+import SeparatorTopSimpleImage from '../assets/images/landing/separator-top-simple.svg';
+import HowToBg from '../assets/images/landing/how-to-bg.webp';
 
 import PlayVideoIcon from '../components/icons/PlayVideoIcon';
 
@@ -62,7 +65,7 @@ const MainLanding = () => {
         </div>
 
         <img
-          className="absolute bottom-[-1vw] left-0 w-full"
+          className="absolute bottom-[-1px] left-0 w-full max-1920:bottom-[-1vw]'"
           src={SeparatorBottomSimpleImage}
           alt=""
           role="presentation"
@@ -71,7 +74,7 @@ const MainLanding = () => {
 
       {/* Client Cards Section */}
       <section className="flex flex-col items-center pt-11 px-[70px] pb-[170px] max-1024:pt-7 max-1024:pb-7 max-1024:px-0">
-        <div className='flex flex-col items-center max-1024:px-4'>
+        <div className="flex flex-col items-center max-1024:px-4">
           <Subtitle title="Rozpocznij za Darmo" />
 
           <SectionTitle title="Co możemy dla Ciebie zrobić?" className="mt-3" />
@@ -87,6 +90,26 @@ const MainLanding = () => {
         </div>
 
         <ClientCards />
+      </section>
+
+      {/* How to Section */}
+      <section className="relative p-[70px] px-[70px]">
+        <div className='relative z-10 flex flex-col items-center'>
+          <Subtitle title="Jak to działa?" />
+
+          <SectionTitle title="Jak zacząć rozmowę?" className="mt-3" />
+
+          <HowToSteps />
+
+          <div className='mt-14 flex justify-center gap-6'>
+            <Button to='#' className='min-w-[247px] min-h-[60px]'>Rozpocznij naukę</Button>
+            <Button to='#' variant='bordered' className='min-w-[262px] min-h-[60px] bg-white'>Zobacz wideo</Button>
+          </div>
+        </div>
+
+        <img src={HowToBg} alt="" role='presentation' className='absolute top-0 left-0 w-full h-full object-cover' />
+        <img src={SeparatorTopSimpleImage} alt="" role='presentation' className='absolute top-0 left-0 w-full' />
+        <img src={SeparatorBottomSimpleImage} alt="" role='presentation' className='absolute left-0 w-full bottom-[-1px] max-1920:bottom-[-1vw]' />
       </section>
     </>
   );
