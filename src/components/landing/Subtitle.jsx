@@ -1,11 +1,11 @@
 import { cn } from '../../lib/utils';
 
-const Subtitle = ({ title, isWhite, className }) => {
+const Subtitle = ({ title, isShort, className }) => {
   return (
     <div
       className={cn(
         'px-8 py-1 bg-[var(--cultured)] rounded-[4px]',
-        isWhite && 'bg-white',
+        isShort && 'px-6',
         className
       )}
     >
