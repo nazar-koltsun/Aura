@@ -29,7 +29,7 @@ const advantages = [
         personalizacja może być bardziej skuteczna niż tradycyjne metody,
         zwiększając efektywność nauki i przynosząc ok.{' '}
         <b>17% większy roczny wzrost przychodów.</b>
-        <a href="#" className='block mt-6 underline text-[9px]'>
+        <a href="https://google.com/" className='block mt-6 underline text-[9px]'>
           21 ROI Stats on Sales Coaching: Can Your Organization Afford NOT to Hire a Sales Coach?
         </a>
       </p>
