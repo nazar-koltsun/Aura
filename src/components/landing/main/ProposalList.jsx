@@ -37,8 +37,8 @@ const proposals = [
 const ProposalList = ({ className }) => {
   return (
     <ul className={cn('grid grid-cols-3 gap-7 max-1240:grid-cols-2 max-1024:gap-4 max-700:grid-cols-1 max-700:gap-9', className)}>
-      {proposals.map((proposal) => (
-        <li key={proposal.title} className='relative flex flex-col items-center bg-[var(--cultured)] pt-8 pb-11 px-8 rounded-[30px] shadow-cardGray'>
+      {proposals.map((proposal, index) => (
+        <li key={index} className='relative flex flex-col items-center bg-[var(--cultured)] pt-8 pb-11 px-8 rounded-[30px] shadow-cardGray'>
           <div className='absolute top-3 right-10 flex justify-center items-center peer cursor-pointer w-8 h-8 max-700:right-7'>
             <InfoIcon />
           </div>
