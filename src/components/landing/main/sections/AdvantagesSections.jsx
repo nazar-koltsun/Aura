@@ -4,6 +4,7 @@ import AdvantageSection from '../AdvantageSection';
 import AdvantageOneImage from '../../../../assets/images/landing/advantageOne.svg';
 import AdvantageOneMob from '../../../../assets/images/landing/advantageOneMob.svg';
 import AdvantageTwoImage from '../../../../assets/images/landing/advantageTwo.svg';
+import SeparatorBottomImage from '../../../../assets/images/landing/separator-bottom.svg' 
 
 const advantages = [
   {
@@ -71,12 +72,14 @@ const advantages = [
 
 const AdvantagesSections = ({ className }) => {
   return (
-    <article className={cn('px-[150px] max-1240:px-[70px] max-1024:px-4', className)}>
-      <div className="mt-8 space-y-10 max-1024:space-y-5">
+    <article>
+      <div className="mt-8 mb-14 space-y-10 max-1024:space-y-5 px-[150px] max-1240:px-[70px] max-1024:px-4 max-960:mb-12 max-700:mb-10">
         {advantages.map((advantage, index) => (
           <AdvantageSection key={index} advantage={advantage} index={index} />
         ))}
       </div>
+
+      <img src={SeparatorBottomImage} className="w-full" alt="" />
     </article>
   );
 };

@@ -4,8 +4,19 @@ const FormInput = ({
   id,
   type = "text",
   className = "",
+  isTextarea = false,
   ...props
 }) => {
+  if (isTextarea) {
+    return (
+      <textarea
+        id={id}
+        className={cn('w-full py-3 px-5 border-2 border-[#D1D1D3] rounded-xl text-[var(--granite-gray)]', className)}
+        {...props}
+      />
+    );
+  }
+
   return (
     <input
       id={id}

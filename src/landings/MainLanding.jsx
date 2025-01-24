@@ -4,6 +4,7 @@ import AboutNowAuraSection from '../components/landing/main/sections/AboutNowAur
 import HowToSection from '../components/landing/main/sections/HowToSection';
 import ClientCardsSection from '../components/landing/main/sections/ClientCardsSection';
 import MainSection from '../components/landing/main/sections/MainSection';
+import ContactSection from '../components/landing/general-sections/ContactSection';
 
 
 const MainLanding = () => {
@@ -17,6 +18,7 @@ const MainLanding = () => {
         <ProposaltSection />
         <AdvantagesSections />
       </div>
+      <ContactSection />
     </>
   );
 };
