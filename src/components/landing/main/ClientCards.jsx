@@ -5,6 +5,7 @@ import '@glidejs/glide/dist/css/glide.theme.min.css';
 import styles from './ClientCards.module.css';
 
 import { cn, debounce } from '../../../lib/utils';
+import HighlightBox from '../HighlightBox';
 
 import Button from '../../Button';
 import CompanyIcon from '../../icons/CompanyIcon';
@@ -132,9 +133,12 @@ const ClientCards = ({ data = clientCards, className }) => {
   };
 
   return (
-    <div ref={glideRef} className='glide'>
-      <div className={cn("glide__track", styles.slidesTrack)} data-glide-el="track">
-        <ul
+    <div ref={glideRef} className="glide">
+      <div
+        className={cn('glide__track', styles.slidesTrack)}
+        data-glide-el="track"
+      >
+        <div
           className={cn(
             'glide__slides grid grid-cols-3 max-1240:grid-cols-2',
             styles.slides,
@@ -142,34 +146,45 @@ const ClientCards = ({ data = clientCards, className }) => {
           )}
         >
           {data.map((cardData, index) => (
-            <li
+            <HighlightBox
               key={cardData.title}
-              className={cn(
-                'glide__slide flex flex-col items-center bg-[var(--cultured)] px-8 py-7 rounded-[30px] max-1024:py-5 max-1024:px-4',
-                styles.slide,
-                index === 0 && 'shadow-cardOrange',
-                index === 1 && 'shadow-cardGreen',
-                index === 2 && 'shadow-cardGray'
-              )}
+              color={
+                index === 0
+                  ? 'var(--sandy-brown)'
+                  : index === 1
+                  ? 'var(--jungle-green)'
+                  : 'var(--rocket-metallic)'
+              }
+              className="rounded-[30px] flex transform duration-200 ease-in hover:-translate-y-2"
             >
-              <div className="flex justify-center items-center w-[42px] h-[42px]">
-                {cardData.icon}
+              <div
+                className={cn(
+                  'glide__slide flex flex-col items-center bg-[var(--cultured)] px-8 py-7 rounded-[30px] max-1024:py-5 max-1024:px-4',
+                  styles.slide,
+                  index === 0 && 'shadow-cardOrange',
+                  index === 1 && 'shadow-cardGreen',
+                  index === 2 && 'shadow-cardGray'
+                )}
+              >
+                <div className="flex justify-center items-center w-[42px] h-[42px] pointer-events-none">
+                  {cardData.icon}
+                </div>
+
+                <h3 className="mt-8 text-[24px] text-center leading-[30px] text-[var(--eerie-black)] font-semibold max-1024:mt-4 max-1024:text-[20px] max-1024:leading-[25px] pointer-events-none">
+                  {cardData.title}
+                </h3>
+
+                <p className="mt-7 mb-7 text-[18px] text-center leading-[30px] text-[var(--granite-gray)] max-1024:mt-6 max-1024:mb-5 pointer-events-none">
+                  {cardData.description}
+                </p>
+
+                <div className="mt-auto flex flex-col items-center gap-5">
+                  {renderActions(index)}
+                </div>
               </div>
-
-              <h3 className="mt-8 text-[24px] text-center leading-[30px] text-[var(--eerie-black)] font-semibold max-1024:mt-4 max-1024:text-[20px] max-1024:leading-[25px]">
-                {cardData.title}
-              </h3>
-
-              <p className="mt-7 mb-7 text-[18px] text-center leading-[30px] text-[var(--granite-gray)] max-1024:mt-6 max-1024:mb-5">
-                {cardData.description}
-              </p>
-
-              <div className="mt-auto flex flex-col items-center gap-5">
-                {renderActions(index)}
-              </div>
-            </li>
+            </HighlightBox>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
