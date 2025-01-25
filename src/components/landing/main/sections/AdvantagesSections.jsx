@@ -1,4 +1,3 @@
-import { cn } from '../../../../lib/utils';
 import AdvantageSection from '../AdvantageSection';
 
 import AdvantageOneImage from '../../../../assets/images/landing/advantageOne.svg';
