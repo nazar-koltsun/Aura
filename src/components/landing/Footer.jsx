@@ -1,4 +1,6 @@
+import { useInView } from 'react-intersection-observer';
 import { NavLink } from 'react-router-dom';
+import { cn } from '../../lib/utils';
 
 import Logo from '../../assets/images/logo.png';
 import NewsletterForm from './NewsletterForm';
@@ -11,6 +13,7 @@ import XIcon from '../icons/XIcon';
 import FacebookIcon from '../icons/FacebookIcon';
 
 import SeparatorTopImg from '../../assets/images/landing/separator-top.svg';
+import FooterAnimationLineImage from '../../assets/images/landing/footer-line-anim.svg';
 
 const socialNetworksBaseClasses =
   'group-hover:fill-[var(--sandy-brown)] transition duration-200 ease-in-out';
@@ -44,14 +47,21 @@ const socialNetworks = [
 ];
 
 const Footer = () => {
+  const { ref, inView } = useInView({ threshold: 0.6 }); //
+
   const titleBaseClasses =
     'text-[var(--eerie-black)] font-medium text-lg leading-[22px] tracking-[1px]';
   const linkBaseClasses =
     'text-[var(--granite-gray)] text-sm hover:text-[var(--sandy-brown)] transition duration-200 ease-in-out';
 
   return (
-    <footer>
-      <img className="w-full" src={SeparatorTopImg} alt="" role='presentation' />
+    <footer ref={ref}>
+      <img
+        className="w-full"
+        src={SeparatorTopImg}
+        alt=""
+        role="presentation"
+      />
 
       <div className="py-5 px-14 max-1024:px-4 max-1024:pt-7 max-1024:pb-12">
         <div className="flex flex-col justify-center items-center">
@@ -70,20 +80,30 @@ const Footer = () => {
         </div>
 
         <div
-          className="h-[2px] mt-14 max-1024:mt-10"
+          className="relative h-[2px] mt-14 max-1024:mt-10 overflow-hidden"
           style={{
             background:
               'linear-gradient(to right, #000000 0%, #FFFFFF 0%, rgba(42, 157, 143, 0.6) 50%, rgba(0, 0, 0, 0) 100%)',
           }}
           role="presentation"
-        ></div>
+        >
+          <img
+            className={cn(
+              'transform transition translate-x-0 duration-100 ease-in',
+              inView && 'translate-x-[100vw] duration-[5000ms]'
+            )}
+            src={FooterAnimationLineImage}
+            alt=""
+          />
+        </div>
 
         <div className="flex justify-between flex-wrap gap-8 pt-12 pb-6 px-14 max-1024:px-0 max-1024:pt-7 max-960:grid max-960:grid-cols-4 max-700:grid-cols-3 max-520:grid-cols-2">
           <div className="max-w-[285px] max-960:col-span-2 max-700:col-span-3 max-700:max-w-[500px] max-520:col-span-2 max-520:max-w-[300px]">
             <h3 className={titleBaseClasses}>Newsletter</h3>
 
             <p className="mt-4 text-[var(--granite-gray)]">
-              Zapisz się na nasz newsletter, <br className='max-960:hidden' /> żeby być na bieżąco.
+              Zapisz się na nasz newsletter, <br className="max-960:hidden" />{' '}
+              żeby być na bieżąco.
             </p>
 
             <NewsletterForm className="mt-8 max-1024:mt-3" />
@@ -173,7 +193,10 @@ const Footer = () => {
             <span className="block mt-4 text-[var(--granite-gray)] text-sm">
               Obserwuj Nas
             </span>
-            <SocialMedia networks={socialNetworks} className="mt-2 max-1024:mt-3.5" />
+            <SocialMedia
+              networks={socialNetworks}
+              className="mt-2 max-1024:mt-3.5"
+            />
           </div>
         </div>
 
