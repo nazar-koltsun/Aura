@@ -38,7 +38,8 @@ const AdvantageSection = ({ advantage, index }) => {
           className="text-xs text-white mt-3 gap-[3px]"
           onClick={toggleExpand}
         >
-          <ArrowDownSecondIcon /> Czytaj więcej
+          <ArrowDownSecondIcon className={isExpanded ? 'rotate-180' : ''} />
+          { isExpanded ? 'Schowaj' : 'Czytaj więcej'}
         </Button>
 
         <div

@@ -126,7 +126,7 @@ const Footer = () => {
               </li>
               <li>
                 <NavLink to={'#'} className={linkBaseClasses}>
-                  Cennik
+                  O Nas
                 </NavLink>
               </li>
             </ul>
@@ -145,6 +145,11 @@ const Footer = () => {
               <li>
                 <NavLink to={'#'} className={linkBaseClasses}>
                   Klient Indywidualny
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={'#'} className={linkBaseClasses}>
+                  Klient JST
                 </NavLink>
               </li>
               <li>
@@ -170,8 +175,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="tel:+48601778876" className={linkBaseClasses}>
-                  +48 601 778 876
+                <a href="#s" className={linkBaseClasses}>
+                  nowAURA Sp. z o.o.
                 </a>
               </li>
               <li>
@@ -182,6 +187,11 @@ const Footer = () => {
               <li>
                 <span className="text-[var(--granite-gray)] text-sm">
                   40-008 Katowice
+                </span>
+              </li>
+              <li>
+                <span className="text-[var(--granite-gray)] text-sm">
+                  NIP 9542878235
                 </span>
               </li>
             </ul>

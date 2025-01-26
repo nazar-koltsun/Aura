@@ -24,7 +24,7 @@ const ProposaltSection = () => {
 
         <ProposalList className="mt-9 max-1024:mt-14" />
 
-        <div className="mt-[82px] mb-[77px] flex flex-col items-center max-1024:mt-9 max-1024:mb-9">
+        <div className="mt-[82px] mb-[58px] flex flex-col items-center max-1024:mt-9 max-1024:mb-9">
           <p className="text-center text-[var(--eerie-black)] text-[26px] leading-[30px] max-1024:text-xl">
             Sprawdź, spersonalizowaną ofertę dla Twoich potrzeb.
           </p>

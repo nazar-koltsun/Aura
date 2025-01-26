@@ -10,6 +10,8 @@ const steps = [
   "4. Otrzymaj szczegółowy raport z pozytywnym i konstruktywnym feedbackiem",
 ];
 
+const STEP_CHANGE_TIME = 800;
+
 const HowToSteps = () => {
   const { ref, inView } = useInView({ threshold: 0.6 }); // Detect when the component is in view
   const [activeIndex, setActiveIndex] = useState(null); // Track the currently active item
@@ -19,7 +21,7 @@ const HowToSteps = () => {
       steps.forEach((_, index) => {
         setTimeout(() => {
           setActiveIndex(index);
-        }, index * 2000); // Stagger each item's activation by 500ms
+        }, index * STEP_CHANGE_TIME); // Stagger each item's activation by STEP_CHANGE_TIME
       });
     } else {
       setActiveIndex(null); // Reset when the component goes out of view

@@ -28,7 +28,7 @@ const HowToSection = () => {
           <Button
             to="#"
             variant="bordered"
-            className="min-w-[262px] min-h-[60px] bg-white text-[var(--eerie-black)] max-700:min-w-[247px]"
+            className="min-w-[262px] min-h-[60px] bg-white max-700:min-w-[247px]"
           >
             Zobacz wideo
           </Button>

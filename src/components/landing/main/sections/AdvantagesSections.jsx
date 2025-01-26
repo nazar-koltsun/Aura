@@ -69,7 +69,7 @@ const advantages = [
   },
 ];
 
-const AdvantagesSections = ({ className }) => {
+const AdvantagesSections = () => {
   return (
     <article>
       <div className="mt-8 mb-14 space-y-10 max-1024:space-y-5 px-[150px] max-1240:px-[70px] max-1024:px-4 max-960:mb-12 max-700:mb-10">

@@ -4,7 +4,7 @@ import ClientCards from '../ClientCards';
 
 const ClientCardsSection = () => {
   return (
-    <section className="flex flex-col items-center pt-11 px-[70px] pb-[170px] max-1024:pt-7 max-1024:pb-7 max-1024:px-0">
+    <section className="flex flex-col items-center pt-11 pb-[50px] px-[70px] max-1024:pt-7 max-1024:pb-0 max-1024:px-0">
       <div className="flex flex-col items-center max-1024:px-4">
         <Subtitle title="Rozpocznij za Darmo" />
 

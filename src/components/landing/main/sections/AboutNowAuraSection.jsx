@@ -4,7 +4,7 @@ import WhatAreNowAuraMobileImage from '../../../../assets/images/landing/about-a
 
 const AboutNowAuraSection = () => {
   return (
-    <section className="pl-20 pr-24 py-28 flex justify-center items-center gap-[131px] max-1240:gap-[80px] max-1024:px-6 max-1024:py-12 max-960:flex-col max-960:gap-9 max-700:py-10">
+    <section className="pl-20 pr-24 pt-11 pb-[38px] flex justify-center items-center gap-[110px] max-1240:gap-[80px] max-1024:px-6 max-1024:pt-12 max-1024:pb-11 max-960:flex-col max-960:gap-9 max-960:pb-10 max-700:pt-10 max-700:pb-9">
       <div>
         <picture>
           <source

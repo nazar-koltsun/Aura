@@ -86,7 +86,7 @@ const ClientCards = ({ data = clientCards, className }) => {
           <Button
             to="#"
             variant="bordered"
-            className="px-7 border-[var(--sandy-brown)]"
+            className="px-7 border-[var(--sandy-brown)] text-[var(--sandy-brown)]"
           >
             Zarezerwuj darmowe demo
           </Button>
@@ -118,7 +118,7 @@ const ClientCards = ({ data = clientCards, className }) => {
         <Button
           to="#"
           variant="bordered"
-          className="px-7 min-w-[194px] border-[var(--rocket-metallic)]"
+          className="px-7 min-w-[194px] text-[var(--rocket-metallic)] border-[var(--rocket-metallic)]"
         >
           Zadaj pytanie
         </Button>
