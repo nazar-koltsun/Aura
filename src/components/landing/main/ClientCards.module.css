@@ -17,9 +17,44 @@
     height: auto;
     flex-shrink: initial;
   }
+
+  .bullets {
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) {
+  .bullets {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform: none;
+  }
+
+  .bullet {
+    width: 12px;
+    height: 12px;
+    background: var(--taupe-gray);
+    box-shadow: none;
+    border: none !important;
+
+    &:hover,
+    &:focus {
+      background-color: var(--taupe-gray);
+    }
+  }
+
+  .bulletActive {
+    background-color: var(--jungle-green);
+
+    &:hover,
+    &:focus {
+      background-color: var(--jungle-green);
+    }
+  }
+
   .slides {
     padding: 30px 0;
   }

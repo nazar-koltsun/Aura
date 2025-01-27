@@ -16,7 +16,7 @@ const Button = ({
     flat: 'text-[var(--granite-gray)] font-medium py-0 px-0 hover:underline',
     default: 'text-white bg-[var(--jungle-green)] hover:bg-[#1e6960]',
     bordered:
-      'text-[var(--jungle-green)] py-[12px] border border-[var(--jungle-green)] hover:bg-[var(--granite-gray)] hover:text-white',
+      'text-[var(--jungle-green)] py-[12px] border border-[var(--jungle-green)] hover:bg-[var(--jungle-green)] hover:text-white',
   };
 
   let button = null;

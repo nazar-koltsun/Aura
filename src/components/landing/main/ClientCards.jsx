@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Glide from '@glidejs/glide';
 import '@glidejs/glide/dist/css/glide.core.min.css';
 import '@glidejs/glide/dist/css/glide.theme.min.css';
@@ -34,6 +34,7 @@ const clientCards = [
 ];
 
 const ClientCards = ({ data = clientCards, className }) => {
+  const [activeSlide, setActiveSlide] = useState(0);
   const glideRef = useRef(null);
   const glideInstanceRef = useRef(null);
 
@@ -46,7 +47,7 @@ const ClientCards = ({ data = clientCards, className }) => {
           perView: 2,
           focusAt: 'center',
           gap: 20,
-          // autoplay: 3000,
+          autoplay: 7000,
           breakpoints: {
             660: {
               perView: 1.2,
@@ -54,6 +55,12 @@ const ClientCards = ({ data = clientCards, className }) => {
             },
           },
         });
+
+        // Update activeSlide state on slide change
+        glideInstanceRef.current.on('run.after', () => {
+          setActiveSlide(glideInstanceRef.current.index);
+        });
+
         glideInstanceRef.current.mount();
       } else if (window.innerWidth > 1024 && glideInstanceRef.current) {
         // Destroy Glide.js for larger viewports
@@ -86,7 +93,7 @@ const ClientCards = ({ data = clientCards, className }) => {
           <Button
             to="#"
             variant="bordered"
-            className="px-7 border-[var(--sandy-brown)] text-[var(--sandy-brown)]"
+            className="px-7 border-[var(--sandy-brown)] text-[var(--sandy-brown)] hover:bg-[var(--sandy-brown)] "
           >
             Zarezerwuj darmowe demo
           </Button>
@@ -118,7 +125,7 @@ const ClientCards = ({ data = clientCards, className }) => {
         <Button
           to="#"
           variant="bordered"
-          className="px-7 min-w-[194px] text-[var(--rocket-metallic)] border-[var(--rocket-metallic)]"
+          className="px-7 min-w-[194px] text-[var(--rocket-metallic)] border-[var(--rocket-metallic)] hover:bg-[var(--rocket-metallic)]"
         >
           Zadaj pytanie
         </Button>
@@ -140,7 +147,7 @@ const ClientCards = ({ data = clientCards, className }) => {
       >
         <div
           className={cn(
-            'glide__slides grid grid-cols-3 max-1240:grid-cols-2',
+            'glide__slides grid grid-cols-3 max-1240:grid-cols-1',
             styles.slides,
             className
           )}
@@ -159,7 +166,7 @@ const ClientCards = ({ data = clientCards, className }) => {
             >
               <div
                 className={cn(
-                  'glide__slide flex flex-col items-center bg-[var(--cultured)] px-8 py-7 rounded-[30px] max-1024:py-5 max-1024:px-4',
+                  'glide__slide flex flex-col flex-grow items-center bg-[var(--cultured)] px-8 py-7 rounded-[30px] max-1024:py-5 max-1024:px-4',
                   styles.slide,
                   index === 0 && 'shadow-cardOrange',
                   index === 1 && 'shadow-cardGreen',
@@ -183,6 +190,28 @@ const ClientCards = ({ data = clientCards, className }) => {
                 </div>
               </div>
             </HighlightBox>
+          ))}
+        </div>
+
+        {/* Dots Navigation */}
+        <div
+          className={cn(
+            'glide__bullets pb-[28px]',
+            styles.bullets
+          )}
+          data-glide-el="controls[nav]"
+        >
+          {data.map((_, index) => (
+            <button
+              key={index}
+              className={cn(
+                'glide__bullet',
+                styles.bullet,
+                index === activeSlide && styles.bulletActive
+                
+              )}
+              data-glide-dir={`=${index}`}
+            ></button>
           ))}
         </div>
       </div>

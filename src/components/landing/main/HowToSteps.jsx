@@ -10,7 +10,7 @@ const steps = [
   "4. Otrzymaj szczegółowy raport z pozytywnym i konstruktywnym feedbackiem",
 ];
 
-const STEP_CHANGE_TIME = 800;
+const STEP_CHANGE_TIME = 1400;
 
 const HowToSteps = () => {
   const { ref, inView } = useInView({ threshold: 0.6 }); // Detect when the component is in view
@@ -31,11 +31,11 @@ const HowToSteps = () => {
   return (
     <div
       ref={ref}
-      className="max-w-[533px] mt-9 bg-[var(--cultured)] p-7 pl-[75px] rounded-[30px] shadow-blockShadow max-700:pt-12
+      className="max-w-[510px] mt-9 bg-[var(--cultured)] p-7 pl-[65px] rounded-[30px] shadow-blockShadow max-700:pt-12
       max-700:pb-12 max-700:px-7"
     >
       <ol
-        className="relative space-y-[98px] 
+        className="relative space-y-14 
       before:content-['']
       before:w-1.5
       before:h-[90%]

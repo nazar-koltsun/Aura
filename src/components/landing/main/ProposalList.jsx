@@ -1,10 +1,10 @@
+import { useState } from 'react';
 import { cn } from '../../../lib/utils';
-import HighlightBox from '../HighlightBox';
+import ProposalItem from './ProposalItem';
 
 import FaceIcon from '../../icons/FaceIcon';
 import UserTableIcon from '../../icons/UserTableIcon';
 import HouseIcon from '../../icons/HouseIcon';
-import InfoIcon from '../../icons/InfoIcon';
 
 const proposals = [
   {
@@ -58,49 +58,21 @@ const proposals = [
 ];
 
 const ProposalList = ({ className }) => {
+  const [showMore, setShowMore] = useState(false);
+
+  const toggleShowMore = () => {
+    setShowMore(prevValue => !prevValue);
+  };
+
   return (
     <ul
       className={cn(
-        'grid grid-cols-3 gap-7 max-1240:grid-cols-2 max-1024:gap-4 max-700:grid-cols-1 max-700:gap-9',
+        'grid grid-cols-3 gap-7 max-1240:grid-cols-1 max-1024:gap-4 max-700:grid-cols-1 max-700:gap-9',
         className
       )}
     >
       {proposals.map((proposal, index) => (
-        <li
-          key={index}
-          className="transform duration-200 ease-in hover:-translate-y-2"
-        >
-          <HighlightBox
-            color="var(--metallic-silver)"
-            className="flex h-full rounded-[30px]"
-          >
-            <div className="relative flex flex-col items-center bg-[var(--cultured)] pt-8 pb-11 px-8 rounded-[30px] shadow-cardGray">
-              <div className="absolute top-3 right-10 flex justify-center items-center peer cursor-pointer w-8 h-8 max-700:right-7">
-                <InfoIcon className="pointer-events-none" />
-              </div>
-
-              <p className="hidden peer-hover:block absolute left-8 top-11 right-11 px-9 pt-9 pb-5 text-lg text-[var(--granite-gray)] rounded-[30px] bg-white pointer-events-none">
-                {proposal.add_info}
-              </p>
-              <div className="flex justify-center items-center w-[45px] h-[45px]">
-                {proposal.icon}
-              </div>
-              <h3 className="mt-3 text-2xl font-semibold text-[var(--eerie-black)] pointer-events-none">
-                {proposal.title}
-              </h3>
-              <ul className="mt-5 space-y-7 list-disc pl-6 pointer-events-none">
-                {proposal.description_items.map((item, index) => (
-                  <li
-                    key={index}
-                    className="text-lg text-[var(--granite-gray)]"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </HighlightBox>
-        </li>
+        <ProposalItem proposal={proposal} key={index} />
       ))}
     </ul>
   );
