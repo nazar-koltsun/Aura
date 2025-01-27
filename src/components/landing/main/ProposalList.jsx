@@ -58,11 +58,6 @@ const proposals = [
 ];
 
 const ProposalList = ({ className }) => {
-  const [showMore, setShowMore] = useState(false);
-
-  const toggleShowMore = () => {
-    setShowMore(prevValue => !prevValue);
-  };
 
   return (
     <ul
