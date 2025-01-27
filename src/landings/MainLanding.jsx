@@ -6,6 +6,8 @@ import ClientCardsSection from '../components/landing/main/sections/ClientCardsS
 import MainSection from '../components/landing/main/sections/MainSection';
 import ContactSection from '../components/landing/general-sections/ContactSection';
 
+import Modal from '../components/Modal';
+
 
 const MainLanding = () => {
   return (
@@ -19,6 +21,8 @@ const MainLanding = () => {
         <AdvantagesSections />
       </div>
       <ContactSection />
+
+      {/* <Modal isOpen={true}>Modal content</Modal> */}
     </>
   );
 };
