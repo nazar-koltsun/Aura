@@ -5,8 +5,7 @@ import HowToSection from '../components/landing/main/sections/HowToSection';
 import ClientCardsSection from '../components/landing/main/sections/ClientCardsSection';
 import MainSection from '../components/landing/main/sections/MainSection';
 import ContactSection from '../components/landing/general-sections/ContactSection';
-
-// import Modal from '../components/Modal';
+import VideoWidget from '../components/landing/VideoWidget'
 
 
 const MainLanding = () => {
@@ -22,7 +21,7 @@ const MainLanding = () => {
       </div>
       <ContactSection />
 
-      {/* <Modal isOpen={true}>Modal content</Modal> */}
+      <VideoWidget videoUrl="https://www.youtube.com/embed/8V8oX3pWdxY?si=WkCK-56ToJF4Z47a" />
     </>
   );
 };
