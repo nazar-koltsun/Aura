@@ -1,11 +1,26 @@
-import MainNav from './MainNav';
+import { useLocation } from 'react-router-dom';
 
+import MainNav from './MainNav';
 import Button from './Button';
 import { cn } from '../lib/utils';
+import UserInfoBox from './UserInfoBox';
 
 import GoOutIcon from '../components/icons/GoOutIcon';
+import UserAvatar from '../assets/images/user-avatar.png';
+
+const USER_DATA = {
+  name: 'Trent',
+  'last-name': 'Adam',
+  email: 'trentadam@net',
+  avatar: UserAvatar,
+  'notifications-count': 3,
+  isOnline: true,
+}
 
 const Sidebar = ({ isOpen, closeSidebar }) => {
+  const location = useLocation();
+  const isSuperAdminMainPage = location.pathname === '/';
+
   return (
     <>
       <aside
@@ -14,6 +29,8 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
           !isOpen && 'max-1024:hidden'
         )}
       >
+        {!isSuperAdminMainPage && <UserInfoBox user={USER_DATA} className='mb-5' />}
+
         <MainNav />
 
         <Button variant="flat" className="mt-6 ml-4">

@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import NavItem from './NavItem';
 
 import UsersIcon from '../components/icons/UsersIcon';
@@ -6,7 +7,7 @@ import PhoneIcon from '../components/icons/PhoneIcon';
 import LinkIcon from '../components/icons/LinkIcon';
 import GoOutIcon from '../components/icons/GoOutIcon';
 
-const NAV_ITEMS = [
+const SUPER_ADMIN_NAV_ITEMS = [
   {
     title: 'Użytkownicy',
     path: '/',
@@ -39,11 +40,38 @@ const NAV_ITEMS = [
   },
 ];
 
+const ADMIN_NAV_ITEMS = [
+  {
+    title: 'Dane Profilu',
+    path: '/',
+    icon: <UsersIcon />,
+  },
+  {
+    title: 'Płatności',
+    path: '/payments',
+    icon: <CreditCardIcon />,
+  },
+  {
+    title: 'Rozmowy',
+    path: '/conversations',
+    icon: <PhoneIcon />,
+  },
+  {
+    title: 'Raporty',
+    path: '/sandbox',
+    icon: <LinkIcon />,
+  },
+];
+
 const MainNav = () => {
+  const location = useLocation();
+  const isSuperAdminMainPage = location.pathname === '/';
+  const navItems = isSuperAdminMainPage ? SUPER_ADMIN_NAV_ITEMS : ADMIN_NAV_ITEMS;
+
   return (
     <nav className="mt-2">
       <ul className='space-y-2'>
-        {NAV_ITEMS.map((item) => (
+        {navItems.map((item) => (
           <NavItem key={item.title} {...item} />
         ))}
       </ul>

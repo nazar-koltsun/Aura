@@ -3,6 +3,7 @@ import RootLayout from './layouts/RootLayout';
 import LandingLayout from './layouts/LandingLayout';
 
 import UsersPage from './pages/UsersPage';
+import ConversationPage from './pages/ConversationPage';
 import MainLanding from './landings/MainLanding';
 
 const router = createBrowserRouter([
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <UsersPage />,
+      },
+      {
+        path: '/conversations',
+        element: <ConversationPage />,
       },
     ],
   },
