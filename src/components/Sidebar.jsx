@@ -13,7 +13,7 @@ const USER_DATA = {
   'last-name': 'Adam',
   email: 'trentadam@net',
   avatar: UserAvatar,
-  'notifications-count': 3,
+  'conversations-count': 3,
   isOnline: true,
 }
 

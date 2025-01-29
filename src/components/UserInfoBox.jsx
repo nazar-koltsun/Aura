@@ -25,7 +25,7 @@ const UserInfoBox = ({ user, className }) => {
         </div>
 
         <span className="self-start flex justify-center items-center min-w-[35px] px-[2px] text-xs text-white leading-[20px] bg-[var(--jungle-green)] rounded">
-          {user['notifications-count']}
+          {user['conversations-count']}
         </span>
       </div>
 
