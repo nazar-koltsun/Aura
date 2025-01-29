@@ -46,7 +46,7 @@ const VideoWidget = ({ videoUrl }) => {
         className={cn(
           'w-[324px] h-[180px] top-auto bottom-[6vh] right-4 left-auto transform-none translate-x-0 translate-y-0 p-0 border-0 max-1024:p-0',
           isModalClicked &&
-            'w-[800px] h-[480px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 pt-8 max-1024:p-3 max-1024:w-[97vw]'
+            'w-[800px] h-[480px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 pt-8 max-1024:p-3 max-1024:w-[97vw] max-520:h-[260px]'
         )}
       >
         <iframe
