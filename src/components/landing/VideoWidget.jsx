@@ -5,7 +5,6 @@ import Button from '../Button';
 import Modal from '../Modal';
 
 import TriangeIcon from '../icons/TriangeIcon';
-import { div } from 'framer-motion/client';
 
 const VideoWidget = ({ videoUrl }) => {
   const [isOpen, setIsOpen] = useState(false);
