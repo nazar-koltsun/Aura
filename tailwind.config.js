@@ -21,6 +21,8 @@ module.exports = {
         cardGreen: '3px 3px 20px 0 rgba(42, 157, 143, 0.4)',
         cardOrange: '3px 3px 20px 0 rgba(244, 162, 97, 0.4)',
         cardGray: '3px 3px 20px 0 rgba(139, 129, 129, 0.4)',
+        buttonShadow: '0 4px 25px -1px rgba(0, 0, 0, 0.25)',
+        premiumSdadow: '3px 3px 20px -1px #2a9d8f',
       },
     },
   },

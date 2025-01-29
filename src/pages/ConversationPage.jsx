@@ -2,6 +2,7 @@ import { useState } from 'react';
 import PageTitle from '../components/PageTitle';
 import Card from '../components/Card';
 import Tabs from '../components/Tabs';
+import AccountTypeCards from '../components/AccountTypeCards';
 
 const TABS_ITEMS = ['Doładuj konto', 'Użytkownicy'];
 
@@ -15,7 +16,7 @@ const ConversationPage = () => {
       tabContent = <div>Użytkownicy</div>;
       break;
     default:
-      tabContent = 'Doładuj konto';
+      tabContent = <AccountTypeCards />;
   }
 
   return (
@@ -28,7 +29,7 @@ const ConversationPage = () => {
           onClick={setActiveTab}
           activeTab={activeTab}
         />
-        <div className='mt-7'>
+        <div className='mt-10'>
           {tabContent}
         </div>
       </Card>
