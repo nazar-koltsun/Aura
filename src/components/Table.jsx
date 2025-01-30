@@ -1,8 +1,10 @@
 import { cn } from '../lib/utils';
 
 const Table = ({ topContent, data, className }) => {
+  const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth + 'px';
+
   return (
-    <div className={cn('bg-white max-1440:w-[calc(98vw-88px-64px-320px)] max-1024:w-full overflow-x-auto', className)}>
+    <div className={cn(`bg-white max-1440:w-[calc(100vw-88px-64px-320px-${scrollbarWidth})] max-1024:w-full overflow-x-auto`, className)}>
       <div className="sticky left-0 pb-8">{topContent}</div>
       <table className="w-full whitespace-nowrap relative">
         <thead>
