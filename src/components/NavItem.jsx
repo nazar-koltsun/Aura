@@ -17,7 +17,9 @@ const NavItem = ({ title, path, icon }) => {
       >
         {({ isActive }) => (
           <>
-            {icon}
+            <div className='w-6 h-6 flex justify-center items-center'>
+              {icon}
+            </div>
             {title}
             {isActive && <ArrowRightIcon className={'ml-auto'} />}
           </>

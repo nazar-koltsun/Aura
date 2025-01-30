@@ -1,4 +1,4 @@
-const PhoneIcon = ({ width = 26, height = 26, fill = '#65676B' }) => {
+const PhoneIcon = ({ width = 24, height = 24, fill = '#65676B' }) => {
   return (
     <svg
       width={width}
