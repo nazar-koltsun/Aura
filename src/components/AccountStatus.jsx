@@ -22,7 +22,7 @@ const AccountStatus = ({ user, className }) => {
       <Button
         variant="flat"
         className={cn(
-          'mt-3 font-semibold text-sm text-[var(--jungle-green)]',
+          'mt-3 font-semibold text-sm text-[var(--jungle-green)] text-left',
           user.conversationsCount === 0 && 'text-[#EE6663]'
         )}
       >
