@@ -1,6 +1,6 @@
 import { cn } from '../lib/utils';
 
-const Table = ({ topContent, data, className }) => {
+const Table = ({ topContent, data, className, onRowClick }) => {
   return (
     <div className={cn(`bg-white max-1440:w-[calc(100vw-88px-64px-320px-17px)] max-1024:w-full overflow-x-auto`, className)}>
       <div className="sticky left-0 pb-8">{topContent}</div>
@@ -22,7 +22,7 @@ const Table = ({ topContent, data, className }) => {
         </thead>
         <tbody>
           {data.map((row, rowIndex) => (
-            <tr key={rowIndex} className="border-b border-[var(--bright-gray)]">
+            <tr key={rowIndex} className="border-b border-[var(--bright-gray)] cursor-pointer transition duration-100 ease-in hover:bg-[var(--ghost-white)]" onClick={() => onRowClick(row)}>
               {Object.keys(row).map((key, index) => (
                 <td
                   key={index}

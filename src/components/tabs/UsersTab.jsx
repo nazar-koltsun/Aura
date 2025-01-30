@@ -6,6 +6,9 @@ import SearchInput from '../SearchInput';
 import FormSelect from '../FormSelect';
 import Pagination from '../Pagination';
 import UserAvatar from '../../assets/images/user-avatar.png';
+import EditUser from '../EditUser';
+
+import DoubleArrowLeftIcon from '../icons/DoubleArrowLeftIcon';
 
 const USERS_TABLE_DATA = [
   {
@@ -108,7 +111,7 @@ const TableTopContent = () => {
 
       <SearchInput className="ml-auto max-700:order-last max-700:w-full" />
 
-      <div className='ml-4 pl-4 pr-1.5 flex items-center gap-1 bg-[var(--ghost-white)] rounded-[10px] max-700:ml-0'>
+      <div className='pl-4 pr-1.5 flex items-center gap-1 bg-[var(--ghost-white)] rounded-[10px] max-700:ml-0'>
         <span className='text-xs text-[#7e7e7e] tracking-tighter'>Sortuj:</span>
         <FormSelect
           className='h-[38px] py-1 pl-0 pr-2.5 text-xs text-[#3d3c42] font-semibold tracking-tighter bg-transparent border-none outline-none'
@@ -124,9 +127,26 @@ const TableTopContent = () => {
 };
 
 const UsersTab = () => {
+  const [isUserEditing, setIsUserEditing] = useState(false);
+
+  const closeUserEditing = () => {
+    setIsUserEditing(false);
+  };
+
+  if (isUserEditing) {
+    return (
+      <>
+        <Button variant='flat' onClick={closeUserEditing} className='text-sm tracking-tight'>
+          <DoubleArrowLeftIcon /> Wróć do listy wszystkich użytkowników
+        </Button>
+        <EditUser />
+      </>
+    )
+  }
+
   return (
     <>
-      <Table data={USERS_TABLE_DATA} topContent={<TableTopContent />} />
+      <Table data={USERS_TABLE_DATA} topContent={<TableTopContent />} onRowClick={() => setIsUserEditing(true)} />
       <Pagination totalItems={256} itemsPerPage={8} className='mt-8' />
       <AccountStatus user={USER_DATA} className="mt-12" />
     </>
