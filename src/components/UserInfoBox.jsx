@@ -17,15 +17,15 @@ const UserInfoBox = ({ user, className }) => {
 
         <div className='grow'>
           <p className="font-medium text-[var(--eerie-black)] leading-tight">
-            {user.name} {user['last-name']}
+            {user.name} {user.lastName}
           </p>
           <p className="text-[var(--granite-gray)] leading-[27px]">
             {user.email}
           </p>
         </div>
 
-        <span className="self-start flex justify-center items-center min-w-[35px] px-[2px] text-xs text-white leading-[20px] bg-[var(--jungle-green)] rounded">
-          {user['conversations-count']}
+        <span className={cn("self-start flex justify-center items-center min-w-[35px] px-[2px] text-xs text-white leading-[20px] bg-[var(--jungle-green)] rounded", user.conversationsCount === 0 && 'bg-[#EE6663]')}>
+          {user.conversationsCount}
         </span>
       </div>
 
@@ -34,7 +34,7 @@ const UserInfoBox = ({ user, className }) => {
         variant="bordered"
         path="#"
       >
-        Rozpocznij rozmowę
+        {user.conversationsCount ? 'Rozpocznij rozmowę' : 'Doładuj konto'}
       </Button>
     </div>
   );

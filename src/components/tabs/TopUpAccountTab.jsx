@@ -1,11 +1,21 @@
 import AccountTypeCards from '../AccountTypeCards';
 import AccountStatus from '../AccountStatus';
+import UserAvatar from '../../assets/images/user-avatar.png';
+
+const USER_DATA = {
+  name: 'Trent',
+  lastName: 'Adam',
+  email: 'trentadam@net',
+  avatar: UserAvatar,
+  conversationsCount: 3,
+  isOnline: true,
+};
 
 const TopUpAccountTab = () => {
   return (
     <>
       <AccountTypeCards />
-      <AccountStatus className="mt-12" />
+      <AccountStatus user={USER_DATA} className="mt-12" />
     </>
   );
 };

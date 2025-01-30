@@ -5,6 +5,7 @@ import Button from '../Button';
 import SearchInput from '../SearchInput';
 import FormSelect from '../FormSelect';
 import Pagination from '../Pagination';
+import UserAvatar from '../../assets/images/user-avatar.png';
 
 const USERS_TABLE_DATA = [
   {
@@ -84,6 +85,15 @@ const USERS_SORT_OPTIONS = [
   },
 ]
 
+const USER_DATA = {
+  name: 'Trent',
+  lastName: 'Adam',
+  email: 'trentadam@net',
+  avatar: UserAvatar,
+  conversationsCount: 0,
+  isOnline: true,
+};
+
 const TableTopContent = () => {
   const [userSortValue, setUserSortValue] = useState(USERS_SORT_OPTIONS[0].value);
 
@@ -118,7 +128,7 @@ const UsersTab = () => {
     <>
       <Table data={USERS_TABLE_DATA} topContent={<TableTopContent />} />
       <Pagination totalItems={256} itemsPerPage={8} className='mt-8' />
-      <AccountStatus className="mt-12" />
+      <AccountStatus user={USER_DATA} className="mt-12" />
     </>
   );
 };
