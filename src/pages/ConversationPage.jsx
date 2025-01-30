@@ -3,6 +3,7 @@ import PageTitle from '../components/PageTitle';
 import Card from '../components/Card';
 import Tabs from '../components/Tabs';
 import TopUpAccountTab from '../components/tabs/TopUpAccountTab';
+import UsersTab from '../components/tabs/UsersTab';
 
 const TABS_ITEMS = ['Doładuj konto', 'Użytkownicy'];
 
@@ -13,7 +14,7 @@ const ConversationPage = () => {
 
   switch (activeTab) {
     case 'Użytkownicy':
-      tabContent = <div>Użytkownicy</div>;
+      tabContent = <UsersTab />;
       break;
     default:
       tabContent = <TopUpAccountTab />
