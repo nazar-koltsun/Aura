@@ -4,6 +4,7 @@ import AccountStatus from '../AccountStatus';
 import Button from '../Button';
 import SearchInput from '../SearchInput';
 import FormSelect from '../FormSelect';
+import Pagination from '../Pagination';
 
 const USERS_TABLE_DATA = [
   {
@@ -70,70 +71,6 @@ const USERS_TABLE_DATA = [
     'Ilość rozmów': '3/5',
     Status: 'Nieaktywny',
   },
-  {
-    'Imię i Nazwisko': 'Jan Nowak',
-    Stanowisko: 'Project Manager',
-    'Data Dodania': '13/12/2024',
-    'E-mail': 'jannowak@gmail.com',
-    'Ilość rozmów': '1/5',
-    Status: 'Aktywny',
-  },
-  {
-    'Imię i Nazwisko': 'Jon Doe',
-    Stanowisko: 'Project Manager',
-    'Data Dodania': '13/12/2024',
-    'E-mail': 'jondoe@gmail.com',
-    'Ilość rozmów': '2/10',
-    Status: 'Nieaktywny',
-  },
-  {
-    'Imię i Nazwisko': 'Jan Nowak',
-    Stanowisko: 'Project Manager',
-    'Data Dodania': '13/12/2024',
-    'E-mail': 'jannowak@gmail.com',
-    'Ilość rozmów': '1/2',
-    Status: 'Nieaktywny',
-  },
-  {
-    'Imię i Nazwisko': 'Jon Doe',
-    Stanowisko: 'Project Manager',
-    'Data Dodania': '13/12/2024',
-    'E-mail': 'jondoe@gmail.com',
-    'Ilość rozmów': '1/4',
-    Status: 'Aktywny',
-  },
-  {
-    'Imię i Nazwisko': 'Jon Doe',
-    Stanowisko: 'Project Manager',
-    'Data Dodania': '13/12/2024',
-    'E-mail': 'jondoe@gmail.com',
-    'Ilość rozmów': '4/14',
-    Status: 'Nieaktywny',
-  },
-  {
-    'Imię i Nazwisko': 'Jon Doe',
-    Stanowisko: 'Project Manager',
-    'Data Dodania': '13/12/2024',
-    'E-mail': 'jondoe@gmail.com',
-    'Ilość rozmów': '4/5',
-    Status: 'Aktywny',
-  },
-  {
-    'Imię i Nazwisko': 'Jon Doe',
-    Stanowisko: 'Project Manager',
-    'Data Dodania': '13/12/2024',
-    'E-mail': 'jondoe@gmail.com',
-    'Ilość rozmów': '4/10',
-    Status: 'Nieaktywny',
-  },
-  {
-    'Imię i Nazwisko': 'Jon Doe',
-    Stanowisko: 'Project Manager',
-    'Data Dodania': '13/12/2024',
-    'E-mail': 'jondoe@gmail.com',
-    'Ilość rozmów': '1/5',
-    Status: 'Aktywny',
-  },
 ];
 
 const USERS_SORT_OPTIONS = [
@@ -180,7 +117,7 @@ const UsersTab = () => {
   return (
     <>
       <Table data={USERS_TABLE_DATA} topContent={<TableTopContent />} />
-      <div>pagination</div>
+      <Pagination totalItems={256} itemsPerPage={8} className='mt-8' />
       <AccountStatus className="mt-12" />
     </>
   );
