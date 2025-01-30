@@ -47,7 +47,7 @@ const ProfileForm = ({ userData }) => {
     <form
       onSubmit={onFormSubmit}
     >
-      <div className="grid grid-cols-4 max-1920:grid-cols-3 max-1440:grid-cols-2 max-620:grid-cols-1 gap-7">
+      <div className="grid grid-cols-4 max-1920:grid-cols-3 max-1440:grid-cols-2 max-700:grid-cols-1 gap-7">
         <div className="space-y-3">
           <FormLabel htmlFor="name">Imię</FormLabel>
           <FormInput
