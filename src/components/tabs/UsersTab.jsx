@@ -140,8 +140,6 @@ const UsersTab = () => {
     setEditingUser([userData]);
   };
 
-  console.log(editingUser);
-
   if (isUserEditing) {
     return (
       <>

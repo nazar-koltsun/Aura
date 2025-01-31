@@ -10,10 +10,10 @@ import UserAvatar from '../assets/images/user-avatar.png';
 
 const USER_DATA = {
   name: 'Trent',
-  'last-name': 'Adam',
+  lastName: 'Adam',
   email: 'trentadam@net',
   avatar: UserAvatar,
-  'conversations-count': 3,
+  conversationsCount: 3,
   isOnline: true,
 }
 
