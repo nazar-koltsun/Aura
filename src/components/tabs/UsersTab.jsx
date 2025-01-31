@@ -128,10 +128,18 @@ const TableTopContent = () => {
 
 const UsersTab = () => {
   const [isUserEditing, setIsUserEditing] = useState(false);
+  const [editingUser, setEditingUser] = useState([]);
 
   const closeUserEditing = () => {
     setIsUserEditing(false);
   };
+
+  const onTableRowClick = (userData) => {
+    setIsUserEditing(true);
+    setEditingUser([userData]);
+  };
+
+  console.log(editingUser);
 
   if (isUserEditing) {
     return (
@@ -139,14 +147,14 @@ const UsersTab = () => {
         <Button variant='flat' onClick={closeUserEditing} className='text-sm tracking-tight'>
           <DoubleArrowLeftIcon /> Wróć do listy wszystkich użytkowników
         </Button>
-        <EditUser />
+        <EditUser className='mt-8' user={editingUser} />
       </>
     )
   }
 
   return (
     <>
-      <Table data={USERS_TABLE_DATA} topContent={<TableTopContent />} onRowClick={() => setIsUserEditing(true)} />
+      <Table data={USERS_TABLE_DATA} topContent={<TableTopContent />} onRowClick={onTableRowClick} />
       <Pagination totalItems={256} itemsPerPage={8} className='mt-8' />
       <AccountStatus user={USER_DATA} className="mt-12" />
     </>
