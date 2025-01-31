@@ -7,6 +7,7 @@ import FormSelect from '../FormSelect';
 import Pagination from '../Pagination';
 import UserAvatar from '../../assets/images/user-avatar.png';
 import EditUser from '../EditUser';
+import ConversationsHistory from '../ConversationsHistory';
 
 import DoubleArrowLeftIcon from '../icons/DoubleArrowLeftIcon';
 
@@ -148,6 +149,7 @@ const UsersTab = () => {
           <DoubleArrowLeftIcon /> Wróć do listy wszystkich użytkowników
         </Button>
         <EditUser className='mt-8' user={editingUser} />
+        <ConversationsHistory className='mt-16' />
       </>
     )
   }
