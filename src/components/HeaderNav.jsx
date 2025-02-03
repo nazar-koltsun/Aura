@@ -16,14 +16,14 @@ const HeaderNav = ({ navItems }) => {
 
   const renderNavItem = (item, isLastItem, index) => {
     const baseClasses =
-      'max-960:block px-5 max-960:py-4 text-[var(--granite-gray)] font-medium hover:text-[var(--sandy-brown)] transition duration-200 ease-in-out max-960:text-lg';
+      'max-960:block px-5 max-960:py-4 text-center text-[var(--granite-gray)] font-medium hover:text-[var(--sandy-brown)] transition duration-200 ease-in-out max-960:text-lg';
 
     if (isLastItem) {
       return (
         <Button
           key={item.title}
           path={item.path}
-          className="ml-5 py-2.5 px-5 max-960:mt-4 max-960:ml-0 text-sm bg-[var(--sandy-brown)] hover:bg-[#DE8640] max-960:text-lg"
+          className="ml-5 py-2.5 px-5 max-960:mt-4 max-960:ml-0 text-sm bg-[var(--sandy-brown)] hover:bg-[#DE8640] text-center max-960:text-lg"
         >
           {item.title}
         </Button>

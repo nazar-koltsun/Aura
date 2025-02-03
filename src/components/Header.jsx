@@ -5,10 +5,13 @@ import { cn } from '../lib/utils';
 
 import UserIcon from './icons/UserIcon';
 
-const Header = ({ navItems = [], className }) => {
+const Header = ({ navItems = [], className, isCorporate = false }) => {
   return (
-    <header className={cn("relative col-span-2 flex justify-between items-center gap-6 px-14 py-2.5 border-b border-[var(--bright-gray)] max-1024:px-6 max-1024:gap-4 bg-white z-30", className)}>
-      <img className='max-1024:w-[180px] max-1024:h-auto"' src={Logo} width={216} height={110} alt="nowAura logo" />
+    <header className={cn("relative col-span-2 flex justify-between items-center gap-6 px-14 py-2.5 border-b border-[var(--bright-gray)] max-1240:px-6 max-1240:gap-4 bg-white z-30", className)}>
+      <div className="flex items-center gap-1.5">
+        <img className='max-1024:w-[180px] max-1024:h-auto"' src={Logo} width={216} height={110} alt="nowAura logo" />
+        {isCorporate && <span className='mt-4 text-sm text-[var(--granite-gray)] max-1240:hidden'>firmowy</span>}
+      </div>
 
       { navItems.length > 0 && <HeaderNav navItems={navItems} /> }
 

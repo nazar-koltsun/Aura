@@ -5,6 +5,7 @@ import LandingLayout from './layouts/LandingLayout';
 import UsersPage from './pages/UsersPage';
 import ConversationPage from './pages/ConversationPage';
 import MainLanding from './landings/MainLanding';
+import CorporateLanding from './landings/CorporateLanding';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/landings/main',
         element: <MainLanding />,
+      },
+      {
+        path: '/landings/corporate',
+        element: <CorporateLanding />,
       },
     ],
   },
