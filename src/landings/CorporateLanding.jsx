@@ -20,7 +20,7 @@ const BENEFITS = {
   items: [
     {
       icon: <TeamPeopleThinkingIcon />,
-      text: <p>Zmniejszona rotacja <br /> pracownicza</p>
+      text: <p>Zmniejszona rotacja <br className='max-1024:hidden' /> pracownicza</p>
     },
     {
       icon: <MindsetThinkingIcon />,
