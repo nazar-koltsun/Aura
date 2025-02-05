@@ -3,6 +3,7 @@ import VideoWidget from '../components/landing/VideoWidget';
 import MainSection from '../components/landing/corporate/sections/MainSection';
 import WhyVRPlusAISection from '../components/landing/corporate/sections/WhyVRPlusAISection';
 import WhatDoYouGetSection from '../components/landing/general-sections/WhatDoYouGetSection';
+import PlansCardsSection from '../components/landing/corporate/sections/PlansCardsSection';
 
 import FeaturesBanner from '../assets/images/landing/features-banner.webp';
 
@@ -28,7 +29,7 @@ const BENEFITS = {
     },
     {
       icon: <TimeIdeaHumanIcon />,
-      text: <p><b className='font-semibold'>4 x większe</b>skupienie podczas szkolenia</p>
+      text: <p><b className='font-semibold'>4 x większe</b> skupienie podczas szkolenia</p>
     },
     {
       icon: <DataAnalysisIcon />,
@@ -43,6 +44,7 @@ const CorporateLanding = () => {
       <MainSection />
       <WhyVRPlusAISection />
       <WhatDoYouGetSection benefits={BENEFITS} />
+      <PlansCardsSection />
       <ContactSection />
       <VideoWidget videoUrl="https://www.youtube.com/embed/8V8oX3pWdxY?si=WkCK-56ToJF4Z47a" />
     </>
@@ -50,3 +52,4 @@ const CorporateLanding = () => {
 };
 
 export default CorporateLanding;
+ 

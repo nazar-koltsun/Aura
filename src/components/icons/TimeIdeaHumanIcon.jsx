@@ -1,8 +1,4 @@
-const TimeIdeaHumanIcon = ({
-  width = 61,
-  height = 61,
-  className,
-}) => {
+const TimeIdeaHumanIcon = ({ width = 61, height = 61, className }) => {
   return (
     <svg
       width={width}
@@ -92,14 +88,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0976"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_129_5077"
@@ -109,14 +105,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0977"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_129_5077"
@@ -126,14 +122,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0975"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_129_5077"
@@ -143,14 +139,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.1079"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_129_5077"
@@ -160,14 +156,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0927"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_129_5077"
@@ -177,14 +173,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0832"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_129_5077"
@@ -194,14 +190,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0993"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_129_5077"
@@ -211,14 +207,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.1094"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_129_5077"
@@ -228,14 +224,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0977"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint9_linear_129_5077"
@@ -245,14 +241,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0977"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint10_linear_129_5077"
@@ -262,14 +258,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.1061"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint11_linear_129_5077"
@@ -279,14 +275,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0948"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint12_linear_129_5077"
@@ -296,14 +292,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0919"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint13_linear_129_5077"
@@ -313,14 +309,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0942"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint14_linear_129_5077"
@@ -330,14 +326,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0989"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint15_linear_129_5077"
@@ -347,14 +343,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0977"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint16_linear_129_5077"
@@ -364,14 +360,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0977"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F4A261" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F4A261" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint17_linear_129_5077"
@@ -381,14 +377,14 @@ const TimeIdeaHumanIcon = ({
           y2="66.0976"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
       </defs>
     </svg>

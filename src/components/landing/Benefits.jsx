@@ -25,7 +25,7 @@ const Benefits = ({ benefits, className }) => {
             {item.icon}
           </div>
 
-          <div className="mt-6 text-[15px] text-[var(--granite-gray)] leading-[30px] max-700:text-[10px] max-700:leading-[16px] max-1024:mt-3">
+          <div className="mt-6 text-[15px] text-[var(--granite-gray)] leading-[30px] max-700:text-[12px] max-700:leading-[22px] max-1024:mt-3">
             {item.text}
           </div>
         </div>

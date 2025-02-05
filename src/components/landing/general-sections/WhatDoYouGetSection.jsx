@@ -15,7 +15,7 @@ const WhatDoYouGetSection = ({ benefits }) => {
         src={SeparatorTopImg}
       />
 
-      <div className='py-6 flex flex-col justify-center items-center max-w-[950px] mx-auto'>
+      <div className='pt-10 pb-12 flex flex-col justify-center items-center max-w-[950px] mx-auto'>
         <Subtitle title="Jak to działa?" isShort />
 
         <SectionTitle

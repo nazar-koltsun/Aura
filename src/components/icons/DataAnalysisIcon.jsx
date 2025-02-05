@@ -44,14 +44,14 @@ const DataAnalysisIcon = ({ width = 61, height = 61, className }) => {
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_129_5099"
@@ -61,14 +61,14 @@ const DataAnalysisIcon = ({ width = 61, height = 61, className }) => {
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_129_5099"
@@ -78,14 +78,14 @@ const DataAnalysisIcon = ({ width = 61, height = 61, className }) => {
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_129_5099"
@@ -95,14 +95,14 @@ const DataAnalysisIcon = ({ width = 61, height = 61, className }) => {
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_129_5099"
@@ -112,14 +112,14 @@ const DataAnalysisIcon = ({ width = 61, height = 61, className }) => {
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_129_5099"
@@ -129,14 +129,14 @@ const DataAnalysisIcon = ({ width = 61, height = 61, className }) => {
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_129_5099"
@@ -146,14 +146,14 @@ const DataAnalysisIcon = ({ width = 61, height = 61, className }) => {
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F4A261" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F4A261" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
       </defs>
     </svg>

@@ -1,8 +1,4 @@
-const TeamPeopleThinkingIcon = ({
-  width = 61,
-  height = 61,
-  className,
-}) => {
+const TeamPeopleThinkingIcon = ({ width = 61, height = 61, className }) => {
   return (
     <svg
       width={width}
@@ -124,14 +120,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_129_5125"
@@ -141,14 +137,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_129_5125"
@@ -158,14 +154,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F4A261" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F4A261" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_129_5125"
@@ -175,14 +171,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_129_5125"
@@ -192,14 +188,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4151"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_129_5125"
@@ -209,14 +205,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4117"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_129_5125"
@@ -226,14 +222,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4161"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_129_5125"
@@ -243,14 +239,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4264"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_129_5125"
@@ -260,14 +256,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint9_linear_129_5125"
@@ -277,14 +273,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4169"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint10_linear_129_5125"
@@ -294,14 +290,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4167"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint11_linear_129_5125"
@@ -311,14 +307,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4111"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint12_linear_129_5125"
@@ -328,14 +324,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4146"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint13_linear_129_5125"
@@ -345,14 +341,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint14_linear_129_5125"
@@ -362,14 +358,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint15_linear_129_5125"
@@ -379,14 +375,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F4A261" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F4A261" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint16_linear_129_5125"
@@ -396,14 +392,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4276"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint17_linear_129_5125"
@@ -413,14 +409,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4144"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint18_linear_129_5125"
@@ -430,14 +426,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4063"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint19_linear_129_5125"
@@ -447,14 +443,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4158"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint20_linear_129_5125"
@@ -464,14 +460,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4327"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint21_linear_129_5125"
@@ -481,14 +477,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint22_linear_129_5125"
@@ -498,14 +494,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4282"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint23_linear_129_5125"
@@ -515,14 +511,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4168"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint24_linear_129_5125"
@@ -532,14 +528,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4059"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
         <linearGradient
           id="paint25_linear_129_5125"
@@ -549,14 +545,14 @@ const TeamPeopleThinkingIcon = ({
           y2="66.4198"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF33B" />
-          <stop offset="0.014" stop-color="#FEE72E" />
-          <stop offset="0.042" stop-color="#FED51B" />
-          <stop offset="0.07" stop-color="#FDCA10" />
-          <stop offset="0.1" stop-color="#FDC70C" />
-          <stop offset="0.4" stop-color="#F3903F" />
-          <stop offset="0.8" stop-color="#ED683C" />
-          <stop offset="1" stop-color="#E93E3A" />
+          <stop stopColor="#FFF33B" />
+          <stop offset="0.014" stopColor="#FEE72E" />
+          <stop offset="0.042" stopColor="#FED51B" />
+          <stop offset="0.07" stopColor="#FDCA10" />
+          <stop offset="0.1" stopColor="#FDC70C" />
+          <stop offset="0.4" stopColor="#F3903F" />
+          <stop offset="0.8" stopColor="#ED683C" />
+          <stop offset="1" stopColor="#E93E3A" />
         </linearGradient>
       </defs>
     </svg>
