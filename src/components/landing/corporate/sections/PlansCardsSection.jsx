@@ -1,12 +1,17 @@
 import Subtitle from "../../Subtitle";
 
 import PlansCardsBg from '../../../../assets/images/landing/plans-cards-bg.webp';
+import PlansCardsBgMob from '../../../../assets/images/landing/plans-cards-bg-mob.webp';
 import SeparatorTopSimpleImage from '../../../../assets/images/landing/separator-top-simple.svg';
 import SeparatorBottomSimpleImage from '../../../../assets/images/landing/separator-bottom-simple.svg';
 import PlanCard from '../../PlanCard';
 
 import FaceIcon from '../../../icons/FaceIcon';
 import UserTableIcon from '../../../icons/UserTableIcon';
+import TwoHeadsBrainIcon from '../../../icons/TwoHeadsBrainIcon';
+import TwoHandsBrainIcon from '../../../icons/TwoHandsBrainIcon';
+import MindsetThinkingGreenIcon from '../../../icons/MindsetThinkingGreenIcon';
+import TeamPeopleThinkingGreenIcon from '../../../icons/TeamPeopleThinkingGreenIcon';
 
 const plansData = [
   {
@@ -26,35 +31,59 @@ const plansData = [
     items: [
       {
         title: "Wartość dla pracowników",
-        icon: null,
-        features: ['Zrozumienie potrzeb klientów', 'Przełamywanie obiekcji', 'Skrócenie cyklu sprzedaży', 'Rozwój umiejętności negocjacji', 'Prezentowanie oferty językiem korzyścim'],
+        icon: <TwoHeadsBrainIcon />,
+        features: ['Zrozumienie potrzeb klientów', 'Przełamywanie obiekcji', 'Skrócenie cyklu sprzedaży', 'Rozwój umiejętności negocjacji', 'Prezentowanie oferty językiem korzyści'],
+      },
+      {
+        title: "Wpływ na firmę",
+        icon: <TwoHandsBrainIcon />,
+        features: ['Zwiększenie szans na powtórny zakup', 'Więcej pozytywnych rekomendacji', 'Klienci jako ambasadorzy marki', 'Wiarygodności firmy', 'Większe szanse na cross-selling'],
       }
     ],
     color: '#F4A261',
+    href: '#',
   },
-  // {
-  //   title: 'softskillAURA',
-  //   icon: <UserTableIcon className="pointer-events-none" />,
-  //   description_items: [
-  //     <p>
-  //       Dla <b>menedżerów</b>, którzy chcą doskonalić swoje umiejętności interpersonalne i zarządzania zespołem bez utraty motywacji i zaangażowania pracowników.
-  //     </p>,
-  //     <p>
-  //       Trenuj rozmowy z zespołem, by <b>udzielać</b> konstruktywnego <b>feedbacku</b>, rozwiązywać konflikty, zarządzać zmianą i projektami.
-  //     </p>,
-  //   ],
-  // },
+  {
+    title: 'softskillAURA',
+    icon: <UserTableIcon className="pointer-events-none" />,
+    description_items: [
+      <p>
+        Dla <b>menedżerów</b>, którzy chcą doskonalić swoje umiejętności interpersonalne i zarządzania zespołem bez utraty motywacji i zaangażowania pracowników.
+      </p>,
+      <p>
+        Trenuj rozmowy z zespołem, by <b>udzielać</b> konstruktywnego <b>feedbacku</b>, rozwiązywać konflikty, zarządzać zmianą i projektami.
+      </p>,
+    ],
+    items: [
+      {
+        title: "Nagłówek 1",
+        icon: <MindsetThinkingGreenIcon />,
+        features: ['Motywowanie zespołu wartościami', 'Precyzyjne przekazywanie oczekiwań', 'Zrozumienie potrzeb i oczekiwań zespołu', 'Zarządzanie obawami zespołu', 'Udzielanie adekwatnego feedbacku'],
+      },
+      {
+        title: "Nagłówek 2",
+        icon: <TeamPeopleThinkingGreenIcon />,
+        features: ['Zwiększenie szans na powtórny zakup', 'Więcej pozytywnych rekomendacji', 'Klienci jako ambasadorzy marki', 'Wiarygodności firmy', 'Większe szanse na cross-selling'],
+      }
+    ],
+    color: '#2A9D8F',
+    href: '#',
+  }
 ];
 
 const PlansCardsSection = () => {
   return (
-    <section className="px-4 py-[92px] relative">
+    <section className="px-4 pt-[92px] pb-[80px] relative max-1024:pt-[50px] max-1024:pb-[50px]">
       <div className="relative z-10 max-w-[1034px] mx-auto flex flex-col items-center justify-center">
         <Subtitle title='Trenuj z nami' isShort />
-        <h2 className="mt-6 text-center text-white text-[44px] leading-[54px] font-semibold">Dla handlowców i menadżerów</h2>
-        <p className="mt-[22px] text-center max-w-[500px] text-white leading-[27px]">Trenuj rozmowy sprzedaży z wirtualnym klientem, rozwijaj kompetencje przełamywania obiekcji, prezentacji oferty, budowania zaufania, zamykania sprzedaży.</p>
+        <h2 className="mt-6 text-center text-white text-[44px] leading-[54px] font-semibold max-1024:text-[28px] max-1024:leading-[34px] max-1024:mt-3">
+          Dla handlowców i menadżerów
+        </h2>
+        <p className="mt-[22px] text-center max-w-[500px] text-white leading-[27px] max-1024:mt-4">
+          Trenuj rozmowy sprzedaży z wirtualnym klientem, rozwijaj kompetencje przełamywania obiekcji, prezentacji oferty, budowania zaufania, zamykania sprzedaży.
+        </p>
 
-        <div className="mt-8 w-full">
+        <div className="mt-8 w-full space-y-[27px]">
           {plansData.map((plan, index) => (
             <PlanCard key={index} planData={plan} />
           ))}
@@ -63,10 +92,10 @@ const PlansCardsSection = () => {
       </div>
 
       <picture>
-        {/* <source
-          srcSet={PlansCardsBg}
+        <source
+          srcSet={PlansCardsBgMob}
           media="(max-width: 520px)"
-        /> */}
+        />
         <img
           src={PlansCardsBg}
           alt=""

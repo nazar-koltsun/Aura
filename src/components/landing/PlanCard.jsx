@@ -1,35 +1,82 @@
-import Button from "../Button";
+import { cn } from '../../lib/utils';
+import Button from '../Button';
 
-const PlanCard = ({planData}) => {
+import GradientCheckIcon from '../icons/GradientCheckIcon';
+
+const PlanCard = ({ planData }) => {
+  const onBtnEnter = (e) => {
+    e.target.style.backgroundColor = planData.color;
+    e.target.style.color = 'white';
+  };
+
+  const onBtnLeave = (e) => {
+    e.target.style.backgroundColor = 'transparent';
+    e.target.style.color = planData.color;
+  }
+
   return (
-    <div className="px-[50px] pt-[18px] pb-8 flex justify-between gap-10 w-full bg-[#F5F8FA] bg-opacity-70 rounded-[30px] hover:bg-opacity-100 transition ease-out duration-200">
-      <div className="w-[45%] pt-4 pb-2 flex flex-col items-center">
-        {planData.icon}
+    <div className="pr-[50px] pl-[60px] pt-[18px] pb-8 flex justify-between gap-10 w-full bg-[#F5F8FA] bg-opacity-70 rounded-[30px] hover:bg-opacity-100 transition ease-out duration-200 max-1024:flex-col max-1024:px-4 max-1024:pb-6 max-1024:gap-5">
+      <div className="w-[44%] pt-4 pb-2 flex flex-col items-center max-1024:w-full">
+        <div className="w-[45px] h-[45px] flex justify-center items-center">
+          {planData.icon}
+        </div>
 
-        <h3 className="mt-3 text-2xl text-[var(--eerie-black)] font-semibold">{planData.title}</h3>
+        <h3 className="mt-3 text-2xl text-[var(--eerie-black)] font-semibold">
+          {planData.title}
+        </h3>
 
-        <ul className="mt-5 mb-4 space-y-6 list-disc">
+        <ul className="mt-5 mb-4 space-y-6 list-disc max-1024:pl-4 max-1024:mb-7 max-1024:max-w-[600px]">
           {planData.description_items.map((item, index) => (
-            <li key={index} className="text-lg leading-[30px] text-[var(--granite-gray)]">
+            <li
+              key={index}
+              className="text-lg leading-[30px] text-[var(--granite-gray) max-1024:text-base max-1024:leading-[28px]"
+            >
               {item}
             </li>
           ))}
         </ul>
 
-        <Button variant="bordered" 
-        className="mt-auto border-[var(--sandy-brown)] text-[var(--sandy-brown)] hover:bg-[var(--sandy-brown)] text-[17px] min-w-[262px] min-h-[60px]">Zamów demo</Button>
+        <Button
+          variant="bordered"
+          path={planData.href}
+          style={{
+            borderColor: planData.color,
+            color: planData.color,
+          }}
+          onMouseEnter={onBtnEnter}
+          onMouseLeave={onBtnLeave}
+          className={cn('mt-auto text-[17px] min-w-[262px] min-h-[60px]')}
+        >
+          Zamów demo
+        </Button>
       </div>
 
-      <div className="w-[55%]">
+      <div className="w-[56%] flex flex-col gap-6 max-1024:w-full max-1024:flex-row max-1024:justify-between max-1024:gap-3 max-700:flex-col max-700:items-center">
         {planData.items.map((item, index) => (
-          <div key={index} className="pt-[47px] pb-[42px] pr-[50px] pl-7 bg-[#F5F8FA] bg-opacity-70 rounded-[30px] shadow-cardGray">
-            {item.icon}
+          <div
+            key={index}
+            className="w-full pt-[47px] pb-[42px] pr-[50px] pl-7 items-center flex gap-8 bg-[#F5F8FA] bg-opacity-70 rounded-[30px] shadow-cardGray max-1024:p-4 max-1024:gap-5 max-700:w-3/4 max-520:w-full"
+          >
+            <div className="w-[65px] h-[65px] flex justify-center items-center max-1024:w-[40px] max-1024:h-[40px]">
+              {item.icon}
+            </div>
             <div>
-              <h4>{item.title}</h4>
+              <div className="inline-block">
+                <h4 className="text-[21px] text-[var(--eerie-black)] leading-[24px] font-medium">
+                  {item.title}
+                </h4>
 
-              <ul>
+                <div className="mt-[2px] w-full h-[2px] bg-gradient-to-r from-transparent via-[#79BCB3] via-[50%] to-transparent to-[100%]"></div>
+              </div>
+
+              <ul className="mt-2.5">
                 {item.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
+                  <li
+                    key={index}
+                    className="flex items-center gap-2.5 text-[15px] leading-[25px] text-[var(--granite-gray)] max-1024:text-[12px] max-1024:leading-6"
+                  >
+                    <GradientCheckIcon /> {feature}
+                  </li>
                 ))}
               </ul>
             </div>
