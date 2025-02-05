@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { cn } from '../../lib/utils';
 import FormAgreementCheckbox from '../FormAgreementCheckbox';
 import Button from '../Button';
 
-const NewsletterPopup = ({ isOpen, onClose }) => {
+const NewsletterPopup = ({ isOpen, onClose, className }) => {
   const [agreements, setAgreements] = useState([
     {
       id: 'all',
@@ -61,7 +62,7 @@ const NewsletterPopup = ({ isOpen, onClose }) => {
   }
 
   return (
-    <div className="absolute -top-[130px] -right-[80%] max-1024:-right-[80%] w-72 py-8 px-6 bg-white border border-[#DBEFEC] rounded-[30px] max-700:right-0">
+    <div className={cn("absolute -top-[130px] -right-[80%] max-1024:-right-[80%] w-72 py-8 px-6 bg-white border border-[#DBEFEC] rounded-[30px] max-700:right-0", className)}>
       <form onSubmit={(e) => e.preventDefault()}>
         <div className="space-y-1.5">
           {agreements.map((agreement) => (

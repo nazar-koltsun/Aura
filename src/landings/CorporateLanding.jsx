@@ -4,6 +4,7 @@ import MainSection from '../components/landing/corporate/sections/MainSection';
 import WhyVRPlusAISection from '../components/landing/corporate/sections/WhyVRPlusAISection';
 import WhatDoYouGetSection from '../components/landing/general-sections/WhatDoYouGetSection';
 import PlansCardsSection from '../components/landing/corporate/sections/PlansCardsSection';
+import InterviewSection from '../components/landing/corporate/sections/InterviewSection';
 
 import FeaturesBanner from '../assets/images/landing/features-banner.webp';
 
@@ -45,6 +46,7 @@ const CorporateLanding = () => {
       <WhyVRPlusAISection />
       <WhatDoYouGetSection benefits={BENEFITS} />
       <PlansCardsSection />
+      <InterviewSection />
       <ContactSection />
       <VideoWidget videoUrl="https://www.youtube.com/embed/8V8oX3pWdxY?si=WkCK-56ToJF4Z47a" />
     </>
