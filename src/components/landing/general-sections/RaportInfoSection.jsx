@@ -47,7 +47,7 @@ const Accordion = ({ title, children }) => {
           <span>{isOpen ? <MinusIcon /> : <PlusIcon />}</span>
         </div>
 
-        <div class="relative mt-[2px] w-full h-[1px] bg-gradient-to-r from-transparent via-[#79BCB3] via-[50%] to-transparent to-[100%] overflow-hidden">
+        <div className="relative mt-[2px] w-full h-[1px] bg-gradient-to-r from-transparent via-[#79BCB3] via-[50%] to-transparent to-[100%] overflow-hidden">
           <AccordionLineIcon
             className={cn(
               'absolute left-0',
@@ -76,7 +76,7 @@ const RaportInfoSection = () => {
         alt=""
       />
 
-      <div className="py-10 max-w-[1060px] mx-auto grid grid-cols-2 gap-24 max-1024:gap-8 max-700:grid-cols-1 max-1024:py-3">
+      <div className="pt-10 pb-12 max-w-[1060px] mx-auto grid grid-cols-2 gap-24 max-1024:gap-8 max-700:grid-cols-1 max-1024:pt-3 max-1024:pb-10">
         <div className="rounded-[30px] overflow-hidden self-start shadow-cardGray max-700:order-2">
           <picture>
             <source media="(max-width: 700px)" srcSet={RaportInfoImgMob} />

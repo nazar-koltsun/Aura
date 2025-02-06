@@ -6,6 +6,7 @@ import WhatDoYouGetSection from '../components/landing/general-sections/WhatDoYo
 import PlansCardsSection from '../components/landing/corporate/sections/PlansCardsSection';
 import InterviewSection from '../components/landing/corporate/sections/InterviewSection';
 import RaportInfoSection from '../components/landing/general-sections/RaportInfoSection';
+import FeaturesTableSection from '../components/landing/general-sections/FeaturesTableSection';
 
 import FeaturesBanner from '../assets/images/landing/features-banner.webp';
 
@@ -49,6 +50,7 @@ const CorporateLanding = () => {
       <PlansCardsSection />
       <InterviewSection />
       <RaportInfoSection />
+      <FeaturesTableSection />
       <ContactSection />
       <VideoWidget videoUrl="https://www.youtube.com/embed/8V8oX3pWdxY?si=WkCK-56ToJF4Z47a" />
     </>

@@ -22,9 +22,9 @@ const AccordionLineIcon = ({
           width="53.7695"
           height="41"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="10" />
           <feComposite
             in2="SourceAlpha"
@@ -46,10 +46,10 @@ const AccordionLineIcon = ({
           y2="0.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-opacity="0" />
-          <stop stop-color="white" stop-opacity="0" />
-          <stop offset="0.5" stop-color="#2A9D8F" />
-          <stop offset="1" stop-opacity="0" />
+          <stop stopOpacity="0" />
+          <stop stopColor="white" stopOpacity="0" />
+          <stop offset="0.5" stopColor="#2A9D8F" />
+          <stop offset="1" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
