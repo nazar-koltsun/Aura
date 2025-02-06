@@ -29,7 +29,7 @@ const PlanCard = ({ planData }) => {
           {planData.description_items.map((item, index) => (
             <li
               key={index}
-              className="text-lg leading-[30px] text-[var(--granite-gray) max-1024:text-base max-1024:leading-[28px]"
+              className="text-lg leading-[30px] text-[var(--granite-gray)] max-1024:text-base max-1024:leading-[28px]"
             >
               {item}
             </li>
