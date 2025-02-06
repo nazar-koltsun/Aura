@@ -62,7 +62,7 @@ const InterviewSection = () => {
               <Button className="w-full mt-3 min-h-[60px]">Skontaktuj się</Button>
             </form>
 
-            <NewsletterPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} className='top-0 ring-0 left-[105%] bottom-0' />
+            <NewsletterPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} className='top-0 ring-0 left-[105%] bottom-0 max-1024:left-0' />
           </div>
         </div>
 
