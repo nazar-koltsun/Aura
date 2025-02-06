@@ -26,7 +26,7 @@ const InterviewSection = () => {
   };
 
   return (
-    <section className="pt-[75px] pb-12 px-4 max-1024:pt-[55px] max-1024:pb-10">
+    <section className="pt-[75px] pb-16 px-4 max-1024:pt-[45px] max-1024:pb-10">
       <div className="relative overflow-hidden px-[73px] py-[30px] max-w-[1082px] mx-auto rounded-[30px] shadow-cardGray max-1024:px-5">
         <div className="relative z-10 max-w-[360px]">
           <h2 className="text-white text-[44px] leading-[54px] font-semibold max-1024:text-[28px] max-1024:leading-[34px]">
