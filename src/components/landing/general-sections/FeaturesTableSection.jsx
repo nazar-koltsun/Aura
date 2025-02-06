@@ -108,10 +108,10 @@ const FeaturesTableSection = () => {
               <div
                 key={index}
                 className={cn(
-                  'border border-white w-[260px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] max-1400:rounded-b-none max-700:w-[160px] max-700:rounded-[15px]',
+                  'border border-white w-[260px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] max-1400:rounded-b-none max-700:w-[160px] max-700:rounded-[15px] max-700:rounded-b-none',
                   index === 0 &&
                     'border-[var(--jungle-green)] rounded-[30px] max-700:rounded-b-none',
-                  index === 1 && 'rounded-bl-[30px]',
+                  index === 1 && 'rounded-bl-[30px] max-700:rounded-b-none',
                   index === FEATURES_DATA.length - 1 &&
                     'rounded-br-[30px] max-1400:rounded-br-[30px] max-700:rounded-br-[15px]'
                 )}
