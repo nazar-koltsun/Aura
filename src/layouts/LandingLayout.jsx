@@ -45,6 +45,7 @@ const HEADER_NAV_LINKS = [
 
 const CORPORATE_PAGES_LINKS = [
   '/landings/corporate',
+  '/landings/individual',
 ]
 
 const LandingLayout = () => {
