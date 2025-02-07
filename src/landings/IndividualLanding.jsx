@@ -1,6 +1,7 @@
 import ContactSection from '../components/landing/general-sections/ContactSection';
 import VideoWidget from '../components/landing/VideoWidget';
 import MainSection from '../components/landing/individual/sections/MainSection';
+import SoftSkillsDevelopSection from '../components/landing/individual/sections/SoftSkillsDevelopSection';
 import InterviewSection from '../components/landing/individual/sections/InterviewSection';
 import RaportInfoSection from '../components/landing/general-sections/RaportInfoSection';
 import CommonQuestionsSection from '../components/landing/general-sections/CommonQuestionsSection';
@@ -9,7 +10,7 @@ const IndividualLanding = () => {
   return (
     <>
       <MainSection />
-
+      <SoftSkillsDevelopSection />
 
       <InterviewSection />
       <RaportInfoSection />
