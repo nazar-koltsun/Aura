@@ -1,8 +1,7 @@
 import PageH1 from '../../PageH1';
 import Button from '../../../Button';
 
-import MainImage from '../../../../assets/images/landing/corporate-main-bg.webp';
-import MainImageMob from '../../../../assets/images/landing/corporate-main-bg-mob.webp';
+import MainImage from '../../../../assets/images/landing/individual-main-bg.webp';
 import SeparatorBottomSimpleImage from '../../../../assets/images/landing/separator-bottom-simple.svg';
 
 const MainSection = () => {
@@ -18,7 +17,7 @@ const MainSection = () => {
           </p>
         </PageH1>
 
-        <p className="mt-11 max-w-[500px] text-[18px] leading-[30px] text-center text-white font-medium max-1024:mt-6">
+        <p className="mt-11 max-w-[500px] text-[18px] leading-[30px] text-center text-white font-medium max-1024:mt-6 max-1024:max-w-[400px]">
           Odkryj siłę skutecznej komunikacji. Buduj trwałe relacje biznesowe i
           osobiste poprzez skuteczną oraz świadomą komunikację.
         </p>
@@ -32,7 +31,7 @@ const MainSection = () => {
       </div>
 
       <picture>
-        <source srcSet={MainImageMob} media="(max-width: 520px)" />
+        {/* <source srcSet={MainImageMob} media="(max-width: 520px)" /> */}
         <img
           src={MainImage}
           className="absolute top-0 left-0 w-full h-full object-cover max-520:object-bottom"
