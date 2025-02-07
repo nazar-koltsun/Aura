@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import { useEffect, useRef } from "react";
 import { cn } from "../../../lib/utils";
 
 const steps = [
@@ -11,63 +10,101 @@ const steps = [
 ];
 
 const STEP_CHANGE_TIME = 1400;
+const SCROLL_THRESHOLD = 15; // Require 10 scrolls to move to next step
 
-const HowToSteps = () => {
-  const { ref, inView } = useInView({ threshold: 0.6 }); // Detect when the component is in view
-  const [activeIndex, setActiveIndex] = useState(null); // Track the currently active item
+const HowToSteps = ({ isInView, activeIndex, setActiveIndex, isDesktop }) => {
+  const scrollContainerRef = useRef(null);
+  const scrollCounter = useRef(0); // Track scroll events
 
   useEffect(() => {
-    if (inView) {
-      steps.forEach((_, index) => {
-        setTimeout(() => {
-          setActiveIndex(index);
-        }, index * STEP_CHANGE_TIME); // Stagger each item's activation by STEP_CHANGE_TIME
-      });
-    } else {
-      setActiveIndex(null); // Reset when the component goes out of view
+    if (!isDesktop) {
+      if (isInView) {
+        steps.forEach((_, index) => {
+          setTimeout(() => {
+            setActiveIndex(index);
+          }, index * STEP_CHANGE_TIME); // Stagger each item's activation by STEP_CHANGE_TIME
+        });
+      } else {
+        setActiveIndex(null); // Reset when the component goes out of view
+      }
     }
-  }, [inView]);
+  }, [isInView, isDesktop, setActiveIndex]);
+
+  useEffect(() => {
+      if (!isDesktop) return;
+
+      const handleScroll = (event) => {
+        const isAtFirstStep = activeIndex === 0 && event.deltaY < 0;
+        const isAtLastStep = activeIndex === steps.length - 1 && event.deltaY > 0;
+  
+        // Allow default scrolling when at first or last step
+        if (isAtFirstStep || isAtLastStep) return;
+  
+        event.preventDefault(); // Stop default scrolling otherwise
+  
+        scrollCounter.current += event.deltaY > 0 ? 1 : -1; // Count scrolls
+        if (Math.abs(scrollCounter.current) >= SCROLL_THRESHOLD) {
+          const direction = scrollCounter.current > 0 ? 1 : -1;
+  
+  
+          setActiveIndex((prev) => {
+            let newIndex = prev + direction;
+            return Math.max(0, Math.min(newIndex, steps.length - 1));
+          });
+          scrollCounter.current = 0; // Reset counter after changing step
+        }
+      };
+  
+      const container = scrollContainerRef.current;
+      if (isInView && container) {
+        window.addEventListener("wheel", handleScroll, { passive: false });
+      } else {
+        window.removeEventListener("wheel", handleScroll);
+        scrollCounter.current = 0; // Reset when out of view
+      }
+  
+      return () => {
+        window.removeEventListener("wheel", handleScroll);
+      };
+  }, [isInView, isDesktop, activeIndex, setActiveIndex]);
 
   return (
     <div
-      ref={ref}
+      ref={scrollContainerRef}
       className="max-w-[510px] mt-9 bg-[var(--cultured)] p-7 pl-[65px] rounded-[30px] shadow-blockShadow max-700:pt-12
       max-700:pb-12 max-700:px-7"
     >
-      <ol
-        className="relative space-y-14 
-      before:content-['']
-      before:w-1.5
-      before:h-[90%]
-      before:bg-[var(--light-silver)]
-      before:absolute
-      before:top-0
-      before:left-[11px]
-      max-700:before:hidden
-      max-700:space-y-5
-      "
-      >
+      <ol className="relative space-y-14 before:w-1.5 before:h-[90%] before:bg-[var(--light-silver)] before:absolute before:top-0 before:left-[11px] max-700:before:hidden max-700:space-y-5">
         {steps.map((step, index) => (
           <motion.li
             key={index}
             className="relative flex items-center gap-[31px] text-[20px] leading-[25px] font-medium max-700:text-center max-700:flex-col-reverse max-700:gap-5"
             animate={{
               color:
-                index === activeIndex ? "var(--jungle-green)" : "var(--eerie-black)",
+                index === activeIndex
+                  ? "var(--jungle-green)"
+                  : "var(--eerie-black)",
             }}
             transition={{
               color: { duration: 0.5, ease: "easeInOut" },
             }}
           >
             <div
-              className={cn('flex shrink-0 justify-center items-center w-7 h-7 rounded-full', 
+              className={cn(
+                "flex shrink-0 justify-center items-center w-7 h-7 rounded-full",
                 index === activeIndex
-                ? "bg-[var(--jungle-green)]"
-                : "bg-[var(--light-silver)]")}
+                  ? "bg-[var(--jungle-green)]"
+                  : "bg-[var(--light-silver)]"
+              )}
               role="presentation"
             >
               <motion.div
-                className={cn('w-3 h-3 rounded-full', index === activeIndex ? "bg-[var(--cultured)]" : "bg-[var(--jungle-green)]")}
+                className={cn(
+                  "w-3 h-3 rounded-full",
+                  index === activeIndex
+                    ? "bg-[var(--cultured)]"
+                    : "bg-[var(--jungle-green)]"
+                )}
                 animate={{
                   backgroundColor:
                     index === activeIndex
