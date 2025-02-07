@@ -1,3 +1,4 @@
+import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from 'react';
 import Glide from '@glidejs/glide';
 import '@glidejs/glide/dist/css/glide.core.min.css';
@@ -37,6 +38,7 @@ const ClientCards = ({ data = clientCards, className }) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const glideRef = useRef(null);
   const glideInstanceRef = useRef(null);
+  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   useEffect(() => {
     const initializeCarousel = () => {
@@ -45,13 +47,14 @@ const ClientCards = ({ data = clientCards, className }) => {
         glideInstanceRef.current = new Glide(glideRef.current, {
           type: 'carousel',
           perView: 2,
-          focusAt: 'center',
+          focusAt: 0,
           gap: 20,
           autoplay: 7000,
           breakpoints: {
             660: {
               perView: 1.2,
               gap: 15,
+              focusAt: 'center',
             },
           },
         });
@@ -140,8 +143,9 @@ const ClientCards = ({ data = clientCards, className }) => {
   };
 
   return (
-    <div ref={glideRef} className="glide">
+    <div ref={glideRef} className={cn("glide", styles.glide)}>
       <div
+        ref={ref}
         className={cn('glide__track', styles.slidesTrack)}
         data-glide-el="track"
       >
@@ -162,7 +166,11 @@ const ClientCards = ({ data = clientCards, className }) => {
                   ? 'var(--jungle-green)'
                   : 'var(--rocket-metallic)'
               }
-              className="rounded-[30px] flex transform duration-200 ease-in hover:-translate-y-2"
+              className={cn("rounded-[30px] flex transform duration-200 opacity-0 ease-in hover:-translate-y-2 max-1024:opacity-100",
+                index === 0 && inView && 'animate-fadeInLeft max-1024:animate-none',
+                index === 1 && inView && 'animate-fadeInUp max-1024:animate-none',
+                index === 2 && inView && 'animate-fadeInRight max-1024:animate-none'
+              )}
             >
               <div
                 className={cn(
@@ -170,7 +178,7 @@ const ClientCards = ({ data = clientCards, className }) => {
                   styles.slide,
                   index === 0 && 'shadow-cardOrange',
                   index === 1 && 'shadow-cardGreen',
-                  index === 2 && 'shadow-cardGray'
+                  index === 2 && 'shadow-cardGray',
                 )}
               >
                 <div className="flex justify-center items-center w-[42px] h-[42px] pointer-events-none">

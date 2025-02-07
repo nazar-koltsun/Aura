@@ -15,7 +15,7 @@ const PlanCard = ({ planData }) => {
   }
 
   return (
-    <div className="pr-[50px] pl-[60px] pt-[18px] pb-8 flex justify-between gap-10 w-full bg-[#F5F8FA] bg-opacity-70 rounded-[30px] hover:bg-opacity-100 transition ease-out duration-200 max-1024:flex-col max-1024:px-4 max-1024:pb-6 max-1024:gap-5">
+    <div className="pr-[50px] pl-[60px] pt-[18px] pb-8 flex justify-between gap-10 w-full bg-[#F5F8FA] bg-opacity-70 rounded-[30px] hover:bg-opacity-100 transition ease-out duration-200 transform hover:-translate-y-2 max-1024:flex-col max-1024:px-4 max-1024:pb-6 max-1024:gap-5">
       <div className="w-[44%] pt-4 pb-2 flex flex-col items-center max-1024:w-full">
         <div className="w-[45px] h-[45px] flex justify-center items-center">
           {planData.icon}

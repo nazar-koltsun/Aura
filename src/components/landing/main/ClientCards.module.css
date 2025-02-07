@@ -62,4 +62,13 @@
   .slide {
     height: auto;
   }
+
+  .glide {
+    padding: 0 16px;
+    overflow: hidden;
+  }
+
+  .slidesTrack {
+    overflow: visible;
+  }
 }
