@@ -61,11 +61,11 @@ const ACCOUNT_TYPE_CARDS = [
 
 const ChooseThePriceSection = () => {
   return (
-    <section className="relative pt-10 pb-12 px-4 flex flex-col items-center max-1024:pt-8">
+    <section className="relative pt-10 px-4 flex flex-col items-center max-1024:pt-8">
       <Subtitle title="Cennik" isShort />
       <SectionTitle title="Wybierz cennik dla siebie" className="mt-3.5" />
 
-      <p className="mt-4 max-w-[500px] text-center text-[var(--granite-gray)] text-[16px] leading-[27px] max-1024:text-lg max-1024:mt-5 max-1024:text-center">
+      <p className="mt-4 max-w-[500px] text-center text-[var(--granite-gray)] leading-[27px] max-1024:mt-5 max-1024:text-center">
         nowAURA rozwija Twoje kompetencje, z pewnością przyniesie korzyści
         całemu zespołowi! Jako polecający, możesz liczyć na bonus za każdą
         podpisaną umowę!

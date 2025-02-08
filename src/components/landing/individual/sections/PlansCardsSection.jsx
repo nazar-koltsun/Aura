@@ -156,7 +156,7 @@ const PlansCardsSection = () => {
       </div>
 
       <div className="mt-[90px] w-full flex justify-center gap-[15%] relative max-1400:flex-col max-1400:max-w-[1034px] 
-      max-1400:mx-auto max-1400:gap-[27px] max-1400:mt-[48px]">
+      max-1400:mx-auto max-1400:gap-[27px] max-1400:mt-8">
         <PlanCard
           planData={plansData[0]}
           isVertical
@@ -167,7 +167,7 @@ const PlansCardsSection = () => {
           planData={plansData[1]}
           isVertical
           isActive
-          className="-top-[45px] relative flex-shrink-0 z-20 max-w-[570px] max-1400:max-w-full
+          className="-top-[45px] relative flex-shrink-0 z-20 max-w-[570px] hover:-translate-y-0 max-1400:max-w-full
           max-1400:top-0"
         />
         <PlanCard
