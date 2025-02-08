@@ -6,6 +6,7 @@ import WhatDoYouGetSection from '../components/landing/general-sections/WhatDoYo
 import RaportInfoSection from '../components/landing/general-sections/RaportInfoSection';
 import CommonQuestionsSection from '../components/landing/general-sections/CommonQuestionsSection';
 import PlansCardsSection from '../components/landing/individual/sections/PlansCardsSection';
+import ChooseThePriceSection from '../components/landing/individual/sections/ChooseThePriceSection';
 
 import WhatYouGetBg from '../assets/images/landing/what-you-get-individual-bg.webp';
 import MindsetThinkingIcon from '../components/icons/MindsetThinkingIcon';
@@ -43,7 +44,7 @@ const IndividualLanding = () => {
       <SoftSkillsDevelopSection />
       <WhatDoYouGetSection benefits={BENEFITS} isBannerLarge /> 
       <PlansCardsSection />
-
+      <ChooseThePriceSection />
       <RaportInfoSection />
 
       <CommonQuestionsSection />
