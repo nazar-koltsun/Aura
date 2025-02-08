@@ -4,6 +4,8 @@ import { Collapse } from 'react-collapse';
 import Button from '../../Button';
 import RaportInfoImg from '../../../assets/images/landing/raport-info.webp';
 import RaportInfoImgMob from '../../../assets/images/landing/raport-info-mobile.webp';
+import RaportInfoSecondImg from '../../../assets/images/landing/raport-info-second-image.webp';
+import RaportInfoSecondImgMob from '../../../assets/images/landing/raport-info-second-image-mob.webp';
 
 import AccordionLineIcon from '../../../components/icons/AccordionLineIcon';
 import PlusIcon from '../../../components/icons/PlusIcon';
@@ -66,7 +68,7 @@ const Accordion = ({ title, children }) => {
   );
 };
 
-const RaportInfoSection = () => {
+const RaportInfoSection = ({ isSecondary = false, hasBottomSeparator = false }) => {
   return (
     <section className="px-4">
       <img
@@ -79,9 +81,9 @@ const RaportInfoSection = () => {
       <div className="pt-10 pb-12 max-w-[1060px] mx-auto grid grid-cols-2 gap-24 max-1024:gap-8 max-700:grid-cols-1 max-1024:pt-3 max-1024:pb-10">
         <div className="rounded-[30px] overflow-hidden self-start shadow-cardGray max-700:order-2">
           <picture>
-            <source media="(max-width: 700px)" srcSet={RaportInfoImgMob} />
+            <source media="(max-width: 700px)" srcSet={isSecondary ? RaportInfoSecondImgMob : RaportInfoImgMob} />
             <img
-              src={RaportInfoImg}
+              src={isSecondary ? RaportInfoSecondImg : RaportInfoImg}
               width="498"
               height="716"
               className="w-full h-full object-cover"
@@ -114,6 +116,15 @@ const RaportInfoSection = () => {
           <Button className="mt-auto max-700:mx-auto">Dowiedz się więcej</Button>
         </div>
       </div>
+
+      {hasBottomSeparator && (
+        <img
+          src={SeparatorBottomImg}
+          className="w-full"
+          role="presentation"
+          alt=""
+        />
+      )}
     </section>
   );
 };

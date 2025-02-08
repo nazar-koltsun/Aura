@@ -48,7 +48,7 @@ const IndividualLanding = () => {
       <ChooseThePriceSection />
       <WriteToUsSection />
 
-      <RaportInfoSection />
+      <RaportInfoSection isSecondary hasBottomSeparator />
 
       <CommonQuestionsSection />
       <ContactSection />

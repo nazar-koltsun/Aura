@@ -21,7 +21,7 @@ const AccountTypeCard = ({ card }) => (
           {card.title}
         </h3>
 
-        <p className="text-[13px] text-[var(--sonic-silver)]">
+        <p className="text-[13px] text-[var(--sonic-silver)] font-semibold">
           {card.subtitle}
         </p>
 

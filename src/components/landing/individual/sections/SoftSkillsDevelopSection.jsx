@@ -5,7 +5,7 @@ import SoftSkillsImage from '../../../../assets/images/landing/soft-skills-devel
 
 const SoftSkillsDevelopSection = () => {
   return (
-    <section className="relative pt-6 px-4 flex flex-col items-center max-1024:pt-8">
+    <section className="relative pt-6 px-4 flex flex-col items-center max-1024:pt-8 max-700:pb-6">
       <Subtitle title="Co Robimy?" isShort />
       <SectionTitle title="Rozwijamy umiejętności miękkie" className="mt-3.5" />
 
