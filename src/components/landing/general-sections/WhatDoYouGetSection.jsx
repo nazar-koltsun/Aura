@@ -5,7 +5,7 @@ import Button from '../../Button';
 
 import SeparatorTopImg from '../../../assets/images/landing/separator-top.svg';
 
-const WhatDoYouGetSection = ({ benefits }) => {
+const WhatDoYouGetSection = ({ benefits, isBannerLarge }) => {
   return (
     <section className="relative -mt-4 px-4">
       <img
@@ -23,7 +23,7 @@ const WhatDoYouGetSection = ({ benefits }) => {
           className='mt-4 max-w-[660px]'
         />
 
-        <Benefits className='mt-14 max-1024:mt-8' benefits={benefits} />
+        <Benefits className='mt-14 max-1024:mt-8' benefits={benefits} isBannerLarge={isBannerLarge} />
 
         <div className='mt-14 flex justify-center items-center gap-6 max-1024:mt-8 max-1024:gap-4 max-700:flex-col'>
           <Button path='#' className='text-[17px] min-w-[250px] min-h-[60px] tracking-wider'>Rozpocznij naukę</Button>

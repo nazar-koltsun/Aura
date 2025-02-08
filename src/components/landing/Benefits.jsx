@@ -1,11 +1,13 @@
 import { cn } from '../../lib/utils';
 
-const Benefits = ({ benefits, className }) => {
+const Benefits = ({ benefits, isBannerLarge, className }) => {
   return (
-    <div className={cn('grid grid-cols-3 gap-9 max-1024:grid-cols-2 max-1024:gap-4', className)}>
+    <div className={cn('grid grid-cols-3 gap-9 w-full max-1024:grid-cols-2 max-1024:gap-4', className)}>
 
-      <div className="col-span-2 relative pl-24 pr-14 py-8 min-h-[250px] flex justify-center items-center rounded-[30px] shadow-cardGray overflow-hidden max-1024:py-6 max-1024:px-11 max-1024:min-h-[197px]">
-        <p className="relative z-10 text-[22px] text-white text-center leading-[30px] font-medium max-1024:text-[18px]">
+      <div className={cn("col-span-2 relative pl-24 pr-14 py-8 min-h-[250px] bg-[#A7AB86] flex justify-center items-center rounded-[30px] shadow-cardGray overflow-hidden max-1024:py-6 max-1024:px-11 max-1024:min-h-[197px]",
+        isBannerLarge && 'col-span-3 max-1024:col-span-2'
+      )}>
+        <p className="relative z-10 max-w-[650px] text-[22px] text-white text-center leading-[30px] font-medium max-1024:text-[18px]">
           {benefits.banner.text}
         </p>
 
