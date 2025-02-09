@@ -7,6 +7,7 @@ import ConversationPage from './pages/ConversationPage';
 import MainLanding from './landings/MainLanding';
 import CorporateLanding from './landings/CorporateLanding';
 import IndividualLanding from './landings/IndividualLanding';
+import JSTLanding from './landings/JSTLanding';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: '/landings/individual',
         element: <IndividualLanding />,
+      },
+      {
+        path: '/landings/jst',
+        element: <JSTLanding />,
       },
     ],
   },
