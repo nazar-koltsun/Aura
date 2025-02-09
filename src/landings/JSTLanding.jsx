@@ -2,6 +2,7 @@ import ContactSection from '../components/landing/general-sections/ContactSectio
 import VideoWidget from '../components/landing/VideoWidget';
 
 import MainSection from '../components/landing/jst/sections/MainSection';
+import WhatIsNowAURASection from '../components/landing/jst/sections/WhatIsNowAURASection';
 
 // import WhatDoYouGetSection from '../components/landing/general-sections/WhatDoYouGetSection';
 import RaportInfoSection from '../components/landing/general-sections/RaportInfoSection';
@@ -41,6 +42,7 @@ const JSTLanding = () => {
   return (
     <>
       <MainSection />
+      <WhatIsNowAURASection />
       {/* <WhatDoYouGetSection benefits={BENEFITS} isBannerLarge /> 
       <PlansCardsSection /> */}
 
