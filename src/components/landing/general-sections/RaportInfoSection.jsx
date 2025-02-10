@@ -68,15 +68,17 @@ const Accordion = ({ title, children }) => {
   );
 };
 
-const RaportInfoSection = ({ isSecondary = false, hasBottomSeparator = false }) => {
+const RaportInfoSection = ({ isSecondary = false, hasTopSeparator = true, hasBottomSeparator = false, className }) => {
   return (
-    <section className="px-4">
-      <img
-        src={SeparatorBottomImg}
-        className="w-full"
-        role="presentation"
-        alt=""
-      />
+    <section className={cn("px-4", className)}>
+      {hasTopSeparator && (
+        <img
+          src={SeparatorBottomImg}
+          className="w-full"
+          role="presentation"
+          alt=""
+        />
+      )}
 
       <div className="pt-10 pb-12 max-w-[1060px] mx-auto grid grid-cols-2 gap-24 max-1024:gap-8 max-700:grid-cols-1 max-1024:pt-3 max-1024:pb-10">
         <div className="rounded-[30px] overflow-hidden self-start shadow-cardGray max-700:order-2">

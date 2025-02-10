@@ -3,9 +3,9 @@ import VideoWidget from '../components/landing/VideoWidget';
 
 import MainSection from '../components/landing/jst/sections/MainSection';
 import WhatIsNowAURASection from '../components/landing/jst/sections/WhatIsNowAURASection';
-
 import WhatDoYouGetSection from '../components/landing/general-sections/WhatDoYouGetSection';
 import RaportInfoSection from '../components/landing/general-sections/RaportInfoSection';
+import FeaturesTableSection from '../components/landing/general-sections/FeaturesTableSection';
 import CommonQuestionsSection from '../components/landing/general-sections/CommonQuestionsSection';
 import PlansCardsSection from '../components/landing/jst/sections/PlansCardsSection';
 
@@ -77,9 +77,8 @@ const JSTLanding = () => {
       <WhatIsNowAURASection />
       <WhatDoYouGetSection benefits={BENEFITS} isBannerLarge />
       <PlansCardsSection />
-
-      <RaportInfoSection isSecondary hasBottomSeparator />
-
+      <RaportInfoSection isSecondary hasTopSeparator={false} hasBottomSeparator={false} className='pt-5' />
+      <FeaturesTableSection />
       <CommonQuestionsSection />
       <ContactSection />
       <VideoWidget videoUrl="https://www.youtube.com/embed/8V8oX3pWdxY?si=WkCK-56ToJF4Z47a" />
