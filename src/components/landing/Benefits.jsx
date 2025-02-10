@@ -21,7 +21,9 @@ const Benefits = ({ benefits, isBannerLarge, className }) => {
       {benefits.items.map((item, index) => (
         <div
           key={index}
-          className="pl-9 pr-5 pt-3 pb-7 min-h-[250px] rounded-[30px] bg-[var(--cultured)] shadow-cardGray max-1024:px-5 max-1024:min-h-[165px]"
+          className={cn("pl-9 pr-5 pt-3 pb-7 min-h-[250px] rounded-[30px] bg-[var(--cultured)] shadow-cardGray max-1024:px-5 max-1024:min-h-[165px]",
+            item.shadow && `shadow-${item.shadow}`
+          )}
         >
           <div className="flex justify-center items-center w-[65px] h-[65px] max-700:w-[33px] max-700:h-[33px]">
             {item.icon}

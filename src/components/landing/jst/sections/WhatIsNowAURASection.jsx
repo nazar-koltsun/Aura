@@ -51,7 +51,7 @@ const WhatIsNowAURASection = () => {
   };
 
   return (
-    <section className="relative pt-6 px-4 flex flex-col items-center max-1024:pt-8 max-700:pb-6">
+    <section className="relative pt-6 pb-14 px-4 flex flex-col items-center max-1024:pt-8 max-700:pb-12">
       <Subtitle title="Co Robimy?" isShort />
       <SectionTitle title="Czym jest nowAURA?" className="mt-3.5" />
 
