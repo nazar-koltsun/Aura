@@ -7,7 +7,7 @@ import WhatIsNowAURASection from '../components/landing/jst/sections/WhatIsNowAU
 import WhatDoYouGetSection from '../components/landing/general-sections/WhatDoYouGetSection';
 import RaportInfoSection from '../components/landing/general-sections/RaportInfoSection';
 import CommonQuestionsSection from '../components/landing/general-sections/CommonQuestionsSection';
-// import PlansCardsSection from '../components/landing/individual/sections/PlansCardsSection';
+import PlansCardsSection from '../components/landing/jst/sections/PlansCardsSection';
 
 import WhatYouGetBg from '../assets/images/landing/what-get-jst-bg.webp';
 import ProtectWorldIcon from '../components/icons/ProtectWorldIcon';
@@ -76,7 +76,7 @@ const JSTLanding = () => {
       <MainSection />
       <WhatIsNowAURASection />
       <WhatDoYouGetSection benefits={BENEFITS} isBannerLarge />
-      {/* <PlansCardsSection /> */}
+      <PlansCardsSection />
 
       <RaportInfoSection isSecondary hasBottomSeparator />
 

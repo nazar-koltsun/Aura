@@ -7,6 +7,7 @@ const PlanCard = ({
   planData,
   isVertical = false,
   isActive = false,
+  hasTightDescription = false,
   className,
 }) => {
   const onBtnEnter = (e) => {
@@ -44,8 +45,9 @@ const PlanCard = ({
 
         <ul
           className={cn(
-            'mt-5 mb-4 flex flex-col gap-6 list-disc max-1024:pl-4 max-1024:mb-7 max-1024:max-w-[600px]',
-            isVertical && 'max-w-[400px] mx-auto'
+            'mt-5 mb-6 flex flex-col gap-6 list-disc max-1024:pl-4 max-1024:mb-7 max-1024:max-w-[600px]',
+            isVertical && 'max-w-[400px] mx-auto',
+            hasTightDescription && 'gap-0'
           )}
         >
           {planData.description_items.map((item, index) => (
