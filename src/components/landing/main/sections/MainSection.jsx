@@ -12,7 +12,7 @@ const MainSection = () => {
     <section className="relative pt-20 px-14 bg-gradient-to-b from-white from-45%  via-[#E9B684] via-75% to-[#7CAB9B] to-100% max-1024:pt-7 max-1024:px-4 max-1024:from-20% max-700:from-30% max-520:from-50%">
       <div className="flex justify-center flex-col">
         <PageH1>
-          <p>nowAURA. Szkolenia.</p>
+          <p>Szkolenia.</p>
           <p className="inline-block bg-gradient-to-r from-[var(--sandy-brown)] from-0%  via-[var(--jungle-green)] via-54% to-[var(--celadon-green)] to-90% bg-clip-text text-transparent">
             Komunikacja.
           </p>
