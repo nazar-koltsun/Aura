@@ -47,7 +47,7 @@ const CorporateLanding = () => {
     <>
       <MainSection />
       <WhyVRPlusAISection />
-      <WhatDoYouGetSection benefits={BENEFITS} />
+      <WhatDoYouGetSection benefits={BENEFITS} className='-mt-10' />
       <PlansCardsSection />
       <InterviewSection />
       <RaportInfoSection />

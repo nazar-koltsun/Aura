@@ -16,49 +16,49 @@ const circlesData = [
   {
     left: '2.1%',
     bottom: '22%',
-    icon: <TwoPeoplesIcon className="max-700:max-w-[70%]" />,
+    icon: <TwoPeoplesIcon className="max-w-[75%] max-700:max-w-[60%]" />,
     bg: 'var(--jungle-green)',
     text: 'Some text 1',
   },
   {
     left: '0.5%',
     top: '40.5%',
-    icon: <ThreePeoplesIcon className="max-700:max-w-[70%]" />,
+    icon: <ThreePeoplesIcon className="max-w-[75%] max-700:max-w-[60%]" />,
     bg: 'var(--jungle-green)',
     text: 'Some text 2',
   },
   {
     left: '9.1%',
     top: '17.7%',
-    icon: <VRGlassesIcon className="max-700:max-w-[70%]" />,
+    icon: <VRGlassesIcon className="max-w-[75%] max-700:max-w-[60%]" />,
     bg: 'var(--jungle-green)',
     text: 'Some text 3',
   },
   {
     left: '40.6%',
     top: '7.6%',
-    icon: <BrainSettingsIcon className="max-700:max-w-[70%]" />,
+    icon: <BrainSettingsIcon className="max-w-[75%] max-700:max-w-[60%]" />,
     bg: 'var(--jungle-green)',
     text: 'Some text 4',
   },
   {
     right: '8.9%',
     top: '17.7%',
-    icon: <MicIcon className="max-700:max-w-[70%]" />,
+    icon: <MicIcon className="max-w-[75%] max-700:max-w-[60%]" />,
     bg: 'var(--sandy-brown)',
     text: 'Some text 5',
   },
   {
     right: '0.1%',
     top: '40.5%',
-    icon: <LabIcon className="max-700:max-w-[70%]" />,
+    icon: <LabIcon className="max-w-[75%] max-700:max-w-[60%]" />,
     bg: 'var(--sandy-brown)',
     text: 'Some text 6',
   },
   {
     right: '1.6%',
     bottom: '22%',
-    icon: <HumanHeadIcon className="max-700:max-w-[70%]" />,
+    icon: <HumanHeadIcon className="max-w-[75%] max-700:max-w-[60%]" />,
     bg: 'var(--sandy-brown)',
     text: 'Some text 7',
   },
@@ -89,7 +89,7 @@ const VRPlusAIFeatures = () => {
   };
 
   return (
-    <div className="mt-5 max-w-[584px] relative max-1024:mt-3">
+    <div className="mt-1 max-w-[400px] relative max-1024:mt-3">
       <img src={VRPlusAIImage} alt="" />
 
       {circlesData.map((circle, index) => (
