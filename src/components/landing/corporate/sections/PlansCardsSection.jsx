@@ -76,14 +76,14 @@ const PlansCardsSection = () => {
     <section className="px-4 pt-[92px] pb-[80px] relative max-1024:pt-[50px] max-1024:pb-[50px]">
       <div className="relative z-10 max-w-[1034px] mx-auto flex flex-col items-center justify-center">
         <Subtitle title='Trenuj z nami' isShort />
-        <h2 className="mt-6 text-center text-white text-[44px] leading-[54px] font-semibold max-1024:text-[28px] max-1024:leading-[34px] max-1024:mt-3">
+        <h2 className="mt-5 text-center text-white text-[44px] leading-[54px] font-semibold max-1024:text-[28px] max-1024:leading-[34px] max-1024:mt-3">
           Dla handlowców i menadżerów
         </h2>
-        <p className="mt-[22px] text-center max-w-[500px] text-white leading-[27px] max-1024:mt-4">
+        <p className="mt-4 text-center max-w-[645px] text-white leading-[27px] max-1024:mt-4">
           Trenuj rozmowy sprzedaży z wirtualnym klientem, rozwijaj kompetencje przełamywania obiekcji, prezentacji oferty, budowania zaufania, zamykania sprzedaży.
         </p>
 
-        <div className="mt-8 w-full space-y-[27px]">
+        <div className="mt-7 w-full space-y-[27px]">
           {plansData.map((plan, index) => (
             <PlanCard key={index} planData={plan} />
           ))}

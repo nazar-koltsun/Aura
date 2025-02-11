@@ -33,7 +33,7 @@ const ACCORDION_DATA = [
 
 const CommonQuestionsSection = () => {
   return (
-    <section className='pt-16 px-4 max-1024:pt-10'>
+    <section className='pt-11 px-4 max-1024:pt-10'>
       <div className='max-w-[1082px] mx-auto flex flex-col items-center'>
         <Subtitle title="Pomoc" />
 
@@ -46,7 +46,7 @@ const CommonQuestionsSection = () => {
         </div>
       </div>
 
-      <img src={SeparatorBottom} className='w-full mt-16 max-1024:mt-10' role='presentation' alt="" />
+      <img src={SeparatorBottom} className='w-full mt-11 max-1024:mt-10' role='presentation' alt="" />
     </section>
   );
 };

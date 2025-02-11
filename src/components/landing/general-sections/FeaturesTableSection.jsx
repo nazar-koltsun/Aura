@@ -77,7 +77,7 @@ const FeaturesTableSection = () => {
   };
 
   return (
-    <section className="relative px-10 py-28 max-1024:pr-0 max-1024:px-4 max-1024:py-16 max-700:py-12">
+    <section className="relative px-10 pt-24 pb-20 max-1024:pr-0 max-1024:px-4 max-1024:py-16 max-700:py-12">
       <div className="relative z-10 flex items-end justify-center mx-auto">
         <div
           className="flex-shrink-0 border border-white w-[260px] rounded-[30px] rounded-tr-none overflow-hidden 

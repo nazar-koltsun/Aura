@@ -23,7 +23,7 @@ const PlanCard = ({
   return (
     <div
       className={cn(
-        'pr-[50px] pl-[60px] pt-[18px] pb-8 flex justify-between gap-10 w-full bg-[#F5F8FA] bg-opacity-70 rounded-[30px] hover:bg-opacity-100 transition ease-out duration-200 transform hover:-translate-y-2 max-1024:flex-col max-1024:px-4 max-1024:pb-6 max-1024:gap-5 max-700:max-w-[500px] max-700:mx-auto',
+        'pr-10 pl-[55px] pt-[18px] pb-6 flex justify-between gap-10 w-full bg-[#F5F8FA] bg-opacity-70 rounded-[30px] hover:bg-opacity-100 transition ease-out duration-200 transform hover:-translate-y-2 max-1024:flex-col max-1024:px-4 max-1024:pb-6 max-1024:gap-5 max-700:max-w-[500px] max-700:mx-auto',
         isVertical && 'flex-col items-center px-9 max-1400:flex-row max-1400:px-[50px] max-1400:pl-[60px] max-1400:items-stretch',
         isActive && 'bg-opacity-100 hover:-translate-y-0 max-1400:bg-opacity-70 max-1400:hover:-translate-y-2',
         className
@@ -77,14 +77,14 @@ const PlanCard = ({
 
       <div
         className={cn(
-          'w-[56%] flex flex-col gap-6 max-1024:w-full max-1024:flex-row max-1024:justify-between max-1024:gap-3 max-700:flex-col max-700:items-center',
+          'w-[56%] flex flex-col gap-5 max-1024:w-full max-1024:flex-row max-1024:justify-between max-1024:gap-3 max-700:flex-col max-700:items-center',
           isVertical && 'w-full max-1400:w-[56%]'
         )}
       >
         {planData.items.map((item, index) => (
           <div
             key={index}
-            className="w-full pt-[47px] pb-[42px] pr-2.5 pl-7 items-center flex gap-8 bg-[#F5F8FA] bg-opacity-70 rounded-[30px] shadow-cardGray max-1024:p-4 max-1024:gap-5 max-700:w-3/4 max-520:w-full"
+            className="w-full pt-8 pb-7 pr-2.5 pl-7 items-center flex gap-8 bg-[#F5F8FA] bg-opacity-70 rounded-[30px] shadow-cardGray max-1024:p-4 max-1024:gap-5 max-700:w-full"
           >
             <div className="w-[65px] h-[65px] flex justify-center items-center max-1024:w-[40px] max-1024:h-[40px]">
               {item.icon}
