@@ -9,7 +9,7 @@ import SocialMedia from './SocialMedia';
 import TiktokIcon from '../icons/TiktokIcon';
 import ThreadsIcon from '../icons/ThreadsIcon';
 import InstagramIcon from '../icons/InstagramIcon';
-import XIcon from '../icons/XIcon';
+import LinkedinIcon from '../icons/LinkedInIcon';
 import FacebookIcon from '../icons/FacebookIcon';
 
 import SeparatorTopImg from '../../assets/images/landing/separator-top.svg';
@@ -35,9 +35,9 @@ const socialNetworks = [
     icon: <InstagramIcon className={socialNetworksBaseClasses} />,
   },
   {
-    title: 'X',
-    href: 'https://x.com',
-    icon: <XIcon className={socialNetworksBaseClasses} />,
+    title: 'Linkedin',
+    href: 'https://linkedin.com',
+    icon: <LinkedinIcon className={socialNetworksBaseClasses} />,
   },
   {
     title: 'Facebook',
