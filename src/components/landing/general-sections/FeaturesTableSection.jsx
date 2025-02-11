@@ -1,9 +1,12 @@
 import { useRef } from 'react';
+import { motion } from "framer-motion";
 import { cn } from '../../../lib/utils';
 
 import FeaturesTableBg from '../../../assets/images/landing/features-table-bg.webp';
 import SeparatorTopSimpleImage from '../../../assets/images/landing/separator-top-simple.svg';
 import SeparatorBottomSimpleImage from '../../../assets/images/landing/separator-bottom-simple.svg';
+
+import LeftRightArrowIcon from '../../icons/LeftRightArrowIcon';
 
 const FEATURES_DATA = [
   {
@@ -52,6 +55,25 @@ const FEATURES_DATA = [
   },
 ];
 
+const ShakingArrow = () => {
+  return (
+    <motion.div
+      className="relative w-[50px] z-10 mr-2 ml-auto hidden max-1394:block"
+      animate={{
+        x: [-5, 5, -5], // Moves left and right
+      }}
+      transition={{
+        duration: 1,
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut",
+      }}
+    >
+      <LeftRightArrowIcon />
+    </motion.div>
+  );
+};
+
 const FeaturesTableSection = () => {
   const tableKeys = Object.keys(FEATURES_DATA[0]).slice(1);
 
@@ -77,7 +99,8 @@ const FeaturesTableSection = () => {
   };
 
   return (
-    <section className="relative px-10 pt-24 pb-20 max-1024:pr-0 max-1024:px-4 max-1024:py-16 max-700:py-12">
+    <section className="relative px-10 pt-24 pb-20 max-1394:pt-11 max-1024:pr-0 max-1024:px-4 max-1024:pb-16 max-1024:pt-6 max-700:pb-12 max-700:pt-1">
+      <ShakingArrow />
       <div className="relative z-10 flex items-end justify-center mx-auto">
         <div
           className="flex-shrink-0 border border-white w-[260px] rounded-[30px] rounded-tr-none overflow-hidden 
