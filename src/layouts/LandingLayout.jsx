@@ -47,6 +47,7 @@ const CORPORATE_PAGES_LINKS = [
   '/landings/corporate',
   '/landings/individual',
   '/landings/jst',
+  '/landings/how-are-things'
 ]
 
 const LandingLayout = () => {

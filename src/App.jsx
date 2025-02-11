@@ -8,6 +8,7 @@ import MainLanding from './landings/MainLanding';
 import CorporateLanding from './landings/CorporateLanding';
 import IndividualLanding from './landings/IndividualLanding';
 import JSTLanding from './landings/JSTLanding';
+import HowAreThingsLanding from './landings/HowAreThingsLanding';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: '/landings/jst',
         element: <JSTLanding />,
+      },
+      {
+        path: '/landings/how-are-things',
+        element: <HowAreThingsLanding />,
       },
     ],
   },
