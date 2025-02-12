@@ -15,29 +15,34 @@ import SeparatorBottomImg from '../../../assets/images/landing/separator-bottom.
 const ACCORDION_DATA = [
   {
     title: 'Transkrypcja rozmowy',
-    text: 'symulujących trudne rozmowy z pracownikiem, takie jak udzielanie informacji zwrotnej czy rozwiązywanie konfliktów',
+    text: (
+      <p>
+        Otrzymasz pełny zapis swojej rozmowy z czytelnymi oznaczeniami:
+        <span className='block text-[var(--jungle-green)]'>• odpowiedzi zgodne ze sztuką komunikacji</span>
+        <span className='block text-[var(--sandy-brown)]'>• odpowiedzi poprawne, z potencjałem doskonalenia</span>
+        <span className='block text-red-500'>• odpowiedzi wymagające poprawy</span>
+      </p>
+    ),
   },
   {
     title: 'Feedback wygenerowany przez AI',
-    text: 'symulujących trudne rozmowy z pracownikiem, takie jak udzielanie informacji zwrotnej czy rozwiązywanie konfliktów',
+    text: 'Szczegółowa analiza Twojej rozmowy pod kątem struktury, argumentacji i skuteczności komunikacji. Nasz raport można porównać do uproszczonego Assessment & Development Centre, co daje Ci rzetelną ocenę Twoich kompetencji',
   },
   {
     title: 'Rekomendacje i sugestię na przyszłe rozmowy',
-    text: 'symulujących trudne rozmowy z pracownikiem, takie jak udzielanie informacji zwrotnej czy rozwiązywanie konfliktów',
+    text: 'Otrzymasz konkretne wskazówki, jak poprawić swoje umiejętności i zwiększyć skuteczność w kolejnych rozmowach, dostosowane do Twojego stylu komunikacji. Dzięki rekomendacjom unikniesz błędów w prawdziwej konwersacji oraz lepiej zareagujesz na trudne sytuacje',
   },
   {
-    title: 'Pełna ocena kompetencji miękkich',
-    text: 'symulujących trudne rozmowy z pracownikiem, takie jak udzielanie informacji zwrotnej czy rozwiązywanie konfliktów',
+    title: 'Pełna analiza kompetencji miękkich',
+    text: 'Kompleksowa analiza Twoich umiejętności interpersonalnych, takich jak budowanie relacji, przekonywanie, zarządzanie emocjami, obawami czy aktywne słuchanie. Dzięki systemowi oznaczeń kolorystycznych łatwo zrozumiesz, które aspekty wymagają poprawy, a które są Twoją mocną stroną',
   },
   {
     title: 'Porównywalność wyników',
-    text: 'symulujących trudne rozmowy z pracownikiem, takie jak udzielanie informacji zwrotnej czy rozwiązywanie konfliktów',
+    text: 'Możliwość śledzenia postępów i porównywania wyników na przestrzeni czasu, co pozwala na systematyczny rozwój i doskonalenie umiejętności',
   },
 ];
 
-const Accordion = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const Accordion = ({ title, children, isOpen, setIsOpen }) => {
   return (
     <div className="flex flex-col">
       <button
@@ -69,6 +74,8 @@ const Accordion = ({ title, children }) => {
 };
 
 const RaportInfoSection = ({ isSecondary = false, hasTopSeparator = true, hasBottomSeparator = false, className }) => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   return (
     <section className={cn("px-4", className)}>
       {hasTopSeparator && (
@@ -109,7 +116,7 @@ const RaportInfoSection = ({ isSecondary = false, hasTopSeparator = true, hasBot
 
           <div className="mt-4 mb-11 flex flex-col gap-4">
             {ACCORDION_DATA.map((data, index) => (
-              <Accordion key={index} title={data.title}>
+              <Accordion key={index} title={data.title} isOpen={index === activeIndex} setIsOpen={() => setActiveIndex(index === activeIndex ? null : index)}>
                 {data.text}
               </Accordion>
             ))}
