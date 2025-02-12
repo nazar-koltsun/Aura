@@ -4,12 +4,13 @@ import Button from './Button';
 
 import CheckIcon from './icons/CheckIcon';
 
-const AccountTypeCard = ({ card }) => (
+const AccountTypeCard = ({ card, isActive, index, setActiveIndex }) => (
   <li
     className={cn(
-      'grid rounded-[20px]',
-      card.type === 'premium' && 'shadow-premiumSdadow'
+      'grid rounded-[20px] w-full',
+      isActive && 'shadow-premiumSdadow'
     )}
+    onClick={() => setActiveIndex(index)}
   >
     <Card className="py-[30px] px-0 rounded-[20px] border border-[var(--light-silver)] max-1024:px-0">
       <div
@@ -37,7 +38,7 @@ const AccountTypeCard = ({ card }) => (
         </Button>
 
         <span className="mt-[2px] text-[11px] text-[var(--sonic-silver)] font-bold">
-          Bezpieczna płatność z Tpay
+          Bezpieczna płatność z Przelewy24
         </span>
       </div>
 
