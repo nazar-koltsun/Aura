@@ -1,13 +1,10 @@
-import { useState } from 'react';
 import { Collapse } from 'react-collapse';
 import { cn } from '../../lib/utils';
 import HighlightBox from '../landing/HighlightBox';
 import PlusIcon from '../icons/PlusIcon';
 import MinusIcon from '../icons/MinusIcon';
 
-const Accordion = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const Accordion = ({ title, isOpen, setIsOpen, children }) => {
   return (
     <HighlightBox color='var(--rocket-metallic)' className='rounded-[10px]'>
       <div

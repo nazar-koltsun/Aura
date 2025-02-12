@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Subtitle from '../Subtitle';
 import SectionTitle from '../SectionTitle';
 import Accordion from '../Accordion';
@@ -32,6 +33,8 @@ const ACCORDION_DATA = [
 ]
 
 const CommonQuestionsSection = () => {
+  const [activerIndex, setActiverIndex] = useState(null);
+
   return (
     <section className='pt-11 px-4 max-1024:pt-10'>
       <div className='max-w-[1082px] mx-auto flex flex-col items-center'>
@@ -41,7 +44,7 @@ const CommonQuestionsSection = () => {
 
         <div className='mt-9 space-y-[22px] max-1024:space-y-4'>
           {ACCORDION_DATA.map((data, index) => (
-            <Accordion key={index} title={data.title}>{data.text}</Accordion>
+            <Accordion key={index} title={data.title} isOpen={index === activerIndex} setIsOpen={() => setActiverIndex(index === activerIndex ? null : index)}>{data.text}</Accordion>
           ))}
         </div>
       </div>
