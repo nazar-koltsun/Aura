@@ -14,7 +14,7 @@ const Benefits = ({ benefits, isBannerLarge, className }) => {
         <img
           src={benefits.banner.image}
           alt=""
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover blur-[2px]"
         />
       </div>
 

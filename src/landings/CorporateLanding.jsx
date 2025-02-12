@@ -19,8 +19,11 @@ import DataAnalysisIcon from '../components/icons/DataAnalysisIcon';
 const BENEFITS = {
   banner: {
     image: FeaturesBanner,
-    text:
-      'Praktyczny trening bez RYZYKA RZECZYWISTYCH KONSEKWENCJI bo wszyscy wiemy, że w teoria nie zawsze sprawdza się w praktyce.',
+    text: (
+      <p>
+        Praktyczny trening <b>bez ryzyka rzeczywistych konsekwencji</b> bo wszyscy wiemy, że w teoria nie zawsze sprawdza się w praktyce.'
+      </p>
+    )
   },
   items: [
     {
