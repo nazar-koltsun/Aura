@@ -10,8 +10,8 @@ const WhyVRPlusAISection = () => {
 
       <p className="mt-4 max-w-[800px] text-[var(--granite-gray)] text-lg text-center max-1024:mt-5">
         Dostarczamy szkolenia podnoszące kwalifikacje komunikacyjne i
-        sprzedażowe wspierane przez VR i AI - badania pokazują, że nauka dzięki
-        immersji VR jest skuteczniejsza o 233%.<sup>1</sup>
+        sprzedażowe, wspierane przez VR i AI. Badania pokazują, że nauka dzięki
+        immersji VR jest o 233% skuteczniejsza.(1)
       </p>
 
       <VRPlusAIFeatures />
