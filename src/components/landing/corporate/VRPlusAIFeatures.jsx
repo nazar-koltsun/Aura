@@ -95,18 +95,14 @@ const VRPlusAIFeatures = () => {
       {circlesData.map((circle, index) => (
         <motion.div
           key={index}
-          animate={
-            hoveredIndex === index || activeIndex === index
-              ? {
-                  scale: [1, 1.08, 1],
-                  transition: {
-                    duration: 1.2,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  },
-                }
-              : { scale: 1 }
-          }
+          animate={{
+            scale: [1, 1.08, 1],
+            transition: {
+              duration: 1.2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            },
+          }}
           className={cn(
             'absolute w-[19%] h-[14.769%] p-1 flex justify-center items-center gap-1 rounded-full text-xs text-white cursor-pointer',
             (hoveredIndex === index || activeIndex === index) && 'z-10'
@@ -118,35 +114,27 @@ const VRPlusAIFeatures = () => {
         >
           {/* Circle Animation (Smooth Scaling) */}
           <motion.div
-            animate={
-              hoveredIndex === index || activeIndex === index
-                ? {
-                    scale: [1, 1.2, 1],
-                    transition: {
-                      duration: 1,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    },
-                  }
-                : { scale: 1 }
-            }
+            animate={{
+              scale: [1, 1.2, 1],
+              transition: {
+                duration: 1,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              },
+            }}
             className="absolute w-full h-full rounded-full z-10"
           ></motion.div>
 
           {/* Icon Animation (Subtle Growing) */}
           <motion.div
-            animate={
-              hoveredIndex === index || activeIndex === index
-                ? {
-                    scale: [1, 1.07, 1],
-                    transition: {
-                      duration: 0.8,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    },
-                  }
-                : { scale: 1 }
-            }
+            animate={{
+              scale: [1, 1.07, 1],
+              transition: {
+                duration: 0.8,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              },
+            }}
             className="flex justify-center items-center"
           >
             {circle.icon}
