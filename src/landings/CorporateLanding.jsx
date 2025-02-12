@@ -20,29 +20,50 @@ const BENEFITS = {
   banner: {
     image: FeaturesBanner,
     text: (
-      <p>
-        Praktyczny trening <b>bez ryzyka rzeczywistych konsekwencji</b> bo wszyscy wiemy, że w teoria nie zawsze sprawdza się w praktyce.'
-      </p>
-    )
+      <span>
+        Praktyczny trening <b>bez ryzyka rzeczywistych konsekwencji</b> bo
+        wszyscy wiemy, że w teoria nie zawsze sprawdza się w praktyce.'
+      </span>
+    ),
   },
   items: [
     {
       icon: <TeamPeopleThinkingIcon />,
-      text: <p>Zmniejszona rotacja <br className='max-1024:hidden' /> pracownicza</p>
+      text: (
+        <span>
+          Zmniejszona rotacja pracownicza prowadząca do obniżenia kosztów
+          onboardingu
+        </span>
+      ),
     },
     {
       icon: <MindsetThinkingIcon />,
-      text: <p>Prawdopodobieństwo wykorzystania nowo nabytej wiedzy zwiększone o <b className='font-semibold'>275%</b></p>
+      text: (
+        <span>
+          Prawdopodobieństwo wykorzystania nowo nabytej wiedzy zwiększone o{' '}
+          <b className="font-semibold">275%</b>
+        </span>
+      ),
     },
     {
       icon: <TimeIdeaHumanIcon />,
-      text: <p><b className='font-semibold'>4 x większe</b> skupienie podczas szkolenia</p>
+      text: (
+        <span>
+          <b className="font-semibold">4 x większe</b> skupienie podczas szkolenia, przekładające się na wykorzystanie wiedzy w praktyce
+        </span>
+      ),
     },
     {
       icon: <DataAnalysisIcon />,
-      text: <p><span className='underline'>93% CEOs,</span> którzy wprowadzili programy szkoleniowe zauważyli znaczący <b className='font-semibold'>wzrost w produktywności</b></p>
+      text: (
+        <span>
+          <span className="underline">93% CEOs,</span> którzy wprowadzili
+          programy szkoleniowe zauważyli znaczący{' '}
+          <b className="font-semibold">wzrost w produktywności</b>
+        </span>
+      ),
     },
-  ]
+  ],
 };
 
 const CorporateLanding = () => {
@@ -50,7 +71,7 @@ const CorporateLanding = () => {
     <>
       <MainSection />
       <WhyVRPlusAISection />
-      <WhatDoYouGetSection benefits={BENEFITS} className='-mt-10' />
+      <WhatDoYouGetSection benefits={BENEFITS} className="-mt-10" />
       <PlansCardsSection />
       <InterviewSection />
       <RaportInfoSection />
@@ -63,4 +84,3 @@ const CorporateLanding = () => {
 };
 
 export default CorporateLanding;
- 

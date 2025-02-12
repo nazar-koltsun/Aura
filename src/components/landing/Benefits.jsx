@@ -21,7 +21,7 @@ const Benefits = ({ benefits, isBannerLarge, className }) => {
       {benefits.items.map((item, index) => (
         <div
           key={index}
-          className={cn("pl-8 pr-4 pt-3 pb-5 min-h-[210px] rounded-[25px] bg-[var(--cultured)] shadow-cardGray max-1024:px-5 max-1024:min-h-[165px]",
+          className={cn("pl-5 pr-4 pt-3 pb-5 min-h-[210px] rounded-[25px] bg-[var(--cultured)] shadow-cardGray max-1024:px-5 max-1024:min-h-[165px]",
             item.shadow && `shadow-${item.shadow}`
           )}
         >
@@ -29,7 +29,8 @@ const Benefits = ({ benefits, isBannerLarge, className }) => {
             {item.icon}
           </div>
 
-          <div className="mt-4 text-[15px] text-[var(--granite-gray)] leading-[30px] max-700:text-[12px] max-700:leading-[22px] max-1024:mt-3">
+          <div className="mt-4 text-[15px] flex gap-1 text-[var(--granite-gray)] leading-[30px] max-700:text-[12px] max-700:leading-[22px] max-1024:mt-3">
+            <span>•</span>
             {item.text}
           </div>
         </div>
