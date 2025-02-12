@@ -1,4 +1,4 @@
-import Subtitle from "../../Subtitle";
+import Subtitle from '../../Subtitle';
 
 import PlansCardsBg from '../../../../assets/images/landing/plans-cards-bg.webp';
 import PlansCardsBgMob from '../../../../assets/images/landing/plans-cards-bg-mob.webp';
@@ -19,26 +19,38 @@ const plansData = [
     icon: <FaceIcon className="pointer-events-none" />,
     description_items: [
       <p>
-        Dla <b>handlowców</b>, którzy chcą doskonalić techniki sprzedażowe i
-        relacyjne bez ryzyka rzeczywistych konsekwencji.
+        Dla <b>handlowców</b>, którzy chcą doskonalić techniki sprzedaży i
+        umiejętność budowania relacji bez ryzyka rzeczywistych konsekwencji
       </p>,
       <p>
         Trenuj rozmowy sprzedaży z wirtualnym klientem, rozwijaj kompetencje{' '}
         <b>przełamywania obiekcji</b>, prezentacji oferty, budowania zaufania,
-        zamykania sprzedaży.
+        zamykania sprzedaży
       </p>,
     ],
     items: [
       {
-        title: "Wartość dla pracowników",
+        title: 'Wartość dla pracowników',
         icon: <TwoHeadsBrainIcon />,
-        features: ['Zrozumienie potrzeb klientów', 'Przełamywanie obiekcji', 'Skrócenie cyklu sprzedaży', 'Rozwój umiejętności negocjacji', 'Prezentowanie oferty językiem korzyści'],
+        features: [
+          'Zrozumienie potrzeb klientów',
+          'Przełamywanie obiekcji',
+          'Skrócenie cyklu sprzedaży',
+          'Rozwój umiejętności negocjacji',
+          'Prezentowanie oferty językiem korzyści',
+        ],
       },
       {
-        title: "Wpływ na firmę",
+        title: 'Wpływ na firmę',
         icon: <TwoHandsBrainIcon />,
-        features: ['Zwiększenie szans na powtórny zakup', 'Więcej pozytywnych rekomendacji', 'Klienci jako ambasadorzy marki', 'Wiarygodności firmy', 'Większe szanse na cross-selling'],
-      }
+        features: [
+          'Zwiększenie szans na powtórny zakup',
+          'Więcej pozytywnych rekomendacji',
+          'Klienci jako ambasadorzy marki',
+          'Wiarygodności firmy',
+          'Większe szanse na cross-selling',
+        ],
+      },
     ],
     color: '#F4A261',
     href: '#',
@@ -48,39 +60,56 @@ const plansData = [
     icon: <UserTableIcon className="pointer-events-none" />,
     description_items: [
       <p>
-        Dla <b>menedżerów</b>, którzy chcą doskonalić swoje umiejętności interpersonalne i zarządzania zespołem bez utraty motywacji i zaangażowania pracowników.
+        Dla <b>menedżerów</b>, którzy chcą doskonalić swoje umiejętności
+        interpersonalne i zarządzania zespołem bez utraty motywacji i
+        zaangażowania pracowników.
       </p>,
       <p>
-        Trenuj rozmowy z zespołem, by <b>udzielać</b> konstruktywnego <b>feedbacku</b>, rozwiązywać konflikty, zarządzać zmianą i projektami.
+        Trenuj rozmowy z zespołem, by <b>udzielać</b> konstruktywnego{' '}
+        <b>feedbacku</b>, rozwiązywać konflikty, zarządzać zmianą i projektami.
       </p>,
     ],
     items: [
       {
-        title: "Nagłówek 1",
+        title: 'Nagłówek 1',
         icon: <MindsetThinkingGreenIcon />,
-        features: ['Motywowanie zespołu wartościami', 'Precyzyjne przekazywanie oczekiwań', 'Zrozumienie potrzeb i oczekiwań zespołu', 'Zarządzanie obawami zespołu', 'Udzielanie adekwatnego feedbacku'],
+        features: [
+          'Motywowanie zespołu wartościami',
+          'Precyzyjne przekazywanie oczekiwań',
+          'Zrozumienie potrzeb i oczekiwań zespołu',
+          'Zarządzanie obawami zespołu',
+          'Udzielanie adekwatnego feedbacku',
+        ],
       },
       {
-        title: "Nagłówek 2",
+        title: 'Nagłówek 2',
         icon: <TeamPeopleThinkingGreenIcon />,
-        features: ['Zwiększenie szans na powtórny zakup', 'Więcej pozytywnych rekomendacji', 'Klienci jako ambasadorzy marki', 'Wiarygodności firmy', 'Większe szanse na cross-selling'],
-      }
+        features: [
+          'Zwiększenie szans na powtórny zakup',
+          'Więcej pozytywnych rekomendacji',
+          'Klienci jako ambasadorzy marki',
+          'Wiarygodności firmy',
+          'Większe szanse na cross-selling',
+        ],
+      },
     ],
     color: '#2A9D8F',
     href: '#',
-  }
+  },
 ];
 
 const PlansCardsSection = () => {
   return (
     <section className="px-4 pt-[92px] pb-[80px] relative max-1024:pt-[50px] max-1024:pb-[50px]">
       <div className="relative z-10 max-w-[1034px] mx-auto flex flex-col items-center justify-center">
-        <Subtitle title='Trenuj z nami' isShort />
+        <Subtitle title="Trenuj z nami" isShort />
         <h2 className="mt-5 text-center text-white text-[44px] leading-[54px] font-semibold max-1024:text-[28px] max-1024:leading-[34px] max-1024:mt-3">
           Dla handlowców i menadżerów
         </h2>
         <p className="mt-4 text-center max-w-[645px] text-white leading-[27px] max-1024:mt-4">
-          Trenuj rozmowy sprzedaży z wirtualnym klientem, rozwijaj kompetencje przełamywania obiekcji, prezentacji oferty, budowania zaufania, zamykania sprzedaży.
+          Trenuj rozmowy sprzedaży z wirtualnym klientem, rozwijaj kompetencje
+          przełamywania obiekcji, prezentacji oferty, budowania zaufania,
+          zamykania sprzedaży.
         </p>
 
         <div className="mt-7 w-full space-y-[27px]">
@@ -88,14 +117,10 @@ const PlansCardsSection = () => {
             <PlanCard key={index} planData={plan} />
           ))}
         </div>
-
       </div>
 
       <picture>
-        <source
-          srcSet={PlansCardsBgMob}
-          media="(max-width: 520px)"
-        />
+        <source srcSet={PlansCardsBgMob} media="(max-width: 520px)" />
         <img
           src={PlansCardsBg}
           alt=""
@@ -115,7 +140,7 @@ const PlansCardsSection = () => {
         className="absolute left-0 w-full bottom-[-1px] max-1920:bottom-[-1vw]"
       />
     </section>
-  )
-}
+  );
+};
 
 export default PlansCardsSection;
