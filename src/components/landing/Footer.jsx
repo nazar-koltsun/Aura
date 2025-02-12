@@ -97,7 +97,7 @@ const Footer = () => {
           />
         </div>
 
-        <div className="flex justify-between flex-wrap gap-8 pt-12 pb-6 px-14 max-1024:px-0 max-1024:pt-7 max-960:grid max-960:grid-cols-4 max-700:grid-cols-3 max-520:grid-cols-2">
+        <div className="flex justify-between flex-wrap gap-8 pt-12 px-14 max-1024:px-0 max-1024:pt-7 max-960:grid max-960:grid-cols-4 max-700:grid-cols-3 max-520:grid-cols-2">
           <div className="max-w-[285px] max-960:col-span-2 max-700:col-span-3 max-700:max-w-[500px] max-520:col-span-2 max-520:max-w-[300px]">
             <h3 className={titleBaseClasses}>Newsletter</h3>
 
@@ -209,18 +209,6 @@ const Footer = () => {
             />
           </div>
         </div>
-
-        <p className="text-[var(--metallic-silver)] text-sm">
-          <sup>(1)</sup>
-          Johnson & Johnson Institute & Osso VR: Enhancing surgical training,{' '}
-          <a
-            href="https://virtualspeech.com/blog/vr-training-case-studies"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://virtualspeech.com/blog/vr-training-case-studies
-          </a>
-        </p>
 
         <p className="mt-12 text-[var(--granite-gray)] text-center text-sm">
           Copyright © 2024{' '}
