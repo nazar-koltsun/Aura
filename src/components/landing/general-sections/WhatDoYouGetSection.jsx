@@ -6,7 +6,7 @@ import Button from '../../Button';
 
 import SeparatorTopImg from '../../../assets/images/landing/separator-top.svg';
 
-const WhatDoYouGetSection = ({ benefits, isBannerLarge, className }) => {
+const WhatDoYouGetSection = ({ benefits, isBannerLarge, isCarouselOnMobile, className }) => {
   return (
     <section className={cn("relative px-4", className)}>
       <img
@@ -24,7 +24,7 @@ const WhatDoYouGetSection = ({ benefits, isBannerLarge, className }) => {
           className='mt-4 max-w-[660px]'
         />
 
-        <Benefits className='mt-8 max-1024:mt-8' benefits={benefits} isBannerLarge={isBannerLarge} />
+        <Benefits className='mt-8 max-1024:mt-8' benefits={benefits} isBannerLarge={isBannerLarge} isCarouselOnMobile={isCarouselOnMobile} />
 
         <div className='mt-12 flex justify-center items-center gap-6 max-1024:mt-8 max-1024:gap-4 max-700:flex-col'>
           <Button path='#' className='text-[17px] min-w-[250px] min-h-[60px] tracking-wider'>Rozpocznij naukę</Button>

@@ -23,17 +23,20 @@ const BENEFITS = {
   items: [
     {
       icon: <MindsetThinkingIcon />,
-      text: <p>Przygotowanie do rozmowy kwalifikacyjnej zwiększa prawdopodobieństwo zatrudnienia</p>
+      text: <p className='w-full'>Przygotowanie do rozmowy kwalifikacyjnej zwiększa prawdopodobieństwo zatrudnienia</p>,
+      linkUrl: 'https://www.improimpro.com/en/blog/improwizacja-w-sprzedazy-jak-poprawic-efektywnosc-rozmow-sprzedazowych-i-zwiekszyc-wyniki',
     },
 
     {
       icon: <TimeIdeaHumanIcon />,
-      text: <p>Umiejętność improwizacji podczas spotkania sprzedażowego powoduje wzrost sprzedaży o 50%<sup>1</sup></p>
+      text: <p>Umiejętność improwizacji podczas spotkania sprzedażowego powoduje wzrost sprzedaży o 50%<sup>1</sup></p>,
+      linkUrl: 'https://hrstandard.pl/2017/07/05/komunikacja-wewnetrzna-a-wyniki-firmy-raport/',
     },
 
     {
       icon: <DataAnalysisIcon />,
-      text: <p>42% badanych uważa skuteczną komunikację z pracownikami za kluczową dla efektywności biznesowej<sup>2</sup></p>
+      text: <p>42% badanych uważa skuteczną komunikację z pracownikami za kluczową dla efektywności biznesowej<sup>2</sup></p>,
+      linkUrl: '#',
     },
   ]
 };
@@ -43,7 +46,7 @@ const IndividualLanding = () => {
     <>
       <MainSection />
       <SoftSkillsDevelopSection />
-      <WhatDoYouGetSection benefits={BENEFITS} isBannerLarge /> 
+      <WhatDoYouGetSection benefits={BENEFITS} isBannerLarge isCarouselOnMobile /> 
       <PlansCardsSection />
       <ChooseThePriceSection />
       <WriteToUsSection />
