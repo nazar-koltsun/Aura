@@ -155,25 +155,25 @@ const PlansCardsSection = () => {
         </p>
       </div>
 
-      <div className="mt-[90px] w-full flex justify-center gap-[15%] relative max-1400:flex-col max-1400:max-w-[1034px] 
-      max-1400:mx-auto max-1400:gap-[27px] max-1400:mt-8">
+      <div className="mt-[90px] w-full flex justify-center gap-[15%] relative max-1200:flex-col max-1200:max-w-[1034px] 
+      max-1200:mx-auto max-1200:mt-8 max-1024:flex-col max-1024:mt-8 max-1024:gap-4">
         <PlanCard
           planData={plansData[0]}
           isVertical
-          className="-mr-[410px] relative flex-shrink-0 left-0 z-10 max-w-[570px] hover:z-30 hover:shadow-cardGray
-          max-1400:max-w-full max-1400:mr-0"
+          className="-mr-[390px] relative flex-shrink-0 left-0 z-10 w-[570px] hover:z-30 hover:shadow-cardGray max-1400:w-[490px] max-1400:px-4 
+           max-1200:mr-0 max-1024:mr-0 max-1024:w-full"
         />
         <PlanCard
           planData={plansData[1]}
           isVertical
           isActive
-          className="-top-[45px] relative flex-shrink-0 z-20 max-w-[570px] hover:-translate-y-0 max-1400:max-w-full
-          max-1400:top-0"
+          className="-top-[45px] relative flex-shrink-0 z-20 w-[570px] hover:-translate-y-0 max-1400:w-[490px] max-1400:px-4 
+          max-1200:top-0 max-1024:top-0 max-1024:w-full"
         />
         <PlanCard
           planData={plansData[2]}
           isVertical
-          className="-ml-[410px] relative flex-shrink-0 z-10 right-0 max-w-[570px] hover:z-30 hover:shadow-cardGray max-1400:max-w-full max-1400:ml-0"
+          className="-ml-[390px] relative flex-shrink-0 z-10 right-0 w-[570px] hover:z-30 hover:shadow-cardGray max-1400:w-[490px] max-1400:px-4 max-1200:ml-0 max-1024:ml-0 max-1024:w-full"
         />
       </div>
 
