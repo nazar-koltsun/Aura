@@ -23,6 +23,10 @@
   --quartz: #474758;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
   font-family: 'Inter', sans-serif;
