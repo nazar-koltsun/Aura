@@ -36,7 +36,7 @@ const CommonQuestionsSection = () => {
   const [activerIndex, setActiverIndex] = useState(null);
 
   return (
-    <section className='pt-11 px-4 max-1024:pt-10'>
+    <section className='pt-6 px-4 max-1024:pt-8'>
       <div className='max-w-[1082px] mx-auto flex flex-col items-center'>
         <Subtitle title="Pomoc" />
 

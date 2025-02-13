@@ -65,7 +65,7 @@ const ChooseThePriceSection = () => {
       <Subtitle title="Cennik" isShort />
       <SectionTitle title="Wybierz cennik dla siebie" className="mt-3.5" />
 
-      <p className="mt-4 max-w-[500px] text-center text-[var(--granite-gray)] leading-[27px] max-1024:mt-5 max-1024:text-center">
+      <p className="mt-4 max-w-[645px] text-center text-[var(--granite-gray)] leading-[27px] max-1024:mt-5 max-1024:text-center">
         nowAURA rozwija Twoje kompetencje, z pewnością przyniesie korzyści
         całemu zespołowi! Jako polecający, możesz liczyć na bonus za każdą
         podpisaną umowę!
@@ -73,7 +73,7 @@ const ChooseThePriceSection = () => {
 
       <AccountTypeCards
         cards={ACCOUNT_TYPE_CARDS}
-        className="mt-12 w-full max-w-[960px]"
+        className="mt-10 w-full max-w-[960px]"
       />
 
       <div className="mt-14 flex justify-center items-center gap-6 max-1024:mt-8 max-1024:gap-4 max-700:flex-col">
@@ -94,7 +94,7 @@ const ChooseThePriceSection = () => {
 
       <img
         src={SeparatorBottom}
-        className="w-full mt-16 max-1024:mt-10"
+        className="w-full mt-12 max-1024:mt-10"
         role="presentation"
         alt=""
       />

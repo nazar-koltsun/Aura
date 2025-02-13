@@ -148,7 +148,7 @@ const PlansCardsSection = () => {
         <h2 className="mt-6 text-center text-white text-[44px] leading-[54px] font-semibold max-1024:text-[28px] max-1024:leading-[34px] max-1024:mt-3">
           Lepsza komunikacja to klucz do sukcesu
         </h2>
-        <p className="mt-[22px] text-center max-w-[500px] text-white leading-[27px] max-1024:mt-4">
+        <p className="mt-[22px] text-center max-w-[645px] text-white leading-[27px] max-1024:mt-4">
           Trenuj rozmowy sprzedaży z wirtualnym klientem, rozwijaj kompetencje
           przełamywania obiekcji, prezentacji oferty, budowania zaufania,
           zamykania sprzedaży.

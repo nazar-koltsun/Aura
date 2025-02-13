@@ -4,7 +4,7 @@ import ContactForm from "../ContactForm"
 
 const ContactSection = () => {
   return (
-    <section className="my-8 px-[70px] flex flex-col items-center max-1024:px-4">
+    <section className="my-6 px-[70px] flex flex-col items-center max-1024:px-4">
       <div className="max-1024:hidden">
         <Subtitle title="Potrzebujesz więcej informacji?" />
       </div>
@@ -12,9 +12,9 @@ const ContactSection = () => {
         <Subtitle title="Kontakt" />
       </div>
 
-      <SectionTitle title="Skontaktuj się z Nami" className="mt-8 text-[var(--quartz)] text-[52px] max-1024:mt-3" />
+      <SectionTitle title="Skontaktuj się z Nami" className="mt-5 text-[var(--quartz)] text-[52px] max-1024:mt-3" />
 
-      <p className="mt-3 text-[var(--granite-gray)]">Napisz do nas. Jesteśmy tu dla Ciebie.</p>
+      <p className="mt-1 text-[var(--granite-gray)]">Napisz do nas. Jesteśmy tu dla Ciebie.</p>
 
       <ContactForm />      
     </section>

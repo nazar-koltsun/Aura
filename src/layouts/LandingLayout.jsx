@@ -57,7 +57,7 @@ const LandingLayout = () => {
   return (
     <div className='grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-screen m-auto'>
       <Header className="col-span-1 max-1024:px-4" navItems={HEADER_NAV_LINKS} isCorporate={isCorporate} />
-      <main><Outlet /></main>
+      <main className='max-w-[2560px] w-full mx-auto'><Outlet /></main>
       <Footer />
     </div>
   );

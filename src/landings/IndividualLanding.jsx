@@ -47,9 +47,7 @@ const IndividualLanding = () => {
       <PlansCardsSection />
       <ChooseThePriceSection />
       <WriteToUsSection />
-
       <RaportInfoSection isSecondary hasBottomSeparator />
-
       <CommonQuestionsSection />
       <ContactSection />
       <VideoWidget videoUrl="https://www.youtube.com/embed/8V8oX3pWdxY?si=WkCK-56ToJF4Z47a" />

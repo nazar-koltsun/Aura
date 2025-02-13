@@ -21,20 +21,20 @@ const WriteToUsSection = () => {
   };
 
   return (
-    <section className="pt-10 pb-12 px-4 flex flex-col items-center max-1024:pt-8 max-1024:pb-10">
+    <section className="pt-7 pb-8 px-4 flex flex-col items-center max-1024:pt-8 max-1024:pb-10">
       <Subtitle title="Wdrażaj Nowocześność" isShort />
       <SectionTitle
         title="Zaproponuj nowAURA jako narzędzie rozwoju w firmie!"
         className="mt-3.5 max-w-[830px]"
       />
 
-      <p className="mt-4 max-w-[500px] text-center text-[var(--granite-gray)] leading-[27px] max-1024:mt-5 max-1024:text-center">
+      <p className="mt-4 max-w-[645px] text-center text-[var(--granite-gray)] leading-[27px] max-1024:mt-5 max-1024:text-center">
         nowAURA rozwija Twoje kompetencje, z pewnością przyniesie korzyści
         całemu zespołowi! Jako polecający, możesz liczyć na bonus za każdą
         podpisaną umowę!
       </p>
 
-      <div className="mt-12 relative overflow-hidden px-[73px] pt-[30px] pb-[60px] w-full max-w-[1082px] mx-auto rounded-[30px] shadow-cardGray max-1024:px-5 max-1024:pb-[30px]">
+      <div className="mt-9 relative overflow-hidden px-16 pt-6 pb-10 w-full max-w-[1082px] mx-auto rounded-[30px] shadow-cardGray max-1024:px-5 max-1024:pb-[30px]">
         <div className="relative z-10">
           <h3 className="text-white text-[44px] leading-[54px] font-semibold max-1024:text-[28px] max-1024:leading-[34px]">
             Poleć nas swojej firmie i zyskaj % <br /> od podpisanej umowy!
@@ -47,7 +47,7 @@ const WriteToUsSection = () => {
           </p>
 
           <div>
-            <form onSubmit={onFormSubmit} className="mt-10 flex justify-start gap-5 max-700:flex-col">
+            <form onSubmit={onFormSubmit} className="mt-7 flex justify-start gap-5 max-700:flex-col">
               <FormInput
                 id="email"
                 name="email"

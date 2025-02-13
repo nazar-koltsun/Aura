@@ -32,7 +32,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={onFormSubmit} className="w-[750px] max-w-full mt-12 max-1024:mt-6">
+    <form onSubmit={onFormSubmit} className="w-[750px] max-w-full mt-8 max-1024:mt-6">
       <div className="space-y-5">
         <FormInput
           id="email"
