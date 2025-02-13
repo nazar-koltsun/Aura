@@ -26,10 +26,14 @@ const Benefits = ({
           perView: 3,
           focusAt: 0,
           gap: 20,
-          // autoplay: 7000,
+          autoplay: 7000,
           breakpoints: {
             700: {
               perView: 2,
+              gap: 15,
+            },
+            460: {
+              perView: 1.5,
               gap: 15,
             },
           },
