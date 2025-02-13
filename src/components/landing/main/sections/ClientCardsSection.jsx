@@ -13,11 +13,6 @@ const ClientCardsSection = () => {
         <p className="mt-5 text-[18px] leading-[30px] text-[var(--granite-gray)]">
           Sprawdź, które rozmowy są dla Ciebie.
         </p>
-
-        <p className="mt-7 max-w-[435px] leading-[27px] text-[var(--granite-gray)] text-center max-1024:hidden">
-          Przykładowy tekst.Przykładowy tekst.Przykładowy tekst.Przykładowy
-          tekst.Przykładowy tekst.Przykładowy tekst.Przykładowy tekst.
-        </p>
       </div>
 
       <ClientCards />

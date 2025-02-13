@@ -87,7 +87,7 @@ const HowToSteps = ({ isInView, activeIndex, setActiveIndex, isDesktop }) => {
   return (
     <div
       ref={scrollContainerRef}
-      className="relative max-w-[510px] mt-9 bg-[var(--cultured)] p-7 pl-[65px] rounded-[30px] shadow-blockShadow max-700:pt-12
+      className="relative max-w-[510px] mt-7 bg-[var(--cultured)] p-7 pl-[65px] rounded-[30px] shadow-blockShadow max-700:pt-12
       max-700:pb-12 max-700:px-7"
     >
       <div className="relative">

@@ -43,7 +43,7 @@ const HowToSection = () => {
   return (
     <section
       ref={ref}
-      className="relative p-[70px] px-[70px] max-1024:px-4 max-1024:p-[50px] max-700:py-[40px] overflow-hidden"
+      className="relative pt-[70px] pb-16 px-[70px] max-1024:px-4 max-1024:p-[50px] max-700:py-[40px] overflow-hidden"
     >
       <div className="relative z-10 flex flex-col items-center">
         <Subtitle title="Jak to działa?" isShort />
@@ -57,7 +57,7 @@ const HowToSection = () => {
           setActiveIndex={handleActiveIndex}
           isDesktop={isDesktop}
         />
-        <div className="mt-14 flex justify-center gap-6 max-700:mt-6 max-700:flex-col max-700:gap-2.5 max-700:items-center">
+        <div className="mt-10 flex justify-center gap-6 max-700:mt-6 max-700:flex-col max-700:gap-2.5 max-700:items-center">
           <Button to="#" className="min-w-[247px] min-h-[60px]">
             Rozpocznij naukę
           </Button>
