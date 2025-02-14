@@ -57,7 +57,7 @@ const visionData = [
 
 const MainSection = () => {
   return (
-    <section className="relative px-4 pt-10 pb-24 max-1024:pt-10 max-1024:pb-14 max-1024:px-4">
+    <section className="relative px-4 pt-10 pb-8 max-1024:pt-10 max-1024:pb-7 max-1024:px-4">
       <div className="max-w-[950px] mx-auto flex flex-col justify-center items-center max-700:max-w-full">
         <Subtitle title="O nas" />
         <PageH1 className="mt-3 text-[44px] leading-[54px] font-semibold">
