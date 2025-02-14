@@ -1,4 +1,12 @@
+import { useState, useEffect, useRef } from 'react';
+import { cn } from '../../../../lib/utils';
 import Card from '../../../Card';
+import ContentItem from '../ContentItem';
+import SectionTitle from '../SectionTitle';
+
+import SeparatorBottomSimple from '../../../../assets/images/landing/separator-bottom.svg';
+
+const SPACE_FROM_TOP_OF_VIEWPORT = 50;
 
 const data = [
   {
@@ -12,7 +20,6 @@ const data = [
         velit esse cillum dolore eu fugiat nulla pariatur (the “Sites”).
       </p>,
     ],
-    add_desc: '',
     href: 'choose-offer',
   },
   {
@@ -27,62 +34,135 @@ const data = [
       </p>,
       <p>
         Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-        suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
-        autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
-        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-        voluptas nulla pariatur.
+        suscipit laboriosam.
       </p>,
       <p>
         Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-        suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
-        autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
-        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-        voluptas nulla pariatur.
+        suscipit laboriosam.
       </p>,
     ],
     href: 'choose-customer',
   },
+  {
+    title: 'Zarejestruj się',
+    descriptions: [
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga.
+      </p>,
+      <p>
+        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+        suscipit laboriosam.
+      </p>,
+    ],
+    href: 'logup',
+  },
+  {
+    title: 'Sprawdź dostępne pakiety rozmów',
+    descriptions: [
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga.
+      </p>,
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga.
+      </p>,
+    ],
+    href: 'check-available',
+  },
 ];
 
-const SectionTitle = ({ title }) => {
-  return (
-    <h2 className="text-2xl text-[var(--eerie-black)] font-bold">{title}</h2>
-  );
-};
-
 const ContentSection = () => {
-  const sidebarLinks = data.map((item) => ({
-    title: item.title,
-    href: item.href,
-  }));
-  console.log('sidebarLinks', sidebarLinks);
+  const [activeNavIndex, setActiveNavIndex] = useState(0);
+  const sectionRefs = useRef([]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let newActiveIndex = activeNavIndex;
+
+      sectionRefs.current.forEach((section, index) => {
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= SPACE_FROM_TOP_OF_VIEWPORT) {
+            newActiveIndex = index;
+          }
+        }
+      });
+
+      if (newActiveIndex !== activeNavIndex) {
+        setActiveNavIndex(newActiveIndex);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [activeNavIndex]);
 
   return (
-    <article className="px-20 py-6 flex gap-12">
-      <Card className="pl-5 pr-4 py-6 w-[330px] flex-shrink-0 rounded-[30px] shadow-blockShadow">
-        <SectionTitle title="Spis treści" />
-
-        <div className="flex flex-col">
-          {sidebarLinks.map((link, index) => (
-            <a key={index} href={'#' + link.href}>
-              {link.title}
-            </a>
-          ))}
-        </div>
-      </Card>
-
-      <div className='space-y-52'>
-        {data.map((item, index) => (
-          <div key={index} id={`${item.href}`}>
-            <SectionTitle title={index + 1 + '. ' + item.title} />
-            {item.descriptions.map((description, index) => (
-              <div key={index} className='inline-flex gap-1'>
-                {index + 1}. {description}
-              </div>
+    <article>
+      <div className="px-20 flex items-start gap-12 max-1024:px-4 max-1024:gap-6">
+        {/* Sidebar Navigation */}
+        <Card className="pl-5 pr-4 py-6 mt-6 sticky top-6 w-[330px] flex-shrink-0 rounded-[30px] shadow-blockShadow max-1240:w-[250px] max-700:hidden">
+          <SectionTitle title="Spis treści" />
+          <div className="mt-4 flex flex-col">
+            {data.map((item, index) => (
+              <a
+                key={index}
+                href={'#' + item.href}
+                onClick={() => setActiveNavIndex(index)}
+                className={cn(
+                  'text-xl leading-[35px] text-[var(--granite-gray)] transform transition duration-200 ease-in hover:text-[var(--jungle-green)] max-1024:text-lg max-1024:leading-[30px]',
+                  activeNavIndex === index &&
+                    'text-[var(--jungle-green)] font-semibold'
+                )}
+              >
+                {index + 1}. {item.title}
+              </a>
             ))}
           </div>
-        ))}
+        </Card>
+
+        {/* Main Content */}
+        <div>
+          {data.map((item, index) => (
+            <ContentItem
+              key={index}
+              id={item.href}
+              title={`${index + 1}. ${item.title}`}
+              descriptions={item.descriptions}
+              sectionRef={(el) => (sectionRefs.current[index] = el)}
+            />
+          ))}
+        </div>
       </div>
+
+      {/* Separator */}
+      <img
+        src={SeparatorBottomSimple}
+        role='presentation'
+        alt=""
+        className="mt-10"
+      />
     </article>
   );
 };

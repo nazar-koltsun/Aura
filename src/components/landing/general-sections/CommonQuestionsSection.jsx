@@ -36,8 +36,8 @@ const CommonQuestionsSection = () => {
   const [activerIndex, setActiverIndex] = useState(null);
 
   return (
-    <section className='pt-6 px-4 max-1024:pt-8'>
-      <div className='max-w-[1082px] mx-auto flex flex-col items-center'>
+    <section className='pt-6 max-1024:pt-8'>
+      <div className='px-4 max-w-[1115px] mx-auto flex flex-col items-center'>
         <Subtitle title="Pomoc" />
 
         <SectionTitle title='Często Zadawane Pytania' className='mt-2.5' />
