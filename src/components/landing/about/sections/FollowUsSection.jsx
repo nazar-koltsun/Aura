@@ -90,7 +90,7 @@ const FollowUsSection = () => {
     <section className="relative flex flex-col items-center overflow-hidden">
       <img className="w-full" alt="" role="presentation" src={SeparatorTopImg} />
 
-      <div className="px-10 pt-2.5 pb-10 w-full flex flex-col items-center mx-auto max-1024:max-w-full max-1024:pt-6 max-1240:px-6 max-1024:px-4">
+      <div className="px-10 pt-2.5 pb-8 w-full flex flex-col items-center mx-auto max-1024:max-w-full max-1024:pt-6 max-1240:px-6 max-1024:px-4">
         <Subtitle title="Social Media" isShort />
         <SectionTitle title="Obserwuj nas" className="mt-4 max-w-[660px]" />
 
@@ -98,7 +98,7 @@ const FollowUsSection = () => {
           Dostarczamy szkolenia podnoszące kwalifikacje komunikacyjne i sprzedażowe wspierane przez VR i AI - badania pokazują, że nauka dzięki immersji VR jest skuteczniejsza o 233%.<sup>1</sup>
         </p>
 
-        <div className='relative mt-10 rounded-[30px] max-w-[1200px] w-full min-h-[400px] shadow-blockShadow overflow-hidden max-1024:mt-6'>
+        <div className='relative mt-10 rounded-[30px] max-w-[1200px] w-full min-h-[400px] shadow-blockShadow overflow-hidden max-1024:mt-6 max-1024:min-h-[350px]'>
           {socials.map((social, index) => (
             <a
               href={social.href}

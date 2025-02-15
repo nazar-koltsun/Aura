@@ -77,7 +77,7 @@ const RaportInfoSection = ({ isSecondary = false, hasTopSeparator = true, hasBot
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <section className={cn("px-4", className)}>
+    <section className={cn(className)}>
       {hasTopSeparator && (
         <img
           src={SeparatorBottomImg}
@@ -87,7 +87,7 @@ const RaportInfoSection = ({ isSecondary = false, hasTopSeparator = true, hasBot
         />
       )}
 
-      <div className="pt-8 pb-12 max-w-[1060px] mx-auto grid grid-cols-2 gap-24 max-1024:gap-8 max-700:grid-cols-1 max-1024:pt-3 max-1024:pb-10">
+      <div className="pt-8 px-4 pb-12 max-w-[1060px] mx-auto grid grid-cols-2 gap-24 max-1024:gap-8 max-700:grid-cols-1 max-1024:pt-3 max-1024:pb-10">
         <div className="rounded-[30px] overflow-hidden self-start shadow-cardGray max-700:order-2">
           <picture>
             <source media="(max-width: 700px)" srcSet={isSecondary ? RaportInfoSecondImgMob : RaportInfoImgMob} />

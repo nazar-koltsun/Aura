@@ -161,7 +161,7 @@ const ContentSection = () => {
         src={SeparatorBottomSimple}
         role='presentation'
         alt=""
-        className="mt-10"
+        className="mt-10 w-full"
       />
     </article>
   );
