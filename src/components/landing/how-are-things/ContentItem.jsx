@@ -4,7 +4,7 @@ import Button from '../../Button';
 
 import ArrowDownSecondIcon from '../../icons/ArrowDownSecondIcon';
 
-const ContentItem = ({ id, title, descriptions, sectionRef }) => {
+const ContentItem = ({ id, title, descriptions, image, sectionRef }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
 
   let descriptionsToShow = showFullDescription
@@ -23,16 +23,17 @@ const ContentItem = ({ id, title, descriptions, sectionRef }) => {
           {index + 1}. {description}
         </div>
       ))}
-      {descriptions.length >= 2 && (
+      {descriptions.length > 2 && (
         <Button
-          variant="flat"
-          className="inline-flex text-xs text-[var(--jungle-green)] flex items-center mt-3 gap-[3px] font-normal"
-          onClick={() => setShowFullDescription(!showFullDescription)}
+        variant="flat"
+        className="text-xs text-[var(--jungle-green)] flex items-center mt-3 gap-[3px] font-normal"
+        onClick={() => setShowFullDescription(!showFullDescription)}
         >
           <ArrowDownSecondIcon width={18} height={18} fill='#2A9D8F' className={showFullDescription ? 'rotate-180' : ''} />
           {showFullDescription ? 'Schowaj' : 'Czytaj więcej'}
         </Button>
       )}
+      <img src={image} alt="" className='w-full mx-auto mt-2 rounded-2xl' />
     </div>
   );
 };

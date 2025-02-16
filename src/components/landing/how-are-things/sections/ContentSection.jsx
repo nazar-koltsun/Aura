@@ -6,6 +6,8 @@ import SectionTitle from '../SectionTitle';
 
 import SeparatorBottomSimple from '../../../../assets/images/landing/separator-bottom.svg';
 
+import BannerImage from '../../../../assets/images/landing/what-you-get-individual-bg.webp';
+
 const SPACE_FROM_TOP_OF_VIEWPORT = 50;
 
 const data = [
@@ -21,9 +23,10 @@ const data = [
       </p>,
     ],
     href: 'choose-offer',
+    image: BannerImage,
   },
   {
-    title: 'Wybierz rodzaj klienta: prywatny lub firmowy',
+    title: 'Wybierz rodzaj klienta',
     descriptions: [
       <p>
         We collect certain personal information about visitors and users of our
@@ -42,6 +45,7 @@ const data = [
       </p>,
     ],
     href: 'choose-customer',
+    image: BannerImage,
   },
   {
     title: 'Zarejestruj się',
@@ -64,6 +68,7 @@ const data = [
       </p>,
     ],
     href: 'logup',
+    image: BannerImage,
   },
   {
     title: 'Sprawdź dostępne pakiety rozmów',
@@ -89,6 +94,189 @@ const data = [
       </p>,
     ],
     href: 'check-available',
+    image: BannerImage,
+  },
+  {
+    title: 'Dokonaj zakupu pakietu',
+    descriptions: [
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga.
+      </p>,
+    ],
+    href: 'buy-a-package',
+    image: BannerImage,
+  },
+  {
+    title: 'Rozmowy dostępne na Twoim koncie',
+    descriptions: [
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga.
+      </p>,
+    ],
+    href: 'available-in-your-account',
+    image: BannerImage,
+  },
+  {
+    title: 'Wybierz temat i sytuację do ćwiczeń',
+    descriptions: [
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga.
+      </p>,
+    ],
+    href: 'choose-topic',
+    image: BannerImage,
+  },
+  {
+    title: 'Jak działa rozmowa z AI?',
+    descriptions: [
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga.
+      </p>,
+    ],
+    href: 'how-are-things-ai',
+    image: BannerImage,
+  },
+  {
+    title: 'Otrzymaj raport z rozmowy',
+    descriptions: [
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga.
+      </p>,
+    ],
+    href: 'get-report',
+    image: BannerImage,
+  },
+  {
+    title: 'Co zawiera raport?',
+    descriptions: [
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga.
+      </p>,
+    ],
+    href: 'what-report-contain?',
+    image: BannerImage,
+  },
+  {
+    title: 'Warianty szkoleń (AI bądź VR+AI)',
+    descriptions: [
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga.
+      </p>,
+    ],
+    href: 'training-variants',
+    image: BannerImage,
+  },
+  {
+    title: 'Wyciągnij wnioski i spróbuj raz jeszcze',
+    descriptions: [
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the
+        system, and expound the actual teachings.
+      </p>,
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga.
+      </p>,
+    ],
+    href: 'draw-conclusions-try-again',
+    image: BannerImage,
   },
 ];
 
@@ -124,14 +312,14 @@ const ContentSection = () => {
         {/* Sidebar Navigation */}
         <Card className="pl-5 pr-4 py-6 mt-6 sticky top-6 w-[330px] flex-shrink-0 rounded-[30px] shadow-blockShadow max-1240:w-[250px] max-700:hidden">
           <SectionTitle title="Spis treści" />
-          <div className="mt-4 flex flex-col">
+          <div className="mt-4 flex flex-col space-y-1">
             {data.map((item, index) => (
               <a
                 key={index}
                 href={'#' + item.href}
                 onClick={() => setActiveNavIndex(index)}
                 className={cn(
-                  'text-xl leading-[35px] text-[var(--granite-gray)] transform transition duration-200 ease-in hover:text-[var(--jungle-green)] max-1024:text-lg max-1024:leading-[30px]',
+                  'text-lg text-[var(--granite-gray)] transform transition duration-200 ease-in hover:text-[var(--jungle-green)] max-1024:text-lg max-1024:leading-[30px]',
                   activeNavIndex === index &&
                     'text-[var(--jungle-green)] font-semibold'
                 )}
@@ -150,6 +338,7 @@ const ContentSection = () => {
               id={item.href}
               title={`${index + 1}. ${item.title}`}
               descriptions={item.descriptions}
+              image={item.image}
               sectionRef={(el) => (sectionRefs.current[index] = el)}
             />
           ))}
