@@ -64,7 +64,7 @@ const MainSection = () => {
           Umiejętności komunikacyjne to klucz
         </PageH1>
 
-        <p className="mt-2 text-[22px] leading-[30px] text-center text-[var(--granite-gray)] max-1024:text-lg">
+        <p className="mt-2 text-lg text-center text-[var(--granite-gray)]">
           Jesteśmy <b>pasjonatami komunikacji</b> oraz{' '}
           <b>sztucznej inteligencji</b> i jej praktycznych zastosowań. Wierzymy,
           że odpowiednie połączenie tych dwóch obszarów to klucz do sukcesu w
@@ -72,7 +72,7 @@ const MainSection = () => {
         </p>
       </div>
 
-      <div className="mt-24 flex justify-center gap-6 max-w-[1255px] mx-auto max-1400:mt-20 max-700:flex-col max-700:items-center
+      <div className="mt-20 flex justify-center gap-6 max-w-[1255px] mx-auto max-1400:mt-20 max-700:flex-col max-700:items-center
        max-700:mt-7">
         {visionData.map((vision, index) => (
           <VisionCard

@@ -17,7 +17,7 @@ const VisionCard = ({
       )}
     >
       <div className="relative rounded-[30px] overflow-hidden">
-        <img src={data.img} alt="" className="w-full h-full object-cover max-1400:h-[300px]" />
+        <img src={data.img} alt="" className="w-full h-[450px] object-cover max-1400:h-[300px]" />
         <div
           className={cn(
             'absolute inset-0 opacity-80',
@@ -28,7 +28,7 @@ const VisionCard = ({
         ></div>
       </div>
 
-      <div className="px-12 pt-11 pb-16 text-[var(--granite-gray)] max-1400:px-8 max-1400:pt-7 max-1400:pb-12 max-1240:px-4
+      <div className="px-7 pt-7 pb-12 text-[var(--granite-gray)] max-1400:px-8 max-1400:pt-7 max-1240:px-4
       max-1240:pt-5 max-1240:pb-8">
         <h2 className="text-[32px] leading-[30px] font-bold max-1400:text-[28px] max-1240:text-xl">{data.title}</h2>
 
