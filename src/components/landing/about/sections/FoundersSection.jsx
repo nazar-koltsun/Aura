@@ -127,7 +127,7 @@ const FoundersSection = () => {
             {founders.map((founder, index) => (
               <div
                 key={index}
-                className="group relative flex min-h-[420px] max-w-[500px] w-full rounded-2xl overflow-hidden shadow-cardGray"
+                className="group relative flex min-h-[420px] max-w-[500px] w-full rounded-2xl overflow-hidden shadow-cardGray transform transition ease-in-out duration-200 hover:-translate-y-2"
               >
                 <div className="relative flex flex-col justify-between w-full z-10 opacity-0 group-hover:opacity-100 transform transition duration-200">
                   <ul className="flex items-center p-6 gap-2">
