@@ -72,8 +72,7 @@ const MainSection = () => {
         </p>
       </div>
 
-      <div className="mt-20 flex justify-center gap-6 max-w-[1255px] mx-auto max-1400:mt-20 max-700:flex-col max-700:items-center
-       max-700:mt-7">
+      <div className="mt-20 flex justify-center gap-6 max-w-[1255px] mx-auto max-1400:mt-16 max-520:mt-11">
         {visionData.map((vision, index) => (
           <VisionCard
             key={index}

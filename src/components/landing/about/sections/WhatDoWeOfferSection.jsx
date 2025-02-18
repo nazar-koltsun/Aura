@@ -55,7 +55,7 @@ const WhatDoWeOfferSection = () => {
 
         <SectionTitle title="Co oferujemy?" className="mt-4 max-w-[660px]" />
 
-        <p className="mt-2 text-[22px] leading-[30px] max-w-[950px] text-center text-[var(--granite-gray)] max-1024:text-lg">
+        <p className="mt-2 max-w-[950px] text-center text-[var(--granite-gray)] text-lg">
           Nowoczesna platforma szkoleniowa oparta na sztucznej inteligencji,
           która pozwala użytkownikom rozwijać umiejętności komunikacji w formie
           interaktywnych symulacji rozmów.
@@ -65,7 +65,7 @@ const WhatDoWeOfferSection = () => {
 
         <Button
           path="#"
-          className="mt-10 text-[17px] min-w-[262px] min-h-[60px] border-2 tracking-wider max-700:min-w-[250px]"
+          className="mt-8 text-[17px] min-w-[262px] min-h-[60px] border-2 tracking-wider max-700:min-w-[250px]"
         >
           Skontaktuj się
         </Button>

@@ -211,7 +211,7 @@ const Footer = () => {
         </div>
 
         <p className="mt-12 text-[var(--granite-gray)] text-center text-sm">
-          Copyright © 2024{' '}
+          Copyright © {new Date().getFullYear()}
         </p>
       </div>
     </footer>

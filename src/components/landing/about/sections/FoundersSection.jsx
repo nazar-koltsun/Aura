@@ -11,7 +11,7 @@ import XIcon from '../../../icons/XIcon';
 import LocationIcon from '../../../icons/LocationIcon';
 
 const socialNetworksBaseClasses =
-  'group-hover:fill-[var(--sandy-brown)] transition duration-200 ease-in-out';
+  'group-hover/link:fill-[var(--sandy-brown)] transition duration-200 ease-in-out';
 
 const founders = [
   {
@@ -116,20 +116,20 @@ const FoundersSection = () => {
         <Subtitle title="Poznaj Nas" isShort />
         <SectionTitle title="Założyciele" className="mt-4 max-w-[660px]" />
 
-        <p className="mt-2 text-[22px] leading-[30px] max-w-[950px] text-center text-[var(--granite-gray)] max-1024:text-lg">
+        <p className="mt-2 max-w-[950px] text-center text-[var(--granite-gray)] text-lg">
           Dostarczamy szkolenia podnoszące kwalifikacje komunikacyjne i
           sprzedażowe wspierane przez VR i AI - badania pokazują, że nauka
           dzięki immersji VR jest skuteczniejsza o 233%.<sup>1</sup>
         </p>
 
-        <div className="mt-10 w-full max-w-[860px] max-1024:mt-8">
-          <div className="flex items-center gap-8 w-full max-1024:gap-4 max-700:flex-col">
+        <div className="mt-7 w-full max-w-[860px]">
+          <div className="flex items-center gap-4 w-full max-700:flex-col">
             {founders.map((founder, index) => (
               <div
                 key={index}
-                className="relative flex min-h-[500px] max-w-[500px] w-full rounded-2xl overflow-hidden shadow-cardGray"
+                className="group relative flex min-h-[420px] max-w-[500px] w-full rounded-2xl overflow-hidden shadow-cardGray"
               >
-                <div className="relative flex flex-col justify-between w-full z-10">
+                <div className="relative flex flex-col justify-between w-full z-10 opacity-0 group-hover:opacity-100 transform transition duration-200">
                   <ul className="flex items-center p-6 gap-2">
                     {founder.socials.map((social, index) => (
                       <li key={index}>
@@ -138,7 +138,8 @@ const FoundersSection = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={social.title}
-                          className="group flex justify-center items-center w-4 h-4"
+                          style={{transitionDelay: `${(index + 1) * 70}ms`}}
+                          className="group/link flex justify-center items-center w-4 h-4 opacity-0 group-hover:opacity-100 transform transition duration-200"
                         >
                           {social.icon}
                         </a>
@@ -146,11 +147,13 @@ const FoundersSection = () => {
                     ))}
                   </ul>
 
-                  <div className="px-6 pb-10 bg-gradient-to-b from-[rgb(0,0,0,0)] from-35% to-[#2A9D8F] to-100% w-full h-full flex flex-col justify-end">
-                    <h3 className="text-2xl font-bold text-white">
+                  <div className="px-6 pb-10 bg-gradient-to-b from-[rgb(0,0,0,0)] from-35% to-[#2A9D8F] to-100% w-full h-full flex  flex-col justify-end">
+                    <h3
+                      className="text-2xl font-bold text-white opacity-0 group-hover:opacity-100 transform transition duration-100
+                      delay-100">
                       {founder.name}
                     </h3>
-                    <p className="text-sm leading-[34px] text-white">
+                    <p className="text-sm leading-[34px] text-white opacity-0 group-hover:opacity-100 transform transition duration-200 delay-200">
                       {founder.role}
                     </p>
                   </div>
@@ -159,12 +162,12 @@ const FoundersSection = () => {
                 <img
                   src={founder.image}
                   alt=""
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover object-top"
                 />
               </div>
             ))}
           </div>
-          <div className="mt-10 px-10 py-4 flex items-center gap-10 rounded-xl shadow-blockShadow text-[var(--granite-gray)] text-[18px] max-1024:mt-7 max-700:gap-5 max-700:px-5">
+          <div className="mt-7 px-10 py-4 flex items-center gap-10 rounded-xl shadow-blockShadow text-[var(--granite-gray)] text-[18px] max-700:gap-5 max-700:px-5">
             <LocationIcon />
             <div>
               <b className='text-[var(--eerie-black)] leading-[22px]'>nowAURA Sp. z o.o.</b>

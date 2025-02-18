@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { debounce } from '../../../../lib/utils';
 import Subtitle from '../../Subtitle';
 import SectionTitle from '../../SectionTitle';
@@ -9,9 +10,7 @@ import FollowUsBannerBg from '../../../../assets/images/landing/follow-us-bg.web
 import FacebookSdadowIcon from '../../../icons/FacebookSdadowIcon';
 import InstagramSdadowIcon from '../../../icons/InstagramSdadowIcon';
 import TictokSdadowIcon from '../../../icons/TictokSdadowIcon';
-import WhatsUpSdadowIcon from '../../../icons/WhatsUpSdadowIcon';
 import LinkedInSdadowIcon from '../../../icons/LinkedInSdadowIcon';
-import XSdadowIcon from '../../../../assets/images/landing/x-shadow-icon.webp';
 
 const socials = [
   {
@@ -28,7 +27,7 @@ const socials = [
     href: 'https://instagram.com',
     icon: <InstagramSdadowIcon />,
     position: {
-      desktop: { top: '8%', left: '60%' },
+      desktop: { top: '10%', left: '60%' },
       mobile: { top: '20%', left: '35%' },
     }
   },
@@ -37,17 +36,8 @@ const socials = [
     href: 'https://tiktok.com',
     icon: <TictokSdadowIcon />,
     position: {
-      desktop: { top: '18%', left: '70%' },
-      mobile: { top: '17%', left: '65%' },
-    }
-  },
-  {
-    title: 'WhatsUp',
-    href: 'https://whatsapp.com',
-    icon: <WhatsUpSdadowIcon />,
-    position: {
-      desktop: { top: '16%', left: '85%' },
-      mobile: { top: '45%', left: '80%' },
+      desktop: { top: '40%', left: '70%' },
+      mobile: { top: '17%', left: '75%' },
     }
   },
   {
@@ -55,17 +45,8 @@ const socials = [
     href: 'https://linkedin.com',
     icon: <LinkedInSdadowIcon />,
     position: {
-      desktop: { top: '45%', left: '77%' },
-      mobile: { top: '45%', left: '50%' },
-    }
-  },
-  {
-    title: 'X',
-    href: 'https://x.com',
-    icon: <img src={XSdadowIcon} alt='' className='max-w-[94px] max-1024:max-w-[70px]' />,
-    position: {
-      desktop: { top: '45%', left: '55%' },
-      mobile: { top: '55%', left: '25%' },
+      desktop: { top: '30%', left: '85%' },
+      mobile: { top: '45%', left: '55%' },
     }
   },
 ];
@@ -100,7 +81,7 @@ const FollowUsSection = () => {
 
         <div className='relative mt-10 rounded-[30px] max-w-[1200px] w-full min-h-[400px] shadow-blockShadow overflow-hidden max-1024:mt-6 max-1024:min-h-[350px]'>
           {socials.map((social, index) => (
-            <a
+            <motion.a
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
@@ -110,15 +91,24 @@ const FollowUsSection = () => {
                 top: isMobile ? social.position.mobile.top : social.position.desktop.top,
                 left: isMobile ? social.position.mobile.left : social.position.desktop.left,
               }}
+              animate={{
+                y: [0, -20, 0],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: index * 0.5,
+              }}
             >
               <span className='sr-only'>{social.title}</span>
               {social.icon}
-            </a>
+            </motion.a>
           ))}
 
           <Button
             path="#"
-            className="absolute bottom-8 left-1/2 z-10 mt-10 text-[17px] min-w-[262px] min-h-[60px] border-2 tracking-wider max-700:min-w-[250px] border-transparent max-960:-translate-x-1/2"
+            className="absolute bottom-8 right-8 z-10 mt-10 text-[17px] min-w-[262px] min-h-[60px] border-2 tracking-wider max-700:min-w-[250px] border-transparent max-960:-translate-x-1/2 max-960:right-0 max-960:left-1/2"
           >
             Skontaktuj się
           </Button>

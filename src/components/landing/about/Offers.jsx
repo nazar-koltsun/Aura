@@ -69,7 +69,7 @@ const Offers = ({ offers }) => {
                 <div className="self-center flex justify-center items-center w-[65px] h-[65px] max-700:w-[40px] max-700:h-[40px]">
                   {item.icon}
                 </div>
-                <div className="mt-10 text-[22px] text-[var(--granite-gray)] leading-[35px] whitespace-normal max-1024:text-base max-1024:leading-[30px] max-1024:mt-5">
+                <div className="mt-8 text-lg text-[var(--granite-gray)] whitespace-normal max-1024:text-base max-1024:mt-5">
                   {item.text}
                 </div>
               </div>
