@@ -28,7 +28,7 @@ const Benefits = ({
           gap: 20,
           autoplay: 7000,
           breakpoints: {
-            700: {
+            768: {
               perView: 2,
               gap: 15,
             },
@@ -76,8 +76,10 @@ const Benefits = ({
           {benefits.items.map((item, index) => (
             <a
               key={index}
+              target="_blank"
+              rel="noopener noreferrer"
               className={cn(
-                'pl-5 pr-4 pt-3 pb-5 min-h-[210px] rounded-[25px] bg-[var(--cultured)] shadow-cardGray transform transition duration-200 ease-in hover:-translate-y-1 hover:shadow-premiumSdadow max-1024:px-5 max-1024:min-h-[165px]',
+                'pl-5 pr-4 pt-3 pb-5 min-h-[200px] rounded-[25px] bg-[var(--cultured)] shadow-cardGray transform transition duration-200 ease-in hover:-translate-y-1 hover:shadow-premiumSdadow max-1024:px-5 max-1024:min-h-[165px]',
                 isCarouselOnMobile && 'max-1024:shadow-smallShadow',
                 item.shadow && `shadow-${item.shadow}`
               )}
@@ -87,7 +89,7 @@ const Benefits = ({
                 {item.icon}
               </div>
 
-              <div className="mt-4 text-[15px] flex gap-1 text-[var(--granite-gray)] leading-[30px] max-700:text-[12px] max-700:leading-[22px] whitespace-normal max-1024:mt-3">
+              <div className="mt-4 text-[15px] flex gap-1 text-[var(--granite-gray)] leading-[22px] max-700:text-[12px] max-700:leading-[18px] whitespace-normal max-1024:mt-3">
                 <span>•</span>
                 {item.text}
               </div>
@@ -142,7 +144,7 @@ const Benefits = ({
     >
       <div
         className={cn(
-          'col-span-2 relative pl-24 pr-14 py-8 min-h-[210px] bg-[#A7AB86] flex justify-center items-center rounded-[25px] shadow-cardGray overflow-hidden max-1024:py-6 max-1024:px-11 max-1024:min-h-[197px]',
+          'col-span-2 relative pl-24 pr-14 py-8 min-h-[200px] bg-[#A7AB86] flex justify-center items-center rounded-[25px] shadow-cardGray overflow-hidden max-1024:py-6 max-1024:px-11 max-1024:min-h-[197px]',
           isBannerLarge && 'col-span-3 max-1024:col-span-2'
         )}
       >

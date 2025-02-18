@@ -21,15 +21,14 @@ const BENEFITS = {
   },
   items: [
     {
-      icon: <ProtectWorldIcon className='mt-3' />,
+      icon: <ProtectWorldIcon className="mt-3" />,
       text: (
         <div>
-          <strong className="font-semibold block">
-            Zmniejsz ilość nieporozumień
-          </strong>
-          <p className="mt-4">
-            Dobrze zadawane pytania eliminują nieporozumienia i pomagają w
-            precyzyjnym zrozumieniu potrzeb mieszkańców.<sup>1</sup>
+          <strong className="font-semibold block">Want a Good Answer?</strong>
+          <p className="mt-2">
+            Ask a Good Question First! 
+            <span className='block italic'>Yuan Yao, Hanghang Tong, Tao Xie, Leman
+            Akoglu, Feng Xu, Jian Lu.</span>
           </p>
         </div>
       ),
@@ -37,29 +36,29 @@ const BENEFITS = {
     },
 
     {
-      icon: <TabletPhoneLearnIcon className='mt-3' />,
+      icon: <TabletPhoneLearnIcon className="mt-3" />,
       text: (
         <div>
           <strong className="font-semibold block">
             Buduj wizerunek profesjonalisty
           </strong>
-          <p className="mt-4">
+          <p className="mt-2">
             Dostosowanie języka oraz przekazywanie trudnych, urzędowych tematów
             w sposób przystępny i zrozumiały buduje postrzeganie urzędnika jako{' '}
             <b>profesjonalisty.</b>
-            <sup>2</sup>
           </p>
         </div>
       ),
       shadow: 'cardOrange',
+      linkUrl: 'https://dorada.uj.edu.pl/artykuly/skuteczna-komunikacja-jakie-znaczenia-maja-slowa-i-gesty',
     },
 
     {
-      icon: <WorkingStationIcon className='mt-3' />,
+      icon: <WorkingStationIcon className="mt-3" />,
       text: (
         <div>
           <strong className="font-semibold block">Zmniejsz ilość pracy</strong>
-          <p className="mt-4">
+          <p className="mt-2">
             Skuteczna komunikacja minimalizuje błędy, co prowadzi do finalizacji
             sprawy już za pierwszym razem obniżając ryzyko powtarzania procesu
             od nowa.
@@ -75,9 +74,14 @@ const JSTLanding = () => {
     <>
       <MainSection />
       <WhatIsNowAURASection />
-      <WhatDoYouGetSection benefits={BENEFITS} isBannerLarge />
+      <WhatDoYouGetSection benefits={BENEFITS} isBannerLarge isCarouselOnMobile />
       <PlansCardsSection />
-      <RaportInfoSection isSecondary hasTopSeparator={false} hasBottomSeparator={false} className='pt-5' />
+      <RaportInfoSection
+        isSecondary
+        hasTopSeparator={false}
+        hasBottomSeparator={false}
+        className="pt-5"
+      />
       <FeaturesTableSection />
       <CommonQuestionsSection />
       <ContactSection />

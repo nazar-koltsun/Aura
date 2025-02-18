@@ -3,43 +3,37 @@ import { cn } from '../../../../lib/utils';
 import Subtitle from '../../Subtitle';
 import SectionTitle from '../../SectionTitle';
 import Button from '../../../Button';
-import Card from '../../../Card';
 
 import ArrowDownSecondIcon from '../../../icons/ArrowDownSecondIcon';
 import WhatIsFirstImage from '../../../../assets/images/landing/what-is-first.webp';
 import WhatIsSecondImage from '../../../../assets/images/landing/what-is-second.webp';
 
-const ItemCard = ({ header, isSecond = false, children }) => (
-  <Card className="pl-[58px] pb-[58px] pr-11 pt-8 w-full flex flex-col rounded-[30px] max-960:max-w-[700px]">
-    <div
-      className={cn(
-        'pr-4 flex justify-between items-center max-1240:flex-col',
-        isSecond && 'max-1240:flex-col-reverse'
-      )}
-    >
-      {header}
+const ItemCard = ({ title, isSecond = false, children }) => (
+  <div
+    className={cn(
+      'w-full flex items-center gap-6 max-1024:flex-col max-1024:gap-0',
+      isSecond && 'flex-row-reverse'
+    )}
+  >
+    <ItemImage image={isSecond ? WhatIsSecondImage : WhatIsFirstImage} />
+    <div className="flex flex-col text-lg text-[var(--granite-gray)] max-1024:text-base">
+      <ItemTitle title={title} />
+      <div className='max-700:max-h-[300px] max-700:overflow-y-auto'>
+        {children}
+      </div>
     </div>
-
-    <div
-      className={cn(
-        'pl-6 space-y-8 text-lg leading-[30px] text-[var(--granite-gray)] max-1240:mt-8 max-1024:space-y-4 max-1024:mt-5 max-1024:text-base max-960:pl-0',
-        isSecond && 'pl-0'
-      )}
-    >
-      {children}
-    </div>
-  </Card>
+  </div>
 );
 
 const ItemTitle = ({ title }) => (
-  <h3 className="text-[31px] leading-[38px] font-bold text-[var(--granite-gray)] max-1240:text-center max-1240:min-h-[76px] max-1024:min-h-[56px] max-960:min-h-0 max-1024:text-xl">
+  <h3 className="text-[22px] leading-[30px] font-bold text-[var(--granite-gray)] max-1024:text-xl">
     {title}
   </h3>
 );
 
 const ItemImage = ({ image }) => (
-  <div className="w-[158px] h-[158px] flex justify-center items-center flex-shrink-0">
-    <img src={image} width="150" height="150" alt="" />
+  <div className="w-[200px] h-[200px] flex justify-center items-center flex-shrink-0 max-700:w-[120px] max-700:h-[120px]">
+    <img src={image} width="200" height="200" alt="" />
   </div>
 );
 
@@ -51,11 +45,11 @@ const WhatIsNowAURASection = () => {
   };
 
   return (
-    <section className="relative pt-6 pb-14 px-4 flex flex-col items-center max-1024:pt-8 max-700:pb-12">
+    <section className="relative pt-5 pb-8 px-10 flex flex-col items-center max-1024:pt-8 max-1024:px-4 max-700:pb-8">
       <Subtitle title="Co Robimy?" isShort />
       <SectionTitle title="Czym jest nowAURA?" className="mt-3.5" />
 
-      <div className="mt-3 max-w-[940px] text-center text-[var(--granite-gray)] text-[22px] leading-[30px] max-1024:text-lg max-1024:mt-5 max-1024:text-center">
+      <div className="mt-3 max-w-[940px] text-center text-[var(--granite-gray)] text-lg max-1024:mt-5 max-1024:text-center">
         <p>
           nowAURA to zaawansowane narzędzie szkoleniowe wspierające pracowników
           urzędu w rozwijaniu kompetencji miękkich i komunikacyjnych. Dzięki
@@ -84,90 +78,74 @@ const WhatIsNowAURASection = () => {
         </Button>
       </div>
 
-      <div className="max-w-[1280px] mx-auto mt-9 flex justify-between gap-12 w-full max-1400:gap-6 max-960:flex-col max-960:items-center">
-        <ItemCard
-          header={
-            <>
-              <ItemImage image={WhatIsFirstImage} />
-              <ItemTitle title="Jak działa nowAURA?" />
-            </>
-          }
-        >
-          <>
-            <p>
+      <div className="max-w-[1280px] mx-auto mt-9 flex flex-col gap-10 w-full max-960:flex-col max-960:items-center">
+        <ItemCard title="Jak to działa?">
+          <ol className="mt-4 list-decimal space-y-4 max-1024:pl-5">
+            <li>
               <strong className="block font-semibold">
                 Warsztaty w czasie rzeczywistym:
               </strong>
-              Nasze szkolenia są praktyczne i interaktywne. Podczas warsztatów
-              samodzielnie testujesz swoje kompetencje, otrzymujesz
-              natychmiastową informację zwrotną o tym, co robisz dobrze i co
-              warto poprawić. To nie klasyczna nauka, gdzie ekspert tylko mówi -
-              próbujesz, analizujesz i doskonalisz swoje umiejętności.
-            </p>
+              Praktyczne szkolenia, podczas których ćwiczysz swoje kompetencje,
+              otrzymujesz natychmiastową informację zwrotną i rozwijasz
+              umiejętności. To nie wykład – działasz, analizujesz, doskonalisz.
+            </li>
 
-            <p>
+            <li>
               <strong className="block font-semibold">
                 Indywidualne i bezpieczne ćwiczenia:
               </strong>
-              Dzięki indywidualnym sesjom w kontrolowanym środowisku możesz
-              uczyć się bez presji, stopniowo budując swoje umiejętności i
-              pewność siebie.
-            </p>
+              Trenujesz w kontrolowanym środowisku, bez presji, stopniowo
+              budując swoje umiejętności i pewność siebie, bez ryzyka
+              rzeczywistych konsekwencji.
+            </li>
 
-            <p>
+            <li>
               <strong className="block font-semibold">
                 Symulacje AI i VR:
               </strong>
               Wykorzystujemy sztuczną inteligencję i technologię VR do tworzenia
-              realistycznych symulacji. Rozmowy odzwierciedlają codzienne
-              sytuacje, dzięki czemu przygotowujesz się na realne wyzwania.
-              Trening trudnych rozmów:Ćwiczysz prowadzenie wymagających rozmów i
-              odpowiadanie na trudne pytania. To bezpieczna przestrzeń, by
-              przećwiczyć różne scenariusze i znaleźć skuteczne sposoby
-              komunikacji.
-            </p>
-          </>
+              realistycznych symulacji. Rozmowy projektujemy tak aby
+              odzwierciedlały sytuacji z twojego dnia pracy. Zdobywasz
+              umiejętności które możesz od razu wykorzystać.
+            </li>
+
+            <li>
+              <strong className="block font-semibold">
+                Trening trudnych rozmów:
+              </strong>
+              Trenuj prowadzenie wymagających rozmów i odpowiadanie na trudne
+              pytania. To bezpieczna przestrzeń, by przećwiczyć różne
+              scenariusze i znaleźć skuteczne sposoby komunikacji.
+            </li>
+          </ol>
         </ItemCard>
 
-        <ItemCard
-          isSecond
-          header={
-            <>
-              <ItemTitle title="Korzyści z wdrożenia nowAURA w urzędzie" />
-              <ItemImage image={WhatIsSecondImage} />
-            </>
-          }
-        >
-          <>
+        <ItemCard title="Korzyści z wdrożenia" isSecond>
+          <div className="mt-4 space-y-4">
             <p>
-              Wdrożenie systemu nowAURA w urzędzie pozwala znacząco{' '}
-              <b>usprawnić proces komunikacji</b> między urzędnikami a
-              mieszkańcami, co przekłada się na konkretne korzyści organizacyjne
-              i wizerunkowe. Pracownicy zyskują umiejętności do jasnego i
-              przystępnego wyjaśniania procedur, co umożliwia interesariuszom
-              lepsze zrozumienie wymagań oraz działań podejmowanych po wizycie w
-              urzędzie.
+              Wdrożenie narzędzia w urzędzie pozwala znacząco usprawnić proces
+              komunikacji między urzędnikami a mieszkańcami. Pracownicy zyskują
+              umiejętności m. in do jasnego i przystępnego wyjaśniania procedur,
+              co umożliwia interesariuszom lepsze zrozumienie wymagań oraz
+              działań podejmowanych po wizycie w urzędzie.
             </p>
 
             <p>
-              Dzięki temu znacząco{' '}
-              <b>redukowane są błędy w składanych dokumentach</b>, co z jednej
-              strony odciąża urzędników, a z drugiej pozwala na sprawniejsze
-              załatwianie spraw. W efekcie zmniejsza się liczba wizyt
-              powtórnych, a mieszkańcy oceniają obsługę jako bardziej
-              profesjonalną.
+              Znacząco redukowane są błędy w składanych dokumentach, co odciąża
+              urzędników i pozwala na sprawniejsze załatwianie spraw. W efekcie
+              zmniejsza się liczba wizyt powtórnych, a mieszkańcy oceniają
+              obsługę jako profesjonalną.
             </p>
 
             <p>
-              Lepsze dopasowanie komunikacji do potrzeb mieszkańców sprzyja
-              także budowaniu zaufania do urzędu. Pracownicy, dzięki pogłębianiu
-              umiejętności takich jak parafraza czy zadawanie pytań otwartych,{' '}
-              <b>precyzyjnie określają oczekiwania petentów</b>, co zmniejsza
-              ryzyko nieporozumień. W efekcie urząd funkcjonuje bardziej
-              efektywnie, zyskując uznanie jako instytucja przyjazna i sprawnie
-              zarządzana.
+              Dopasowanie komunikacji do potrzeb mieszkańców sprzyja budowaniu
+              zaufania do urzędu. Pracownicy, dzięki pogłębianiu umiejętności
+              parafrazy czy zadawaniu pytań otwartych, precyzyjnie określają
+              oczekiwania interesariuszy, co zmniejsza ryzyko nieporozumień. W
+              efekcie urząd funkcjonuje bardziej efektywnie, zyskując uznanie
+              jako instytucja przyjazna i sprawnie zarządzana.
             </p>
-          </>
+          </div>
         </ItemCard>
       </div>
     </section>
