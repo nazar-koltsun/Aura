@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import PageH1 from '../../PageH1';
 import Subtitle from '../../Subtitle';
 import VisionCard from '../VisionCard';
@@ -7,7 +8,7 @@ import VisionImage from '../../../../assets/images/landing/vision.webp';
 const visionData = [
   {
     img: VisionImage,
-    title: 'Nasza wizja',
+    title: 'Nasza wizja 1',
     description: (
       <p>
         Naszym celem jest{' '}
@@ -23,7 +24,7 @@ const visionData = [
   },
   {
     img: VisionImage,
-    title: 'Nasza wizja',
+    title: 'Nasza wizja 2',
     description: (
       <p>
         Naszym celem jest{' '}
@@ -39,7 +40,7 @@ const visionData = [
   },
   {
     img: VisionImage,
-    title: 'Nasza wizja',
+    title: 'Nasza wizja 3',
     description: (
       <p>
         Naszym celem jest{' '}
@@ -56,8 +57,14 @@ const visionData = [
 ];
 
 const MainSection = () => {
+  const [activeCardIndex, setActiveCardIndex] = useState(1);
+
+  const handleActiveIndex = (index) => {
+    setActiveCardIndex(index);
+  };
+
   return (
-    <section className="relative px-4 pt-10 pb-8 max-1024:pt-10 max-1024:pb-7 max-1024:px-4">
+    <section className="relative px-4 pt-10 pb-8 max-1024:pt-10 max-1024:pb-7 max-1024:px-4 max-520:pb-16">
       <div className="max-w-[950px] mx-auto flex flex-col justify-center items-center max-700:max-w-full">
         <Subtitle title="O nas" />
         <PageH1 className="mt-3 text-[44px] leading-[54px] font-semibold">
@@ -72,14 +79,14 @@ const MainSection = () => {
         </p>
       </div>
 
-      <div className="mt-20 flex justify-center gap-6 max-w-[1255px] mx-auto max-1400:mt-16 max-520:mt-11">
+      <div className="mt-20 flex justify-center gap-6 max-w-[1255px] mx-auto max-1400:mt-16 max-520:mt-14">
         {visionData.map((vision, index) => (
           <VisionCard
             key={index}
+            index={index}
             data={vision}
-            isActive={index === 1}
-            isFirst={index === 0}
-            isLast={index === visionData.length - 1}
+            activeCardIndex={activeCardIndex}
+            handleActiveIndex={handleActiveIndex}
           />
         ))}
       </div>
