@@ -9,11 +9,11 @@ import BurgerIcon from '../components/icons/BurgerIcon';
 const HEADER_NAV_LINKS = [
   {
     title: 'O Nas',
-    path: 'about-us',
+    path: '/landings/about',
   },
   {
     title: 'Jak to działa?',
-    path: 'how-it-works',
+    path: 'landings/how-are-things',
   },
   {
     title: 'Cennik',
@@ -23,15 +23,15 @@ const HEADER_NAV_LINKS = [
       items: [
         {
           title: 'Klient firmowy',
-          path: 'price',
+          path: '/landings/corporate',
         },
         {
           title: 'Klient indywidualny',
-          path: 'price',
+          path: '/landings/individual',
         },
         {
           title: 'Klient JST',
-          path: 'price',
+          path: '/landings/jst',
         },
       ],
     }

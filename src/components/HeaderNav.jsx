@@ -14,7 +14,7 @@ const HeaderNav = ({ navItems }) => {
   const openNav = () => setIsOpen(true);
   const closeNav = () => setIsOpen(false);
 
-  const renderNavItem = (item, isLastItem, index) => {
+  const renderNavItem = (item, isLastItem) => {
     const baseClasses =
       'max-960:block px-5 max-960:py-4 text-center text-[var(--granite-gray)] font-medium hover:text-[var(--sandy-brown)] transition duration-200 ease-in-out max-960:text-lg';
 
@@ -24,6 +24,7 @@ const HeaderNav = ({ navItems }) => {
           key={item.title}
           path={item.path}
           className="ml-5 py-2.5 px-5 max-960:mt-4 max-960:ml-0 text-sm bg-[var(--sandy-brown)] hover:bg-[#DE8640] text-center max-960:text-lg"
+          onClick={closeNav}
         >
           {item.title}
         </Button>
@@ -38,11 +39,12 @@ const HeaderNav = ({ navItems }) => {
           className={({ isActive }) =>
             cn(baseClasses, isActive && 'text-[var(--sandy-brown)]')
           }
+          onClick={closeNav}
         >
           {item.title}
         </NavLink>
 
-        {item.submenu && <HaaderSubNav submenu={item.submenu} />}
+        {item.submenu && <HaaderSubNav submenu={item.submenu} onClose={closeNav} />}
       </div>
     );
   };

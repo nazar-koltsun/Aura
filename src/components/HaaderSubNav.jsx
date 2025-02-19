@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-const HaaderSubNav = ({ submenu }) => {
+const HaaderSubNav = ({ submenu, onClose }) => {
   return (
     <div className="hidden group-hover:block absolute top-full -right-4 min-w-60 pt-9 max-960:static max-960:block max-960:pt-0">
       <div className="bg-[var(--cultured)] shadow-blockShadow rounded-[30px] px-7 py-3.5 max-960:shadow-none max-960:rounded-none max-960:border-t max-960:border-t-[var(--cultured)]}">
@@ -15,6 +15,7 @@ const HaaderSubNav = ({ submenu }) => {
                 key={item.title}
                 to={item.path}
                 className="text-lg text-[var(--granite-gray)] hover:text-[var(--sandy-brown)] transition duration-200 ease-in-out max-960:text-base"
+                onClick={onClose}
               >
                 {item.title}
               </NavLink>

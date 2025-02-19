@@ -99,18 +99,18 @@ const FeaturesTableSection = () => {
   };
 
   return (
-    <section className="relative px-10 pt-24 pb-20 max-1394:pt-11 max-1024:pr-0 max-1024:px-4 max-1024:pb-16 max-1024:pt-6 max-700:pb-12 max-700:pt-1">
+    <section className="relative px-10 pt-24 pb-20 max-1394:pt-11 max-1024:px-4 max-1024:pb-16 max-1024:pt-6 max-700:pb-12 max-700:pt-1">
       <ShakingArrow />
       <div className="relative z-10 flex items-end justify-center mx-auto">
         <div
           className="flex-shrink-0 border border-white w-[260px] rounded-[30px] rounded-tr-none overflow-hidden 
-        max-1400:rounded-br-none max-700:rounded-[15px] max-700:rounded-br-none max-700:w-[175px]"
+        max-1400:rounded-br-none max-700:rounded-[15px] max-700:rounded-br-none max-700:w-[185px]"
         >
           {tableKeys.map((key, index) => (
             <div
               key={index}
               className="min-h-[61px] px-2 py-4 border-b-2 border-b-white last:border-b-0 bg-white 
-              bg-opacity-20 text-[17px] leading-[27px] font-bold text-white max-700:text-[12px] max-700:px-[2px]
+              bg-opacity-20 text-[17px] leading-[27px] font-bold text-white max-700:text-[12px] max-700:px-1.5
               max-700:py-2 max-700:min-h-0"
             >
               {key}
@@ -131,7 +131,7 @@ const FeaturesTableSection = () => {
               <div
                 key={index}
                 className={cn(
-                  'border border-white w-[260px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] max-1400:rounded-b-none max-700:w-[160px] max-700:rounded-[15px] max-700:rounded-b-none',
+                  'border border-white w-[260px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] max-1400:rounded-b-none max-700:w-[140px] max-700:rounded-[15px] max-700:rounded-b-none',
                   index === 0 &&
                     'border-[var(--jungle-green)] rounded-[30px] max-700:rounded-b-none',
                   index === 1 && 'rounded-bl-[30px] max-700:rounded-b-none',
@@ -141,7 +141,7 @@ const FeaturesTableSection = () => {
               >
                 <div
                   className={cn(
-                    'px-2 py-4 border-b-2 last:border-b-0 bg-white text-[17px] leading-[27px] font-bold text-[var(--granite-gray)] text-center max-700:text-[12px] max-700:px-[2px] max-700:py-2',
+                    'px-2 py-4 border-b-2 last:border-b-0 bg-white text-[17px] leading-[27px] font-bold text-[var(--granite-gray)] text-center max-700:text-[12px] max-700:px-1.5 max-700:py-2',
                     index === 0 &&
                       'bg-[var(--jungle-green)] text-white border-b-[var(--jungle-green)]'
                   )}
@@ -154,7 +154,7 @@ const FeaturesTableSection = () => {
                     <div
                       key={featureIndex}
                       className={cn(
-                        'px-2 py-4 min-h-[61px] border-b-2 text-center border-b-white last:border-b-0 bg-white bg-opacity-20 text-[17px] leading-[27px] text-white max-700:text-[12px] max-700:px-[2px] max-700:py-2 max-700:min-h-0',
+                        'px-2 py-4 min-h-[61px] border-b-2 text-center border-b-white last:border-b-0 bg-white bg-opacity-20 text-[17px] leading-[27px] text-white max-700:text-[12px] max-700:px-1.5 max-700:py-2 max-700:min-h-0',
                         index === 0 &&
                           'font-bold bg-[#2A9D8F] border-b-[#2A9D8F]'
                       )}

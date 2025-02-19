@@ -24,11 +24,12 @@ const BENEFITS = {
       icon: <ProtectWorldIcon className="mt-3" />,
       text: (
         <div>
-          <strong className="font-semibold block">Want a Good Answer?</strong>
+          <strong className="font-semibold block">Zmniejsz ilość nieporozumień</strong>
           <p className="mt-2">
+            Want a Good Answer?
             Ask a Good Question First! 
             <span className='block italic'>Yuan Yao, Hanghang Tong, Tao Xie, Leman
-            Akoglu, Feng Xu, Jian Lu.</span>
+            Akoglu, Feng Xu, Jian Lu.<sup>1</sup> </span>
           </p>
         </div>
       ),
@@ -45,7 +46,7 @@ const BENEFITS = {
           <p className="mt-2">
             Dostosowanie języka oraz przekazywanie trudnych, urzędowych tematów
             w sposób przystępny i zrozumiały buduje postrzeganie urzędnika jako{' '}
-            <b>profesjonalisty.</b>
+            <b>profesjonalisty.</b><sup>2</sup>
           </p>
         </div>
       ),
