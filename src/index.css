@@ -143,13 +143,13 @@ iframe {
 }
 
 .animate-fadeInLeft {
-  animation: fadeInLeft 0.8s ease-out 0.8s forwards;
+  animation: fadeInLeft 0.5s ease-out 0.5s forwards;
 }
 
 .animate-fadeInRight {
-  animation: fadeInRight 0.8s ease-out 0.8s forwards;
+  animation: fadeInRight 0.5s ease-out 0.5s forwards;
 }
 
 .animate-fadeInUp {
-  animation: fadeInUp 0.8s ease-out 0.8s forwards;
+  animation: fadeInUp 0.5s ease-out 0.5s forwards;
 }

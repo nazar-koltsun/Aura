@@ -21,7 +21,7 @@ const detectIsDesktop = () => {
 };
 
 const HowToSection = () => {
-  const { ref, inView } = useInView({ threshold: 0.9 });
+  const { ref, inView } = useInView({ threshold: 0.7 });
   const [activeIndex, setActiveIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(detectIsDesktop());
 
