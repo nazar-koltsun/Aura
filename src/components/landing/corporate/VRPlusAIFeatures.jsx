@@ -20,7 +20,9 @@ const circlesData = [
     bg: 'var(--jungle-green)',
     text: (
       <p>
-        <b className="block text-lg mb-1 max-700:text-base">Trening 1 na 1 bez ryzyka konsekwencji!</b>
+        <b className="block text-lg mb-1 max-700:text-base">
+          Trening 1 na 1 bez ryzyka konsekwencji!
+        </b>
         Ćwicz indywidualnie rozmowy z sztuczną inteligencją w bezpiecznym
         środowisku, gdzie możesz eksperymentować, uczyć się na błędach i
         rozwijać swoje umiejętności bez stresu i konsekwencji
@@ -34,8 +36,12 @@ const circlesData = [
     bg: 'var(--jungle-green)',
     text: (
       <p>
-        <b className="block text-lg mb-1 max-700:text-base">Buduj trwałe relacje i zdobywaj zaufanie!</b>
-        Ćwicz umiejętności nawiązywania długotrwałych relacji z zespołem, klientami oraz partnerami biznesowymi, zwiększając swoją skuteczność i przewagę konkurencyjną
+        <b className="block text-lg mb-1 max-700:text-base">
+          Buduj trwałe relacje i zdobywaj zaufanie!
+        </b>
+        Ćwicz umiejętności nawiązywania długotrwałych relacji z zespołem,
+        klientami oraz partnerami biznesowymi, zwiększając swoją skuteczność i
+        przewagę konkurencyjną
       </p>
     ),
   },
@@ -46,8 +52,12 @@ const circlesData = [
     bg: 'var(--jungle-green)',
     text: (
       <p>
-        <b className="block text-lg mb-1 max-700:text-base">Maksymalna immersja w VR!</b>
-        Zaawansowana technologia VR przenosi uczestników w wirtualny świat, gdzie mogą w pełni skupić się na szkoleniu, doświadczając realistycznych sytuacji i bodźców, ucząc się poprzez praktykę
+        <b className="block text-lg mb-1 max-700:text-base">
+          Maksymalna immersja w VR!
+        </b>
+        Zaawansowana technologia VR przenosi uczestników w wirtualny świat,
+        gdzie mogą w pełni skupić się na szkoleniu, doświadczając realistycznych
+        sytuacji i bodźców, ucząc się poprzez praktykę
       </p>
     ),
   },
@@ -58,8 +68,12 @@ const circlesData = [
     bg: 'var(--jungle-green)',
     text: (
       <p>
-        <b className="block text-lg mb-1 max-700:text-base">Raporty i analiza wyników!</b>
-        Po każdej sesji otrzymujesz szczegółowy raport z analizą mocnych stron i obszarów do poprawy – dzięki temu wiesz, nad czym pracować, by osiągać jeszcze lepsze rezultaty
+        <b className="block text-lg mb-1 max-700:text-base">
+          Raporty i analiza wyników!
+        </b>
+        Po każdej sesji otrzymujesz szczegółowy raport z analizą mocnych stron i
+        obszarów do poprawy – dzięki temu wiesz, nad czym pracować, by osiągać
+        jeszcze lepsze rezultaty
       </p>
     ),
   },
@@ -70,8 +84,15 @@ const circlesData = [
     bg: 'var(--sandy-brown)',
     text: (
       <p>
-        <b className="block text-lg mb-1 max-700:text-base">Trening w czasie rzeczywistym!</b>
-        Szkolenie odbywa się w interaktywnym środowisku, gdzie sztuczna inteligencja odgrywa rolę klienta lub członka zespołu, <span className='underline'>odpowiadając głosowo na żywo na wypowiedzi uczestników</span> i maksymalizując ich zaangażowanie
+        <b className="block text-lg mb-1 max-700:text-base">
+          Trening w czasie rzeczywistym!
+        </b>
+        Szkolenie odbywa się w interaktywnym środowisku, gdzie sztuczna
+        inteligencja odgrywa rolę klienta lub członka zespołu,{' '}
+        <span className="underline">
+          odpowiadając głosowo na żywo na wypowiedzi uczestników
+        </span>{' '}
+        i maksymalizując ich zaangażowanie
       </p>
     ),
   },
@@ -82,8 +103,11 @@ const circlesData = [
     bg: 'var(--sandy-brown)',
     text: (
       <p>
-        <b className="block text-lg mb-1 max-700:text-base">Eksperymentowanie i doskonalenie strategii!</b>
-        Testuj różne podejścia w sprzedaży i zarządzaniu, odkrywaj najlepsze strategie i udoskonalaj swoje umiejętności w praktycznych scenariuszach
+        <b className="block text-lg mb-1 max-700:text-base">
+          Eksperymentowanie i doskonalenie strategii!
+        </b>
+        Testuj różne podejścia w sprzedaży i zarządzaniu, odkrywaj najlepsze
+        strategie i udoskonalaj swoje umiejętności w praktycznych scenariuszach
       </p>
     ),
   },
@@ -94,8 +118,12 @@ const circlesData = [
     bg: 'var(--sandy-brown)',
     text: (
       <p>
-        <b className="block text-lg mb-1 max-700:text-base">Zadowoleni klienci, zmotywowany zespół!</b>
-        Dzięki skutecznej komunikacji i umiejętności budowania relacji, Twój zespół lepiej odpowiada na potrzeby klientów, zwiększając ich satysfakcję i lojalność
+        <b className="block text-lg mb-1 max-700:text-base">
+          Zadowoleni klienci, zmotywowany zespół!
+        </b>
+        Dzięki skutecznej komunikacji i umiejętności budowania relacji, Twój
+        zespół lepiej odpowiada na potrzeby klientów, zwiększając ich
+        satysfakcję i lojalność
       </p>
     ),
   },
@@ -108,6 +136,13 @@ const VRPlusAIFeatures = () => {
 
   // Detect if the device supports touch
   useEffect(() => {
+    document.body.addEventListener('click', (e) => {
+      if (!e.target.classList.contains('pulse-circle')) {
+        setActiveIndex(null);
+        setHoveredIndex(null);
+      }
+    });
+
     const checkTouchDevice = () => {
       setIsTouchDevice(
         'ontouchstart' in window || navigator.maxTouchPoints > 0
@@ -167,7 +202,7 @@ const VRPlusAIFeatures = () => {
                     },
                   }
             }
-            className="absolute w-full h-full rounded-full z-10"
+            className="pulse-circle absolute w-full h-full rounded-full z-10"
           ></motion.div>
 
           {/* Icon Animation (Stops on Hover) */}
