@@ -5,11 +5,14 @@ import GradientCheckIcon from '../icons/GradientCheckIcon';
 
 const PlanCard = ({
   planData,
+  index,
+  activeIndex = 1,
   isVertical = false,
-  isActive = false,
   hasTightDescription = false,
+  handleActiveIndex = () => {},
   className,
 }) => {
+  const isActive = index === activeIndex;
   const onBtnEnter = (e) => {
     e.target.style.backgroundColor = planData.color;
     e.target.style.color = 'white';
@@ -20,6 +23,8 @@ const PlanCard = ({
     e.target.style.color = planData.color;
   };
 
+  console.log('activeIndex', activeIndex);
+
   return (
     <div
       className={cn(
@@ -28,6 +33,11 @@ const PlanCard = ({
         isActive && 'bg-opacity-100 hover:-translate-y-0 max-1024:bg-opacity-70 max-1024:hover:-translate-y-2',
         className
       )}
+      onMouseEnter={() => {
+        console.log('mouse enter');
+        handleActiveIndex(index);
+      }}
+      onMouseLeave={() => handleActiveIndex(1)}
     >
       <div
         className={cn(

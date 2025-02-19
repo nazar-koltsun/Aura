@@ -18,14 +18,18 @@ const circlesData = [
   {
     left: '4%',
     top: '42%',
-    icon: <HeadHearthSettingsIcon className="max-w-[65%] max-700:max-w-[60%]" />,
+    icon: (
+      <HeadHearthSettingsIcon className="max-w-[65%] max-700:max-w-[60%]" />
+    ),
     bg: 'var(--jungle-green)',
     text: (
       <p>
-        <b className="block text-lg mb-1 max-700:text-base">Title 1</b>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-        eaque, eos voluptate magni cum quasi ab, doloribus laborum perspiciatis
-        quibusdam, fugit possimus quo eligendi iure?
+        <b className="block text-lg mb-1 max-700:text-base">
+          Trening 1 na 1 bez ryzyka konsekwencji!
+        </b>
+        Ćwicz indywidualnie rozmowy z sztuczną inteligencją w bezpiecznym
+        środowisku, gdzie możesz eksperymentować, uczyć się na błędach i
+        rozwijać swoje umiejętności bez stresu i konsekwencji.
       </p>
     ),
   },
@@ -36,10 +40,30 @@ const circlesData = [
     bg: 'var(--sandy-brown)',
     text: (
       <p>
-        <b className="block text-lg mb-1 max-700:text-base">Title 2</b>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-        eaque, eos voluptate magni cum quasi ab, doloribus laborum perspiciatis
-        quibusdam, fugit possimus quo eligendi iure?
+        <b className="block text-lg mb-1 max-700:text-base">
+          Raporty i analiza wyników!
+        </b>
+        Po każdej sesji otrzymujesz szczegółowy raport z analizą mocnych stron i
+        obszarów do poprawy – dzięki temu wiesz, nad czym pracować, by osiągać
+        jeszcze lepsze rezultaty.
+      </p>
+    ),
+  },
+  {
+    left: '32%',
+    top: '16%',
+    icon: (
+      <TwoHeadsExpirianceIcon className="max-w-[65%] max-700:max-w-[60%]" />
+    ),
+    bg: 'var(--jungle-green)',
+    text: (
+      <p>
+        <b className="block text-lg mb-1 max-700:text-base">
+          Mów tak, by Cię słuchano!
+        </b>
+        Zyskaj pewność siebie w relacjach międzyludzkich - zarówno w pracy
+        (zarządzanie zespołem, sprzedaż), jak i w życiu prywatnym. Nasz trening
+        pomoże Ci mówić skutecznie i z większą charyzmą.
       </p>
     ),
   },
@@ -50,24 +74,11 @@ const circlesData = [
     bg: 'var(--jungle-green)',
     text: (
       <p>
-        <b className="block text-lg mb-1 max-700:text-base">Title 3</b>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-        eaque, eos voluptate magni cum quasi ab, doloribus laborum perspiciatis
-        quibusdam, fugit possimus quo eligendi iure?
-      </p>
-    ),
-  },
-  {
-    left: '32%',
-    top: '16%',
-    icon: <TwoHeadsExpirianceIcon className="max-w-[65%] max-700:max-w-[60%]" />,
-    bg: 'var(--jungle-green)',
-    text: (
-      <p>
-        <b className="block text-lg mb-1 max-700:text-base">Title 4</b>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-        eaque, eos voluptate magni cum quasi ab, doloribus laborum perspiciatis
-        quibusdam, fugit possimus quo eligendi iure?
+        <b className="block text-lg mb-1 max-700:text-base">
+          Wpływaj skutecznie i etycznie!
+        </b>
+        Naucz się pozytywnych technik wpływu i skutecznej komunikacji,
+        zachowując pełną etykę.
       </p>
     ),
   },
@@ -78,10 +89,12 @@ const circlesData = [
     bg: 'var(--sandy-brown)',
     text: (
       <p>
-        <b className="block text-lg mb-1 max-700:text-base">Title 5</b>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-        eaque, eos voluptate magni cum quasi ab, doloribus laborum perspiciatis
-        quibusdam, fugit possimus quo eligendi iure?
+        <b className="block text-lg mb-1 max-700:text-base">
+          Trening w czasie rzeczywistym!
+        </b>
+        Szkolenie odbywa się w interaktywnym środowisku, gdzie sztuczna
+        inteligencja odgrywa rolę klienta lub członka zespołu, reagując na żywo
+        na wypowiedzi uczestników i maksymalizując ich zaangażowanie.
       </p>
     ),
   },
@@ -92,10 +105,9 @@ const circlesData = [
     bg: 'var(--jungle-green)',
     text: (
       <p>
-        <b className="block text-lg mb-1 max-700:text-base">Title 6</b>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-        eaque, eos voluptate magni cum quasi ab, doloribus laborum perspiciatis
-        quibusdam, fugit possimus quo eligendi iure?
+        <b className="block text-lg mb-1 max-700:text-base">Obniżaj stres!</b>
+        Ćwicz trudne sytuacje, by zachować spokój i opanowanie w stresujących
+        rozmowach.
       </p>
     ),
   },
@@ -108,6 +120,13 @@ const SoftSkillsDevelopSection = () => {
 
   // Detect if the device supports touch
   useEffect(() => {
+    document.body.addEventListener('click', (e) => {
+      if (!e.target.classList.contains('pulse-circle')) {
+        setActiveIndex(null);
+        setHoveredIndex(null);
+      }
+    });
+
     const checkTouchDevice = () => {
       setIsTouchDevice(
         'ontouchstart' in window || navigator.maxTouchPoints > 0
@@ -184,7 +203,7 @@ const SoftSkillsDevelopSection = () => {
                       },
                     }
               }
-              className="absolute w-full h-full rounded-full z-10"
+              className="pulse-circle absolute w-full h-full rounded-full z-10"
             ></motion.div>
 
             {/* Icon Animation (Stops on Hover) */}

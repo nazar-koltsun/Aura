@@ -50,9 +50,9 @@ const Footer = () => {
   const { ref, inView } = useInView({ threshold: 0.6 }); //
 
   const titleBaseClasses =
-    'text-[var(--eerie-black)] font-medium text-lg leading-[22px] tracking-[1px]';
+    'text-[var(--eerie-black)] font-medium text-base leading-[22px] tracking-[1px]';
   const linkBaseClasses =
-    'text-[var(--granite-gray)] text-sm hover:text-[var(--sandy-brown)] transition duration-200 ease-in-out';
+    'text-[var(--granite-gray)] text-xs hover:text-[var(--sandy-brown)] transition duration-200 ease-in-out';
 
   return (
     <footer ref={ref}>
@@ -101,7 +101,7 @@ const Footer = () => {
           <div className="max-w-[285px] max-960:col-span-2 max-700:col-span-3 max-700:max-w-[500px] max-520:col-span-2 max-520:max-w-[300px]">
             <h3 className={titleBaseClasses}>Newsletter</h3>
 
-            <p className="mt-4 text-[var(--granite-gray)]">
+            <p className="mt-4 text-[var(--granite-gray)] text-sm">
               Zapisz się na nasz newsletter, <br className="max-960:hidden" />{' '}
               żeby być na bieżąco.
             </p>
@@ -112,7 +112,7 @@ const Footer = () => {
           <div>
             <h3 className={titleBaseClasses}>O Nas</h3>
 
-            <ul className="mt-4 space-y-2 max-1024:space-y-3.5">
+            <ul className="mt-4 space-y-2">
               <li>
                 <NavLink to={'#'} className={linkBaseClasses}>
                   Jak to Działa?
@@ -135,7 +135,7 @@ const Footer = () => {
           <div>
             <h3 className={titleBaseClasses}>Produkty</h3>
 
-            <ul className="mt-4 space-y-2 max-1024:space-y-3.5">
+            <ul className="mt-4 space-y-2">
               <li>
                 <NavLink to={'#'} className={linkBaseClasses}>
                   Klient Firmowy
@@ -168,7 +168,7 @@ const Footer = () => {
           <div>
             <h3 className={titleBaseClasses}>Kontakt</h3>
 
-            <ul className="mt-4 space-y-2 max-1024:space-y-3.5">
+            <ul className="mt-4 space-y-2">
               <li>
                 <a href="mailto:info@nowaura.com" className={linkBaseClasses}>
                   info@nowaura.com
@@ -180,17 +180,17 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <span className="text-[var(--granite-gray)] text-sm">
+                <span className="text-[var(--granite-gray)] text-xs">
                   ul. Warszawska 40
                 </span>
               </li>
               <li>
-                <span className="text-[var(--granite-gray)] text-sm">
+                <span className="text-[var(--granite-gray)] text-xs">
                   40-008 Katowice
                 </span>
               </li>
               <li>
-                <span className="text-[var(--granite-gray)] text-sm">
+                <span className="text-[var(--granite-gray)] text-xs">
                   NIP 9542878235
                 </span>
               </li>
@@ -200,7 +200,7 @@ const Footer = () => {
           <div>
             <h3 className={titleBaseClasses}>Social Media</h3>
 
-            <span className="block mt-4 text-[var(--granite-gray)] text-sm">
+            <span className="block mt-4 text-[var(--granite-gray)] text-xs">
               Obserwuj Nas
             </span>
             <SocialMedia
@@ -210,7 +210,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="mt-12 text-[var(--granite-gray)] text-center text-sm">
+        <p className="mt-12 text-[var(--granite-gray)] text-center text-xs">
           Copyright © {new Date().getFullYear()}
         </p>
       </div>

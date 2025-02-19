@@ -21,7 +21,7 @@ const NewsletterForm = ({ className }) => {
         <FormInput
           placeholder="Wpisz swój e-mail"
           type="email"
-          className="text-sm border-[#BFE2DD]"
+          className="text-xs border-[#BFE2DD]"
         />
         <Button className='px-5 rounded-lg'>
           <MailIcon />
