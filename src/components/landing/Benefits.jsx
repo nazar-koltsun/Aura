@@ -107,7 +107,7 @@ const Benefits = ({
             data-glide-el="track"
           >
             <div className={cn('glide__slides', styles.slides)}>
-             {renderLinks()}
+              {renderLinks()}
             </div>
             {/* Dots Navigation */}
             <div
@@ -148,9 +148,9 @@ const Benefits = ({
           isBannerLarge && 'col-span-3 max-1024:col-span-2'
         )}
       >
-        <p className="relative z-10 max-w-[650px] text-[22px] text-white text-center leading-[30px] font-medium max-1024:text-[18px]">
+        <div className="relative z-10 max-w-[650px] text-[22px] text-white text-center leading-[30px] font-medium max-1024:text-[18px]">
           {benefits.banner.text}
-        </p>
+        </div>
 
         <img
           src={benefits.banner.image}
