@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 import Header from '../components/Header';
 import Footer from '../components/landing/Footer';
+import CookieBanner from '../components/CookieBanner';
 
 const HEADER_NAV_LINKS = [
   {
@@ -60,6 +61,7 @@ const LandingLayout = () => {
       <Header className="col-span-1 max-1024:px-4" navItems={HEADER_NAV_LINKS} isCorporate={isCorporate} />
       <main className='max-w-[2560px] w-full mx-auto'><Outlet /></main>
       <Footer />
+      <CookieBanner />
     </div>
   );
 };
