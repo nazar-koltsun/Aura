@@ -24,14 +24,20 @@ const BENEFITS = {
       icon: <ProtectWorldIcon className="mt-3" />,
       text: (
         <div>
-          <strong className="font-semibold block">Zmniejsz ilość nieporozumień</strong>
+          <strong className="font-semibold block">
+            Zmniejsz ilość nieporozumień
+          </strong>
           <p className="mt-2">
-            Want a Good Answer?
-            Ask a Good Question First! 
-            <span className='block italic'>Yuan Yao, Hanghang Tong, Tao Xie, Leman
-            Akoglu, Feng Xu, Jian Lu.<sup>1</sup> </span>
+            Dobrze zadawane pytania eliminują nieporozumienia i pomagają w
+            precyzyjnym zrozumieniu potrzeb mieszkańców. <button className='benefit-info-index relative -ml-2 -top-1 w-4 h-4 inline-flex justify-center items-center text-xs'>1</button>
           </p>
         </div>
+      ),
+      info_text: (
+        <p>
+          Want a Good Answer? Ask a Good Question First! Yuan Yao, Hanghang
+          Tong, Tao Xie, Leman Akoglu, Feng Xu, Jian Lu
+        </p>
       ),
       shadow: 'cardGreen',
     },
@@ -46,12 +52,15 @@ const BENEFITS = {
           <p className="mt-2">
             Dostosowanie języka oraz przekazywanie trudnych, urzędowych tematów
             w sposób przystępny i zrozumiały buduje postrzeganie urzędnika jako{' '}
-            <b>profesjonalisty.</b><sup>2</sup>
+            <b>profesjonalisty.</b>
+            <button className='benefit-info-index relative -ml-1 -top-1 w-4 h-4 inline-flex justify-center items-center text-xs'>2</button>
           </p>
         </div>
       ),
+      info_text: (
+        <a target='_blank' rel="nofollow noreferrer" href='https://dorada.uj.edu.pl/artykuly/skuteczna-komunikacja-jakie-znaczenia-maja-slowa-i-gesty'>https://dorada.uj.edu.pl/artykuly/skuteczna-komunikacja-jakie-znaczenia-maja-slowa-i-gesty</a>
+      ),
       shadow: 'cardOrange',
-      linkUrl: 'https://dorada.uj.edu.pl/artykuly/skuteczna-komunikacja-jakie-znaczenia-maja-slowa-i-gesty',
     },
 
     {
@@ -75,7 +84,11 @@ const JSTLanding = () => {
     <>
       <MainSection />
       <WhatIsNowAURASection />
-      <WhatDoYouGetSection benefits={BENEFITS} isBannerLarge isCarouselOnMobile />
+      <WhatDoYouGetSection
+        benefits={BENEFITS}
+        isBannerLarge
+        isCarouselOnMobile
+      />
       <PlansCardsSection />
       <RaportInfoSection
         isSecondary

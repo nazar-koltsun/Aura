@@ -4,6 +4,8 @@ import Glide from '@glidejs/glide';
 import '@glidejs/glide/dist/css/glide.core.min.css';
 import '@glidejs/glide/dist/css/glide.theme.min.css';
 import styles from './Benefits.module.css';
+import Benefit from './Benefit';
+
 
 const Benefits = ({
   benefits,
@@ -70,31 +72,14 @@ const Benefits = ({
   }, [isCarouselOnMobile]);
 
   const renderItems = (benefits) => {
+
     const renderLinks = () => {
       return (
         <>
           {benefits.items.map((item, index) => (
-            <a
-              key={index}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(
-                'pl-5 pr-4 pt-3 pb-5 min-h-[200px] rounded-[25px] bg-[var(--cultured)] shadow-cardGray transform transition duration-200 ease-in hover:-translate-y-1 hover:shadow-premiumSdadow max-1024:px-5 max-1024:min-h-[165px]',
-                isCarouselOnMobile && 'max-1024:shadow-smallShadow',
-                item.shadow && `shadow-${item.shadow}`
-              )}
-              href={item.linkUrl || null}
-            >
-              <div className="flex justify-center items-center w-[65px] h-[65px] max-700:w-[33px] max-700:h-[33px]">
-                {item.icon}
-              </div>
-
-              <div className="mt-4 text-[15px] flex gap-1 text-[var(--granite-gray)] leading-[22px] max-700:text-[12px] max-700:leading-[18px] whitespace-normal max-1024:mt-3">
-                <span>•</span>
-                {item.text}
-              </div>
-            </a>
+            <Benefit key={index} index={index} benefit={item} isCarouselOnMobile={isCarouselOnMobile} />
           ))}
+          
         </>
       );
     };
