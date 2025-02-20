@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { cn } from '../../lib/utils';
 import CloseIconRounded from '../icons/CloseIconRounded';
 
-const Benefit = ({ index, benefit, isCarouselOnMobile }) => {
+const Benefit = ({ infoIndex, benefit, isCarouselOnMobile }) => {
   const [showIndexInfo, setShowIndexInfo] = useState(false);
 
   const showInfoBox = () => {
@@ -14,16 +14,16 @@ const Benefit = ({ index, benefit, isCarouselOnMobile }) => {
   };
 
   useEffect(() => {
-    const infoIndex = document.querySelectorAll('.benefit-info-index')[index];
+    const infoIndexBtn = document.querySelectorAll('.benefit-info-index')[infoIndex];
 
-    if (infoIndex) {
-      infoIndex.addEventListener('click', showInfoBox);
+    if (infoIndexBtn) {
+      infoIndexBtn.addEventListener('click', showInfoBox);
 
       return () => {
-        infoIndex.removeEventListener('click', showInfoBox);
+        infoIndexBtn.removeEventListener('click', showInfoBox);
       };
     }
-  }, [index, showIndexInfo]);
+  }, [infoIndex, showIndexInfo]);
 
   const WrapperTag = benefit.linkUrl ? 'a' : 'div';
   const wrapperProps = benefit.linkUrl

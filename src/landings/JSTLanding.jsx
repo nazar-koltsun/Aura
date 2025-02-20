@@ -33,6 +33,7 @@ const BENEFITS = {
           </p>
         </div>
       ),
+      info_index: 0,
       info_text: (
         <p>
           Want a Good Answer? Ask a Good Question First! Yuan Yao, Hanghang
@@ -57,6 +58,7 @@ const BENEFITS = {
           </p>
         </div>
       ),
+      info_index: 1,
       info_text: (
         <a target='_blank' rel="nofollow noreferrer" href='https://dorada.uj.edu.pl/artykuly/skuteczna-komunikacja-jakie-znaczenia-maja-slowa-i-gesty'>https://dorada.uj.edu.pl/artykuly/skuteczna-komunikacja-jakie-znaczenia-maja-slowa-i-gesty</a>
       ),

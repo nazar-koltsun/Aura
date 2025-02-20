@@ -77,7 +77,7 @@ const Benefits = ({
       return (
         <>
           {benefits.items.map((item, index) => (
-            <Benefit key={index} index={index} benefit={item} isCarouselOnMobile={isCarouselOnMobile} />
+            <Benefit key={index} infoIndex={item.info_index} benefit={item} isCarouselOnMobile={isCarouselOnMobile} />
           ))}
           
         </>

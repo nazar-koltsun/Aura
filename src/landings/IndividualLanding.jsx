@@ -25,19 +25,28 @@ const BENEFITS = {
     {
       icon: <MindsetThinkingIcon />,
       text: <p className='w-full'>Przygotowanie do rozmowy kwalifikacyjnej zwiększa prawdopodobieństwo zatrudnienia</p>,
-      linkUrl: 'https://www.improimpro.com/en/blog/improwizacja-w-sprzedazy-jak-poprawic-efektywnosc-rozmow-sprzedazowych-i-zwiekszyc-wyniki',
     },
 
     {
       icon: <TimeIdeaHumanIcon />,
-      text: <p>Umiejętność improwizacji podczas spotkania sprzedażowego powoduje wzrost sprzedaży o 50%<sup>1</sup></p>,
-      linkUrl: 'https://hrstandard.pl/2017/07/05/komunikacja-wewnetrzna-a-wyniki-firmy-raport/',
+      text: (
+        <p>Umiejętność improwizacji podczas spotkania sprzedażowego powoduje wzrost sprzedaży o 50% <button className='benefit-info-index relative -ml-2 -top-1 w-4 h-4 inline-flex justify-center items-center text-xs'>1</button></p>
+      ),
+      info_index: 0,
+      info_text: (
+        <a target='_blank' rel="nofollow noreferrer" href='https://www.improimpro.com/en/blog/improwizacja-w-sprzedazy-jak-poprawic-efektywnosc-rozmow-sprzedazowych-i-zwiekszyc-wyniki'>https://www.improimpro.com/en/blog/improwizacja-w-sprzedazy-jak-poprawic-efektywnosc-rozmow-sprzedazowych-i-zwiekszyc-wyniki</a>
+      ),
     },
 
     {
       icon: <DataAnalysisIcon />,
-      text: <p>42% badanych uważa skuteczną komunikację z pracownikami za kluczową dla efektywności biznesowej<sup>2</sup></p>,
-      linkUrl: '#',
+      text: (
+        <p>42% badanych uważa skuteczną komunikację z pracownikami za kluczową dla efektywności biznesowej <button className='benefit-info-index relative -ml-2 -top-1 w-4 h-4 inline-flex justify-center items-center text-xs'>2</button></p>
+      ),
+      info_index: 1,
+      info_text: (
+        <a target='_blank' rel="nofollow noreferrer" href='https://hrstandard.pl/2017/07/05/komunikacja-wewnetrzna-a-wyniki-firmy-raport/'>https://hrstandard.pl/2017/07/05/komunikacja-wewnetrzna-a-wyniki-firmy-raport/</a>
+      ),
     },
   ]
 };
