@@ -10,7 +10,7 @@ const steps = [
 ];
 
 const STEP_CHANGE_TIME = 1400;
-const SCROLL_THRESHOLD = 20;
+const SCROLL_THRESHOLD = 60;
 
 const HowToSteps = ({ isInView, activeIndex, setActiveIndex, isDesktop }) => {
   const scrollContainerRef = useRef(null);
