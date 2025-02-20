@@ -8,14 +8,14 @@ const AccountTypeCard = ({ card, isActive, index, setActiveIndex }) => (
   <li
     className={cn(
       'grid rounded-[20px] w-full',
-      isActive && 'shadow-premiumSdadow'
+      isActive && 'shadow-premiumShadow'
     )}
     onClick={() => setActiveIndex(index)}
   >
     <Card className="py-[30px] px-0 rounded-[20px] border border-[var(--light-silver)] max-1024:px-0">
       <div
         className={cn(
-          'px-12 pb-6 flex flex-col items-center text-center border-b max-1440:px-6 border-b-[var(--light-silver)]',
+          'px-12 pb-6 flex flex-col items-center text-center border-b max-1440:px-6 border-b-[var(--light-silver)]'
         )}
       >
         <h3 className="text-[26px] text-[var(--granite-gray)] font-bold">

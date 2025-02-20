@@ -14,7 +14,9 @@ const Benefit = ({ infoIndex, benefit, isCarouselOnMobile }) => {
   };
 
   useEffect(() => {
-    const infoIndexBtn = document.querySelectorAll('.benefit-info-index')[infoIndex];
+    const infoIndexBtn = document.querySelectorAll('.benefit-info-index')[
+      infoIndex
+    ];
 
     if (infoIndexBtn) {
       infoIndexBtn.addEventListener('click', showInfoBox);
@@ -38,7 +40,7 @@ const Benefit = ({ infoIndex, benefit, isCarouselOnMobile }) => {
     <WrapperTag
       {...wrapperProps}
       className={cn(
-        'relative pl-5 pr-4 pt-3 pb-5 min-h-[200px] rounded-[25px] bg-[var(--cultured)] shadow-cardGray transform transition duration-200 ease-in hover:-translate-y-1 hover:shadow-premiumSdadow max-1024:px-5 max-1024:min-h-[165px]',
+        'relative pl-5 pr-4 pt-3 pb-5 min-h-[200px] rounded-[25px] bg-[var(--cultured)] shadow-cardGray transform transition duration-200 ease-in hover:-translate-y-1 hover:shadow-premiumShadow max-1024:px-5 max-1024:min-h-[165px]',
         isCarouselOnMobile && 'max-1024:shadow-smallShadow',
         benefit.shadow && `shadow-${benefit.shadow}`
       )}

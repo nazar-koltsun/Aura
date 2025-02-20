@@ -58,13 +58,19 @@ const Offers = ({ offers }) => {
 
   const renderItems = () => {
     return (
-      <div ref={glideRef} className='glide col-span-3 mt-10 max-w-[1265px] mx-auto max-1024:mt-4'>
-        <div className={cn('glide__track', styles.slidesTrack)} data-glide-el="track">
+      <div
+        ref={glideRef}
+        className="glide col-span-3 mt-10 max-w-[1265px] mx-auto max-1024:mt-4"
+      >
+        <div
+          className={cn('glide__track', styles.slidesTrack)}
+          data-glide-el="track"
+        >
           <div className={cn('glide__slides', styles.slides)}>
             {offers.map((item, index) => (
               <div
                 key={index}
-                className="px-10 py-8 flex flex-col rounded-[30px] bg-white shadow-cardGray transform transition duration-200 ease-in hover:-translate-y-1 hover:shadow-premiumSdadow max-1024:px-4 max-1024:py-5"
+                className="px-10 py-8 flex flex-col rounded-[30px] bg-white shadow-cardGray transform transition duration-200 ease-in hover:-translate-y-1 hover:shadow-premiumShadow max-1024:px-4 max-1024:py-5"
               >
                 <div className="self-center flex justify-center items-center w-[65px] h-[65px] max-700:w-[40px] max-700:h-[40px]">
                   {item.icon}
@@ -78,11 +84,18 @@ const Offers = ({ offers }) => {
         </div>
 
         {/* Dots Navigation */}
-        <div className={cn('glide__bullets', styles.bullets)} data-glide-el="controls[nav]">
+        <div
+          className={cn('glide__bullets', styles.bullets)}
+          data-glide-el="controls[nav]"
+        >
           {offers.map((_, index) => (
             <button
               key={index}
-              className={cn('glide__bullet', styles.bullet, index === activeSlide && styles.bulletActive)}
+              className={cn(
+                'glide__bullet',
+                styles.bullet,
+                index === activeSlide && styles.bulletActive
+              )}
               data-glide-dir={`=${index}`}
             ></button>
           ))}
