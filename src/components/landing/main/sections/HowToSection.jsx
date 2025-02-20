@@ -71,30 +71,25 @@ const HowToSection = () => {
         </div>
       </div>
 
-      {/* Backgro≈und images with dual transition effect */}
+      {/* Background images with fade transition effect */}
       {isDesktop && (
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          {bgImages.map((img, index) => {
-            const isActive = index === activeIndex;
-            const isPrevious = index < activeIndex;
-
-            return (
-              <motion.img
-                key={index}
-                src={img}
-                alt=""
-                role="presentation"
-                className="absolute top-0 left-0 w-full h-full object-cover"
-                animate={{
-                  y: isActive ? '0%' : isPrevious ? '-100%' : '100%', // Current moves up, next comes from below
-                }}
-                initial={{ y: isActive ? '0' : '100%' }} // Starts off-screen at bottom
-                transition={{
-                  y: { duration: 0.5, ease: 'linear' },
-                }}
-              />
-            );
-          })}
+          {bgImages.map((img, index) => (
+            <motion.img
+              key={index}
+              src={img}
+              alt=""
+              role="presentation"
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              animate={{
+                opacity: index === activeIndex ? 1 : 0,
+              }}
+              initial={{ opacity: 0 }}
+              transition={{
+                opacity: { duration: 0.8, ease: 'easeInOut' },
+              }}
+            />
+          ))}
         </div>
       )}
 
