@@ -15,7 +15,6 @@ const HEADER_NAV_LINKS = [
   },
   {
     title: 'Cennik',
-    path: 'price',
     submenu: {
       title: 'Wybierz cennik',
       items: [
