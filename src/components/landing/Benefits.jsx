@@ -43,9 +43,9 @@ const Benefits = ({
         });
 
         // Update activeSlide state on slide change
-        glideInstanceRef.current.on('run.after', () => {
-          setActiveSlide(glideInstanceRef.current.index);
-        });
+        // glideInstanceRef.current.on('run.after', () => {
+        //   setActiveSlide(glideInstanceRef.current.index);
+        // });
 
         glideInstanceRef.current.mount();
       } else if (window.innerWidth > 1024 && glideInstanceRef.current) {
