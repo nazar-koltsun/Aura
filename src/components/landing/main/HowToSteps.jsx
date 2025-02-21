@@ -10,13 +10,11 @@ const steps = [
 ];
 
 const STEP_CHANGE_TIME = 1400;
-const SCROLL_THRESHOLD = 60;
 
 const HowToSteps = ({ isInView, activeIndex, setActiveIndex, isDesktop }) => {
   const scrollContainerRef = useRef(null);
-  const scrollCounter = useRef(0);
   const dotRef = useRef(null);
-
+  
   useEffect(() => {
     if (!isDesktop) {
       if (isInView) {
@@ -30,59 +28,6 @@ const HowToSteps = ({ isInView, activeIndex, setActiveIndex, isDesktop }) => {
       }
     }
   }, [isInView, isDesktop, setActiveIndex]);
-
-  useEffect(() => {
-    if (!isDesktop) return;
-
-    let lastScrollTime = Date.now();
-
-    const handleScroll = (event) => {
-      const now = Date.now();
-      const timeDiff = now - lastScrollTime;
-      lastScrollTime = now;
-
-      const isAtFirstStep = activeIndex === 0 && event.deltaY < 0;
-      const isAtLastStep = activeIndex === steps.length - 1 && event.deltaY > 0;
-
-      if (isAtFirstStep || isAtLastStep) return;
-
-      event.preventDefault();
-
-      let scrollAmount = event.deltaY;
-      if (event.deltaMode === 1) {
-        scrollAmount *= 20;
-      } else if (event.deltaMode === 2) {
-        scrollAmount *= window.innerHeight;
-      }
-
-      scrollAmount =
-        Math.sign(scrollAmount) * Math.min(50, Math.abs(scrollAmount));
-      scrollCounter.current += scrollAmount * (timeDiff < 200 ? 0.1 : 1);
-
-      if (Math.abs(scrollCounter.current) >= SCROLL_THRESHOLD) {
-        const direction = scrollCounter.current > 0 ? 1 : -1;
-
-        setActiveIndex((prev) => {
-          let newIndex = prev + direction;
-          return Math.max(0, Math.min(newIndex, steps.length - 1));
-        });
-
-        scrollCounter.current = 0;
-      }
-    };
-
-    const container = scrollContainerRef.current;
-    if (isInView && container) {
-      window.addEventListener('wheel', handleScroll, { passive: false });
-    } else {
-      window.removeEventListener('wheel', handleScroll);
-      scrollCounter.current = 0;
-    }
-
-    return () => {
-      window.removeEventListener('wheel', handleScroll);
-    };
-  }, [isInView, isDesktop, activeIndex, setActiveIndex]);
 
   return (
     <div
