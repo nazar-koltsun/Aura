@@ -13,9 +13,9 @@ const CookieBanner = () => {
 
   const onDeclineAll = () => {
     setCookies({
-      necessary: true,
-      analytics: false,
-      marketing: false,
+      niezbędne: true,
+      analityczne: false,
+      marketingowe: false,
     });
 
     setTimeout(() => {
@@ -24,7 +24,15 @@ const CookieBanner = () => {
   };
 
   const onAcceptAll = () => {
-    setShowBanner(false);
+    setCookies({
+      niezbędne: true,
+      analityczne: true,
+      marketingowe: true,
+    });
+
+    setTimeout(() => {
+      setShowBanner(false);
+    }, 800);
   };
 
   const toggleCookie = (type) => {
@@ -91,7 +99,8 @@ const CookieBanner = () => {
           >
             <input
               type="checkbox"
-              checked={cookies[type] || false}
+              checked={type || false}
+              disabled={type === 'niezbędne'}
               onChange={() => {
                 toggleCookie(type);
               }}
