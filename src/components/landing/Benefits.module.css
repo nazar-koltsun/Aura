@@ -25,7 +25,7 @@
 }
 
 @media (max-width: 1024px) {
-  .bullets {
+  /* .bullets {
     position: static;
     display: flex;
     justify-content: center;
@@ -54,10 +54,11 @@
     &:focus {
       background-color: var(--jungle-green);
     }
-  }
+  } */
 
   .slides {
     padding: 16px 0;
+    overflow: visible;
   }
 
   .slide {
