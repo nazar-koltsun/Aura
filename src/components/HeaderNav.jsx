@@ -15,6 +15,12 @@ const HeaderNav = ({ navItems }) => {
   const closeNav = () => setIsOpen(false);
 
   const renderNavItem = (item, isLastItem) => {
+    const BaseTag = item.submenu ? 'div' : NavLink;
+    const BaseAtributes = item.submenu ? {} : {
+      to: item.path,
+      onClick: closeNav
+    };
+
     const baseClasses =
       'max-960:block px-5 max-960:py-4 text-center text-[var(--granite-gray)] font-medium hover:text-[var(--sandy-brown)] transition duration-200 ease-in-out max-960:text-lg';
 
@@ -34,15 +40,14 @@ const HeaderNav = ({ navItems }) => {
     return (
       <div key={item.title} className="group relative max-960:w-full max-960:text-center 
       max-960:border-b max-960:border-b-[var(--cultured)]}">
-        <NavLink
-          to={item.path}
+        <BaseTag
+          {...BaseAtributes}
           className={({ isActive }) =>
             cn(baseClasses, isActive && 'text-[var(--sandy-brown)]')
           }
-          onClick={closeNav}
         >
           {item.title}
-        </NavLink>
+        </BaseTag>
 
         {item.submenu && <HaaderSubNav submenu={item.submenu} onClose={closeNav} />}
       </div>
