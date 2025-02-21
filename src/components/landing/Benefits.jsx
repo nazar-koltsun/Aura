@@ -6,7 +6,6 @@ import '@glidejs/glide/dist/css/glide.theme.min.css';
 import styles from './Benefits.module.css';
 import Benefit from './Benefit';
 
-
 const Benefits = ({
   benefits,
   isBannerLarge,
@@ -24,11 +23,13 @@ const Benefits = ({
       if (window.innerWidth <= 1024 && !glideInstanceRef.current) {
         // Initialize Glide.js for mobile
         glideInstanceRef.current = new Glide(glideRef.current, {
-          type: 'carousel',
+          type: 'slider',
           perView: 3,
           focusAt: 0,
           gap: 20,
-          autoplay: 7000,
+          // autoplay: 7000,
+          rewind: false, // Disables infinite looping
+          bound: true, // Prevents sliding past the first or last slide
           breakpoints: {
             768: {
               perView: 2,
@@ -72,14 +73,17 @@ const Benefits = ({
   }, [isCarouselOnMobile]);
 
   const renderItems = (benefits) => {
-
     const renderLinks = () => {
       return (
         <>
           {benefits.items.map((item, index) => (
-            <Benefit key={index} infoIndex={item.info_index} benefit={item} isCarouselOnMobile={isCarouselOnMobile} />
+            <Benefit
+              key={index}
+              infoIndex={item.info_index}
+              benefit={item}
+              isCarouselOnMobile={isCarouselOnMobile}
+            />
           ))}
-          
         </>
       );
     };
@@ -95,7 +99,7 @@ const Benefits = ({
               {renderLinks()}
             </div>
             {/* Dots Navigation */}
-            <div
+            {/* <div
               className={cn('glide__bullets', styles.bullets)}
               data-glide-el="controls[nav]"
             >
@@ -110,7 +114,7 @@ const Benefits = ({
                   data-glide-dir={`=${index}`}
                 ></button>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       );
