@@ -14,7 +14,7 @@ const STEP_CHANGE_TIME = 1400;
 const HowToSteps = ({ isInView, activeIndex, setActiveIndex, isDesktop }) => {
   const scrollContainerRef = useRef(null);
   const dotRef = useRef(null);
-
+  
   useEffect(() => {
     if (!isDesktop) {
       if (isInView) {

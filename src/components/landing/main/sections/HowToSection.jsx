@@ -69,10 +69,8 @@ const HowToSection = () => {
       () => setIsDesktop(detectIsDesktop()),
       400
     );
-    imageContainerRef.current.addEventListener(
-      'resize',
-      detectIsDesktopDebounced
-    );
+    window.addEventListener('resize', detectIsDesktopDebounced);
+    return () => window.removeEventListener('resize', detectIsDesktopDebounced);
   }, []);
 
   const handleActiveIndex = useCallback((index) => {
