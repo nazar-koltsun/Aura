@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { debounce } from '../../../../lib/utils';
 
@@ -21,31 +20,73 @@ const detectIsDesktop = () => {
 };
 
 const HowToSection = () => {
-  const { ref, inView } = useInView({ threshold: 0.7 });
+  const imageContainerRef = useRef(null);
+  const { ref, inView } = useInView({ threshold: 0.9 });
   const [activeIndex, setActiveIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(detectIsDesktop());
 
+  const { ref: imageOneRef } = useInView({
+    threshold: 0.7,
+    root: imageContainerRef.current,
+    onChange: (inView) => {
+      if (inView) {
+        setActiveIndex(0); // Call setActiveIndex when the element is in view
+      }
+    },
+  });
+
+  const { ref: imageTwoRef } = useInView({
+    threshold: 0.7,
+    root: imageContainerRef.current,
+    onChange: (inView) => {
+      if (inView) {
+        setActiveIndex(1); // Call setActiveIndex when the element is in view
+      }
+    },
+  });
+  const { ref: imageThreeRef } = useInView({
+    threshold: 0.7,
+    root: imageContainerRef.current,
+    onChange: (inView ) => {
+      if (inView) {
+        setActiveIndex(2); // Call setActiveIndex when the element is in view
+      }
+    },
+  });
+
+  const { ref: imageFourRef } = useInView({
+    threshold: 0.7,
+    root: imageContainerRef.current,
+    onChange: (inView) => {
+      if (inView) {
+        setActiveIndex(3); // Call setActiveIndex when the element is in view
+      }
+    },
+  });
+
   useEffect(() => {
-    const debouncedInitialize = debounce(
+    const detectIsDesktopDebounced = debounce(
       () => setIsDesktop(detectIsDesktop()),
       400
     );
-    window.addEventListener('resize', debouncedInitialize);
-    return () => window.removeEventListener('resize', debouncedInitialize);
+    imageContainerRef.current.addEventListener(
+      'resize',
+      detectIsDesktopDebounced
+    );
   }, []);
 
   const handleActiveIndex = useCallback((index) => {
     setActiveIndex(index);
   }, []);
 
-  const bgImages = [HowToBg, SecondBg, FourthdBg, ThirdBg];
+  const bgImages = [HowToBg, SecondBg, ThirdBg, FourthdBg];
 
   return (
     <section
       ref={ref}
       className="relative pt-[70px] pb-16 px-[70px] max-1024:px-4 max-1024:p-[50px] max-700:py-[40px] overflow-hidden"
     >
-      <div className="relative z-10 flex flex-col items-center">
+      <div className="relative z-20 flex flex-col items-center pointer-events-none">
         <Subtitle title="Jak to działa?" isShort />
         <SectionTitle
           title="Jak zacząć rozmowę?"
@@ -73,23 +114,49 @@ const HowToSection = () => {
 
       {/* Background images with fade transition effect */}
       {isDesktop && (
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          {bgImages.map((img, index) => (
-            <motion.img
-              key={index}
-              src={img}
+        <div
+          ref={imageContainerRef}
+          className="absolute z-10 top-0 left-0 w-full h-full overflow-y-auto snap-proximity snap-y scrollbar-hide overscroll-x-auto"
+        >
+          <div index={0} className="relative w-full h-full snap-center">
+            <img
+              src={bgImages[0]}
               alt=""
               role="presentation"
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              animate={{
-                opacity: index === activeIndex ? 1 : 0,
-              }}
-              initial={{ opacity: 0 }}
-              transition={{
-                opacity: { duration: 0.8, ease: 'easeInOut' },
-              }}
+              className="absolute inset-0 w-full h-full object-cover"
+              ref={imageOneRef}
             />
-          ))}
+          </div>
+
+          <div index={1} className="relative w-full h-full snap-center">
+            <img
+              src={bgImages[1]}
+              alt=""
+              role="presentation"
+              className="absolute inset-0 w-full h-full object-cover"
+              ref={imageTwoRef}
+            />
+          </div>
+
+          <div index={2} className="relative w-full h-full snap-center">
+            <img
+              src={bgImages[2]}
+              alt=""
+              role="presentation"
+              className="absolute inset-0 w-full h-full object-cover"
+              ref={imageThreeRef}
+            />
+          </div>
+
+          <div index={3} className="relative w-full h-full snap-center">
+            <img
+              src={bgImages[3]}
+              alt=""
+              role="presentation"
+              className="absolute inset-0 w-full h-full object-cover"
+              ref={imageFourRef}
+            />
+          </div>
         </div>
       )}
 
@@ -106,13 +173,13 @@ const HowToSection = () => {
         src={SeparatorTopSimpleImage}
         alt=""
         role="presentation"
-        className="absolute top-0 left-0 w-full"
+        className="absolute z-20 top-0 left-0 w-full"
       />
       <img
         src={SeparatorBottomSimpleImage}
         alt=""
         role="presentation"
-        className="absolute left-0 w-full bottom-[-1px] max-1920:bottom-[-1vw]"
+        className="absolute z-20 left-0 w-full bottom-[-1px] max-1920:bottom-[-1vw]"
       />
     </section>
   );
