@@ -15,14 +15,20 @@ const HeaderNav = ({ navItems }) => {
   const closeNav = () => setIsOpen(false);
 
   const renderNavItem = (item, isLastItem) => {
-    const BaseTag = item.submenu ? 'div' : NavLink;
-    const BaseAtributes = item.submenu ? {} : {
-      to: item.path,
-      onClick: closeNav
-    };
-
     const baseClasses =
-      'max-960:block px-5 max-960:py-4 text-center text-[var(--granite-gray)] font-medium hover:text-[var(--sandy-brown)] transition duration-200 ease-in-out max-960:text-lg';
+      'max-960:block px-5 max-960:py-4 text-center text-[var(--granite-gray)] font-medium transition duration-200 ease-in-out max-960:text-lg';
+
+    const BaseTag = item.submenu ? 'div' : NavLink;
+    const BaseAtributes = item.submenu
+      ? {
+        className: baseClasses,
+      }
+      : {
+          to: item.path,
+          onClick: closeNav,
+          className: ({ isActive }) => cn(baseClasses, 'hover:text-[var(--sandy-brown)]', isActive && 'text-[var(--sandy-brown)]')
+        };
+
 
     if (isLastItem) {
       return (
@@ -38,18 +44,20 @@ const HeaderNav = ({ navItems }) => {
     }
 
     return (
-      <div key={item.title} className="group relative max-960:w-full max-960:text-center 
-      max-960:border-b max-960:border-b-[var(--cultured)]}">
+      <div
+        key={item.title}
+        className="group relative max-960:w-full max-960:text-center 
+      max-960:border-b max-960:border-b-[var(--cultured)]}"
+      >
         <BaseTag
           {...BaseAtributes}
-          className={({ isActive }) =>
-            cn(baseClasses, isActive && 'text-[var(--sandy-brown)]')
-          }
         >
           {item.title}
         </BaseTag>
 
-        {item.submenu && <HaaderSubNav submenu={item.submenu} onClose={closeNav} />}
+        {item.submenu && (
+          <HaaderSubNav submenu={item.submenu} onClose={closeNav} />
+        )}
       </div>
     );
   };
@@ -90,7 +98,7 @@ const HeaderNav = ({ navItems }) => {
           />
         </button>
 
-        <div className='flex items-center max-960:flex-col'>
+        <div className="flex items-center max-960:flex-col">
           {navItems.map((item, index) =>
             renderNavItem(item, index === navItems.length - 1, index)
           )}
