@@ -56,6 +56,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: '/sign-up',
+    element: <div>Sign Up page</div>,
+  }
 ]);
 
 const App = () => {

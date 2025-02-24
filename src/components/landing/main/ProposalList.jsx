@@ -22,20 +22,25 @@ const proposals = [
     ],
     add_info:
       'Badania RAIN Group pokazują, że sprzedawcy, którzy regularnie rozwijają swoje umiejętności, mają o 20% wyższe szanse na przekroczenie targetów sprzedażowych',
+    link: '/sign-up',
   },
   {
     title: 'softskillAURA',
     icon: <UserTableIcon className="pointer-events-none" />,
     description_items: [
       <p>
-        Dla <b>menedżerów</b>, którzy chcą doskonalić swoje umiejętności interpersonalne i zarządzania zespołem bez utraty motywacji i zaangażowania pracowników.
+        Dla <b>menedżerów</b>, którzy chcą doskonalić swoje umiejętności
+        interpersonalne i zarządzania zespołem bez utraty motywacji i
+        zaangażowania pracowników.
       </p>,
       <p>
-        Trenuj rozmowy z zespołem, by <b>udzielać</b> konstruktywnego <b>feedbacku</b>, rozwiązywać konflikty, zarządzać zmianą i projektami.
+        Trenuj rozmowy z zespołem, by <b>udzielać</b> konstruktywnego{' '}
+        <b>feedbacku</b>, rozwiązywać konflikty, zarządzać zmianą i projektami.
       </p>,
     ],
     add_info:
       'Zgodnie z badaniami Gallup, menedżerowie, którzy regularnie trenują umiejętności miękkie, są w stanie poprawić zaangażowanie zespołu nawet o 14%, co przekłada się na wyższą produktywność i mniejszą rotację pracowników.',
+    link: '/sign-up',
   },
   {
     title: 'careerAURA',
@@ -53,11 +58,11 @@ const proposals = [
     ],
     add_info:
       'Badania przeprowadzone przez LinkedIn wykazały, że osoby, które ćwiczyły umiejętności rozmów kwalifikacyjnych, zwiększyły swoje szanse na otrzymanie oferty pracy o 15%.',
+    link: '/sign-up',
   },
 ];
 
 const ProposalList = ({ className }) => {
-
   return (
     <ul
       className={cn(
