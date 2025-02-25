@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { debounce } from '../../../../lib/utils';
+import { cn, debounce } from '../../../../lib/utils';
 
 import Subtitle from '../../Subtitle';
 import SectionTitle from '../../SectionTitle';
@@ -21,7 +21,7 @@ const detectIsDesktop = () => {
 
 const HowToSection = () => {
   const imageContainerRef = useRef(null);
-  const { ref, inView } = useInView({ threshold: 0.9 });
+  const { ref, inView } = useInView({ threshold: 1 });
   const [activeIndex, setActiveIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(detectIsDesktop());
 
@@ -82,7 +82,7 @@ const HowToSection = () => {
   return (
     <section
       ref={ref}
-      className="relative pt-[70px] pb-16 px-[70px] max-1024:px-4 max-1024:p-[50px] max-700:py-[40px] overflow-hidden"
+      className="relative pt-[70px] pb-16 px-[70px] max-1400:pb-10 max-1400:pt-[50px] max-1024:px-4 max-1024:p-[50px] max-700:py-[40px] overflow-hidden"
     >
       <div className="relative z-20 flex flex-col items-center pointer-events-none">
         <Subtitle title="Jak to działa?" isShort />
@@ -96,7 +96,7 @@ const HowToSection = () => {
           setActiveIndex={handleActiveIndex}
           isDesktop={isDesktop}
         />
-        <div className="mt-10 flex justify-center gap-6 max-700:mt-6 max-700:flex-col max-700:gap-2.5 max-700:items-center">
+        <div className="mt-8 flex justify-center gap-6 max-700:mt-6 max-700:flex-col max-700:gap-2.5 max-700:items-center">
           <Button to="#" className="min-w-[247px] min-h-[60px]">
             Rozpocznij naukę
           </Button>
@@ -114,7 +114,8 @@ const HowToSection = () => {
       {isDesktop && (
         <div
           ref={imageContainerRef}
-          className="absolute z-10 top-0 left-0 w-full h-full overflow-y-auto snap-proximity snap-y scrollbar-hide overscroll-x-auto"
+          className={
+            cn("absolute z-10 top-0 left-0 w-full h-full overflow-y-auto snap-proximity snap-y scrollbar-hide overscroll-x-auto", !inView && "overflow-y-hidden")}
         >
           <div index={0} className="relative w-full h-full snap-center">
             <img

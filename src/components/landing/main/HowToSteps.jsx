@@ -32,7 +32,7 @@ const HowToSteps = ({ isInView, activeIndex, setActiveIndex, isDesktop }) => {
   return (
     <div
       ref={scrollContainerRef}
-      className="relative max-w-[510px] mt-7 bg-[var(--cultured)] p-7 pl-[65px] rounded-[30px] shadow-blockShadow max-700:pt-12
+      className="relative max-w-[510px] mt-6 bg-[var(--cultured)] p-7 pl-[65px] rounded-[30px] shadow-blockShadow max-700:pt-12
       max-700:pb-12 max-700:px-7"
     >
       <div className="relative">
@@ -42,7 +42,7 @@ const HowToSteps = ({ isInView, activeIndex, setActiveIndex, isDesktop }) => {
             ref={dotRef}
             className="absolute z-30 flex justify-center items-center left-0 top-0 w-7 h-7 bg-[var(--jungle-green)] rounded-full"
             animate={{
-              top: `${activeIndex * 84}px`,
+              top: `${activeIndex * 68}px`,
             }}
             initial={{ top: 0 }}
             transition={{
@@ -54,7 +54,7 @@ const HowToSteps = ({ isInView, activeIndex, setActiveIndex, isDesktop }) => {
           </motion.div>
         )}
 
-        <ol className="relative space-y-14 before:w-1.5 before:h-[275px] before:bg-[var(--light-silver)] before:absolute before:top-0 before:left-[11px] max-700:before:hidden max-700:space-y-5">
+        <ol className="relative space-y-10 before:w-1.5 before:h-[220px] before:bg-[var(--light-silver)] before:absolute before:top-0 before:left-[11px] max-700:before:hidden max-700:space-y-5">
           {steps.map((step, index) => (
             <motion.li
               key={index}
