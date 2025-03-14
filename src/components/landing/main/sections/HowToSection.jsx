@@ -81,50 +81,45 @@ const HowToSection = () => {
 
   useEffect(() => {
     // Helper to compute the scrollbar width
-    const getScrollbarWidth = () =>
-      window.innerWidth - document.documentElement.clientWidth;
-  
     const handleScroll = (e) => {
-      console.log('scrolling')
       const stepsAnimationBlock = imageContainerRef.current;
       if (!stepsAnimationBlock) return;
-  
-      // Calculate centered position for the container
-      const centeredAnimationBlockTop =
-        (window.innerHeight - stepsAnimationBlock.offsetHeight) / 2;
+
       const currentAnimationBlockTop =
         stepsAnimationBlock.getBoundingClientRect().top;
-  
-      const isAnimationBlockTopCentered =
-        Math.abs(currentAnimationBlockTop - centeredAnimationBlockTop) < 200;
-  
+      const stepsAnimationBlockHeight = stepsAnimationBlock.offsetHeight;
+
+      const centerBlockTop = window.innerHeight / 2 - stepsAnimationBlockHeight / 2;
+
+      const isAnimationBlockTopCentered = Math.abs(currentAnimationBlockTop - centerBlockTop) <= 220;
+      console.log('isAnimationBlockTopCentered', isAnimationBlockTopCentered);
+      
       const lastIndex = bgImages.length - 1;
       const isAtBoundary =
         (activeIndex === 0 && e.deltaY < 0) ||
         (activeIndex === lastIndex && e.deltaY > 0);
-  
+
       if (isAnimationBlockTopCentered && !isAtBoundary) {
         e.preventDefault();
-        stepsAnimationBlock.scrollBy({
-          top: e.deltaY,
-          behavior: 'smooth', // Use smooth behavior for smoother scrolling
-        });
-        // Disable body scroll while reserving space for the scrollbar
-        document.body.style.overflow = 'hidden';
-        document.body.style.paddingRight = `${getScrollbarWidth()}px`;
-      } else {
-        // Enable body scrolling and remove reserved space
-        document.body.style.overflow = '';
-        document.body.style.paddingRight = '';
-      }
+
+        const isTrackpad = Math.abs(e.deltaY) < 50 && e.deltaY % 1 !== 0;
+
+        if (isTrackpad) {
+          stepsAnimationBlock.scrollTop += e.deltaY * 40;
+        } else {
+          stepsAnimationBlock.scrollBy({
+            top: e.deltaY,
+            behavior: 'smooth',
+          });
+        }
+      } 
     };
-  
-    window.addEventListener('wheel', handleScroll);
+
+    window.addEventListener('wheel', handleScroll, { passive: false });
     return () => {
-      window.removeEventListener('wheel', handleScroll);
+      window.removeEventListener('wheel', handleScroll, { passive: false });
     };
   }, [activeIndex, bgImages.length]);
-  
 
   return (
     <section
