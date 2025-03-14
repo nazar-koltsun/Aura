@@ -22,7 +22,7 @@ const detectIsDesktop = () => {
 const HowToSection = () => {
   const imageContainerRef = useRef(null);
   const { ref, inView } = useInView({ threshold: 1 });
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
   const [isDesktop, setIsDesktop] = useState(detectIsDesktop());
 
   const { ref: imageOneRef } = useInView({
@@ -30,7 +30,7 @@ const HowToSection = () => {
     root: imageContainerRef.current,
     onChange: (inView) => {
       if (inView) {
-        setActiveIndex(0); // Call setActiveIndex when the element is in view
+        setActiveIndex(0);
       }
     },
   });
@@ -40,16 +40,16 @@ const HowToSection = () => {
     root: imageContainerRef.current,
     onChange: (inView) => {
       if (inView) {
-        setActiveIndex(1); // Call setActiveIndex when the element is in view
+        setActiveIndex(1);
       }
     },
   });
   const { ref: imageThreeRef } = useInView({
     threshold: 0.7,
     root: imageContainerRef.current,
-    onChange: (inView ) => {
+    onChange: (inView) => {
       if (inView) {
-        setActiveIndex(2); // Call setActiveIndex when the element is in view
+        setActiveIndex(2);
       }
     },
   });
@@ -59,10 +59,16 @@ const HowToSection = () => {
     root: imageContainerRef.current,
     onChange: (inView) => {
       if (inView) {
-        setActiveIndex(3); // Call setActiveIndex when the element is in view
+        setActiveIndex(3);
       }
     },
   });
+
+  const handleActiveIndex = useCallback((index) => {
+    setActiveIndex(index);
+  }, []);
+
+  const bgImages = [HowToBg, SecondBg, ThirdBg, FourthdBg];
 
   useEffect(() => {
     const detectIsDesktopDebounced = debounce(
@@ -73,16 +79,57 @@ const HowToSection = () => {
     return () => window.removeEventListener('resize', detectIsDesktopDebounced);
   }, []);
 
-  const handleActiveIndex = useCallback((index) => {
-    setActiveIndex(index);
-  }, []);
-
-  const bgImages = [HowToBg, SecondBg, ThirdBg, FourthdBg];
+  useEffect(() => {
+    // Helper to compute the scrollbar width
+    const getScrollbarWidth = () =>
+      window.innerWidth - document.documentElement.clientWidth;
+  
+    const handleScroll = (e) => {
+      console.log('scrolling')
+      const stepsAnimationBlock = imageContainerRef.current;
+      if (!stepsAnimationBlock) return;
+  
+      // Calculate centered position for the container
+      const centeredAnimationBlockTop =
+        (window.innerHeight - stepsAnimationBlock.offsetHeight) / 2;
+      const currentAnimationBlockTop =
+        stepsAnimationBlock.getBoundingClientRect().top;
+  
+      const isAnimationBlockTopCentered =
+        Math.abs(currentAnimationBlockTop - centeredAnimationBlockTop) < 200;
+  
+      const lastIndex = bgImages.length - 1;
+      const isAtBoundary =
+        (activeIndex === 0 && e.deltaY < 0) ||
+        (activeIndex === lastIndex && e.deltaY > 0);
+  
+      if (isAnimationBlockTopCentered && !isAtBoundary) {
+        e.preventDefault();
+        stepsAnimationBlock.scrollBy({
+          top: e.deltaY,
+          behavior: 'smooth', // Use smooth behavior for smoother scrolling
+        });
+        // Disable body scroll while reserving space for the scrollbar
+        document.body.style.overflow = 'hidden';
+        document.body.style.paddingRight = `${getScrollbarWidth()}px`;
+      } else {
+        // Enable body scrolling and remove reserved space
+        document.body.style.overflow = '';
+        document.body.style.paddingRight = '';
+      }
+    };
+  
+    window.addEventListener('wheel', handleScroll);
+    return () => {
+      window.removeEventListener('wheel', handleScroll);
+    };
+  }, [activeIndex, bgImages.length]);
+  
 
   return (
     <section
       ref={ref}
-      className="relative pt-[70px] pb-16 px-[70px] max-1400:pb-10 max-1400:pt-[50px] max-1024:px-4 max-1024:p-[50px] max-700:py-[40px] overflow-hidden"
+      className="steps-animation relative pt-[70px] pb-16 px-[70px] max-1400:pb-10 max-1400:pt-[50px] max-1024:px-4 max-1024:p-[50px] max-700:py-[40px] overflow-hidden"
     >
       <div className="relative z-20 flex flex-col items-center pointer-events-none">
         <Subtitle title="Jak to działa?" isShort />
@@ -114,8 +161,11 @@ const HowToSection = () => {
       {isDesktop && (
         <div
           ref={imageContainerRef}
-          className={
-            cn("absolute z-10 top-0 left-0 w-full h-full overflow-y-auto snap-proximity snap-y scrollbar-hide overscroll-x-auto", !inView && "overflow-y-hidden")}
+          className={cn(
+            'absolute z-10 top-0 left-0 w-full h-full overflow-y-auto scroll-smooth snap-proximity snap-y scrollbar-hide overscroll-x-auto',
+            !inView && 'overflow-y-hidden'
+          )}
+          tabIndex="-1"
         >
           <div index={0} className="relative w-full h-full snap-center">
             <img
