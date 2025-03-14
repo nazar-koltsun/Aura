@@ -90,9 +90,7 @@ const HowToSection = () => {
       const stepsAnimationBlockHeight = stepsAnimationBlock.offsetHeight;
 
       const centerBlockTop = window.innerHeight / 2 - stepsAnimationBlockHeight / 2;
-
       const isAnimationBlockTopCentered = Math.abs(currentAnimationBlockTop - centerBlockTop) <= 220;
-      console.log('isAnimationBlockTopCentered', isAnimationBlockTopCentered);
       
       const lastIndex = bgImages.length - 1;
       const isAtBoundary =
